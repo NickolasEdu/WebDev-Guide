@@ -1,14 +1,14 @@
 ## Index
 
-1. Conceitos web
-2. Programação
-3. HTML
-4. CSS
+1. [Conceitos web](#conceitos-web)
+2. [Programação](#programação)
+3. [HTML](#html)
+4. [CSS](#css)
 5. Javascript
 
 #
 
-# 1. Conceitos sobre Web
+# Conceitos Web
 
 *Para se tornar um desenvolvedor web, antes de tudo, devemos entender um pouco sobre o que é a Web. Nesse capítulo eu trouxe algumas definições sobre como a internet funciona. **Mas é importante ressaltar,** que não é necessário decorar tudo o que estiver aqui, a intenção desse artigo como um todo é de que seja um material de apoio para estudos. Sendo assim, aqui nesse capítulo irei trazer alguns conceitos que se tornarão familiares para o desenvolvedor com o tempo, ao decorrer da sua trajetória de estudos quando algum desses termos ou outro semelhante aparecer na sua frente, o conteúdo aqui já servirá como base para fixar os conceitos e revisão para cada vez que estiver com alguma dúvida*.
 
@@ -46,9 +46,7 @@ Se essa informação sobre número de **IP**, servidores e banco de dados pode p
 
 ## **DNS - Domain Name System**
 
-Esse é o sistema que dá nome aos **IP's**, basicamente o conhecido WWW. Com esse sistema , facilita nossa vida ao pesquisarmos algum site, e também facilitando a transmissão de dados, pois se em um computador usado como um servidor de dado que armazena vários domínios, seria muito mais complicado encontrar o site requisitado dentro daquele **IP**.
-
-*WWW é a sigla para World Wide Web, uma rede mundial de computadores interligados.*
+Esse é o sistema que dá nome aos **IP's**, basicamente o conhecido "WWW" Com esse sistema , facilita nossa vida ao pesquisarmos algum site, e também facilitando a transmissão de dados, pois se em um computador usado como um servidor de dado que armazena vários domínios, seria muito mais complicado encontrar o site requisitado dentro daquele **IP**.
 
 ## Proxy
 
@@ -72,9 +70,10 @@ E no final das contas, após toda essa troca de informações e comunicação em
 
 Agora a função de fazer que isso funcione, cabe o programador que seguindo algumas séries de regras criará e desenvolverá a comunicação entre Sites, Dispositivos e APIs.
 
----
 
-# 2. Programação
+**[⬆ voltar ao topo](#index)**
+
+# Programação
 
 ## Linguagem de programação
 
@@ -100,17 +99,19 @@ Para o desenvolvimento Web o melhor recomendado é o Visual Studio Code.
 
 Também temos outras opções como Sublime Text e Atom, mas em questão de funcionalidades e performance, o VS Code tem vantagem entre os dois.
 
-# Ambiente de desenvolvimento
+## Ambiente de desenvolvimento
 
 **[Em Produção]**
 
 Aqui vou trazer uma série de atalhos e extensões do VS Code para te ajudar a criar um ambiente produtivo na hora de estudar e praticar.
 
----
+**[⬆ voltar ao topo](#index)**
 
-# 3. HTML - HyperText Markpu Language
 
-Aqui já sabemos que o **https** é o protocolo de transferência de hipertexto, pois bem, o **HTML** é basicamente o arquivo de texto que o protocolo envia de um computador para outro.
+# HTML
+**[Em produção]**
+
+A sigla de HTML signiica HyperText MArkup Language. Aqui já sabemos que o **https** é o protocolo de transferência de hipertexto, pois bem, o **HTML** é basicamente o arquivo de texto que o protocolo envia de um computador para outro.
 
 Pense no **HTML** como um texto, a diferença é que nesse texto podemos adicionar a ele outros arquivos como de imagens, vídeos, cores, etc. Então é nele que vamos escrever a maior parte do conteúdo por meio de tags e classes e posteriormente agregar com outros tipos de arquivo.
 
@@ -121,3 +122,8 @@ O **5** se refere apenas a qual versão que o programa está.
 O HTML4 (comumente referido apenas como “HTML”) foi publicado em 1999, enquanto que a maior e mais recente atualização foi lançada em 2014. Chamada de HTML5, a atualização introduziu diversos novos recursos à linguagem.
 
 O HTML5 introduziu algumas melhorias de semântica. As novas tags semânticas informam ao navegador sobre o significado do conteúdo, o que auxilia tanto os leitores de tela quanto os
+
+
+**[⬆ voltar ao topo](#index)**
+
+# CSS
