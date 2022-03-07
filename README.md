@@ -1,3 +1,11 @@
+Prazer meu nome é Nickolas Eduardo, eu criei este repositório como uma forma de revisar todos os conteúdos que eu estudei relacionados a desenvolvimento web. De inicio eu fiz esses resumos para uso próprio, mas com o tempo conhecendo outros desenvolvedores iniciantes eu cheguei a conclusão de que esses meus resumos poderiam de alguma forma serem úteis para outros programadores.
+
+Eu não sou nenhum desenvolvedor Pleno ou Sênior, ainda não sou nem um Júnior. Mas eu sei como é difícil no começo encontrar um norte, sendo assim eu espero que esse projeto ajude e seja útil para aqueles que estiverem lendo.
+
+*”Deveria ser nosso dever espalhar o conhecimento, pois assim quando alguém chegar aonde eu  já estive antes, ele terá mais ferramentas para poder fazer melhor do que eu fiz”*
+
+   **Kevin Hart**
+
 ## Index
 
 0. [Inglês](#ingles)
