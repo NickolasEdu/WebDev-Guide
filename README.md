@@ -172,6 +172,10 @@ Para o auxílio do entendimento das tags, criei um exemplo prático em um arquiv
 
 <a href="https://github.com/NickolasEdu/html-guide" target="_blank"><img title="HTML5" alt="HTML" height="35" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"></a>
 
+Ao navegar pelo código de exemplo, notamos que: Tudo dentro da tag 'head' é referente a configuração, encaixe na tela, título da aba, ícone da janela, importação de fonte, importação de CSS, é a cabeça do nosso sitema. Já no 'body' vai literalmente o corpo, todo o conteúdo visivél para o usuário. <br>
+Até aqui fomos introduzidos as tags e as divs, que são basicamente caixas que agrupam certos conteúdos. Div 'header' por exemplo agrupa todas as tags que estão no cabeçalho da página. E que cada div pode receber uma classe. <br>
+
+Para o próximo exemplo, vamos ver outras tags e entender sobre indentação.
 
 **[⬆ voltar ao topo](#index)**
 
