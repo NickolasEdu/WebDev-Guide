@@ -92,7 +92,11 @@ Aqui seu computador mandou outro **Request** para os servidores do Youtube, que 
 
 ## Browser
 
-E no final das contas, após toda essa troca de informações e comunicação em máquina e servidor. É o navegador que irá fazer a interpretação de todo o código que foi recebido por ele (html, css, javascript, imagens etc...).
+E no final das contas, após toda essa troca de informações e comunicação em máquina e servidor. É o navegador que irá fazer a interpretação de todo o código que foi recebido vindo do servidor (html, css, javascript, imagens etc...).
+
+## Aplicação Estática vs SPA
+
+Um site estático é quando ele enviar para o navegador tudo de uma vez, para ver algum conteúdo atualizado é preciso recarregar a página (dar um F5). Uma SPA - Single Page Aplication (Aplicação de uma página só) é quando a página vai trazendo as informações conforme você vai requisitando, exemplo o Facebook que na página inicial existe dados de Feed, stories, chat que são carregados de forma simultanea. 
 
 Agora a função de fazer que isso funcione, cabe o programador que seguindo algumas séries de regras criará e desenvolverá a comunicação entre Sites, Dispositivos e APIs.
 
@@ -127,9 +131,14 @@ Também temos outras opções como Sublime Text e Atom, mas em questão de funci
 
 ## Ambiente de desenvolvimento
 
-**[Em Produção]**
+*Um ambiente de desenvolvimento é tudo aquilo que te auxilia a ser mais produtivo. Para esse ínicio vou apresentar algumas ferramentas e extensões do VS Code que nos ajudam.*<br>
+- **Tema do editor**, a escolha de um tema pode ser muito útil no começo pois ao se acostumar com uma paleta de cores, você logo vai encontrar os elementos na tela só de bater o olho, ajudando muito a diferenciar funções, variaveis e constantes.
+- **HTML Preview**, ele te trás uma pré visualização numa janela ao lado do próprio código, bastante simples mas ajuda a você ver como o HTML está sendo apresentado, no inicio pode ser útil para pegar o comportamento das Tags.
+- **Live Server**, esse sim é mais completo que o HTML Peview. O Live Server roda seu arquino direto no navegador e a cada vez que salva você pode ver com qual cara seu site está ficando de maneira semi-automática
+- **Codesnap**, Uma situação muito comum quando um dev precisa compartilhar um código que não está no GitHub ou precisa achar um erro em uma parte especifíca. O Codesnap é essencial para isso, essa extenção tira um print em ótima qualidade do trecho do código que você escolher, já importa para imagem pronta para ser enviada para outro dev.
+- **Dev Tools**, ou ferramente do desenvolvedor que abrimos pelo próprio navegador. Com ela conseguimos ver dados do código fonte, Estilos, consultas ao servidor de quase qualquer site que visitamos, e principalmente para estudarmos o comportamento dos nossos próprios projetos.
 
-Aqui vou trazer uma série de atalhos e extensões do VS Code para te ajudar a criar um ambiente produtivo na hora de estudar e praticar.
+
 
 **[⬆ voltar ao topo](#index)**
 
@@ -157,9 +166,9 @@ O HTML5 introduziu algumas melhorias de semântica. As novas tags semânticas in
 
 As tags são usadas para informar ao navegador a estrutura do site. Ou seja: quando se escreve um código em HTML, as tags serão interpretadas pelo navegador, produzindo assim a estrutura e o conteúdo visual da página.
 
-A principal característica das tags é estarem sempre dentro dos sinais de chevron (sinal de “maior que” e “menor que”), ou seja: <tag> </tag>. Em alguns casos específicos, veremos com alto fechamento: <tag />.
+A principal característica das tags é estarem sempre dentro dos sinais de chevron (sinal de “maior que” e “menor que”).
 
-Para o auxílio do entendimento das tags, criei um exemplo prático em um arquivo **HTML**. Sintasse a vontade para abrir o repositório, navegar pelo código, e até copiar para poder ver o formato que as tags são apresentadas visualmente no navegador.
+Para o auxílio do entendimento das tags, criei um exemplo prático em um arquivo **HTML**. Sintasse a vontade para abrir o repositório, navegar pelo código, e até copiar para poder ver o formato que as tags são apresentadas visualmente no navegador com live server ou pelo HTML Preview.
 
 <a href="https://github.com/NickolasEdu/html-guide" target="_blank"><img title="HTML5" alt="HTML" height="35" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"></a>
 
