@@ -177,8 +177,10 @@ Até aqui fomos introduzidos as tags e as divs, que são basicamente caixas que 
 
 **Esclarecimento de conceitos**<br>
 **Semântica:** A forma que as ferramentas de busca dos navegadores irão ler a nossa página. Assim como uma redação precisa ser clara e bem escrita, nosso código também, tanto para quem for ler as linhas que escrevemos, como o navegador para buscar esses informações. A semântica é essencial para o SEO - Search Engine Optimization (Otimização para motores de busca).<br>
-**Indentação:** Essa é ação de afastar o texto da margem, de forma que fique alinhado com as tags que o agrupa. Sempre devemos identar com a tecla tab, nunca com a barra de espaço.
-**Hierarquia de Tags:** com o tempo vamos começar a falar sobre elementos pais e filhos. Um elemento pai é quando uma tag ou div agrupa outras tags dentro dela, tags irmãs são as tags dentro do mesmo alinhamento quando estão agrupadas.
+**Indentação:** Essa é ação de afastar o texto da margem, de forma que fique alinhado com as tags que o agrupa. Sempre devemos identar com a tecla tab, nunca com a barra de espaço.<br>
+**Hierarquia de Tags:** com o tempo vamos começar a falar sobre elementos pais e filhos. Um elemento pai é quando uma tag ou div agrupa outras tags dentro dela, tags irmãs são as tags dentro do mesmo alinhamento quando estão agrupadas.<br>
+
+![Tag Anchor e indentação exemplo](https://drive.google.com/file/d/1AJmxXbff4Ug2DhCt4b9tqHoKYwQ14Q-2/view?usp=sharing)
 
 **[⬆ voltar ao topo](#index)**
 
