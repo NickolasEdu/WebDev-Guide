@@ -180,7 +180,25 @@ Até aqui fomos introduzidos as tags e as divs, que são basicamente caixas que 
 **Indentação:** Essa é ação de afastar o texto da margem, de forma que fique alinhado com as tags que o agrupa. Sempre devemos identar com a tecla tab, nunca com a barra de espaço.<br>
 **Hierarquia de Tags:** com o tempo vamos começar a falar sobre elementos pais e filhos. Um elemento pai é quando uma tag ou div agrupa outras tags dentro dela, tags irmãs são as tags dentro do mesmo alinhamento quando estão agrupadas.<br>
 
+
+Bora entender o funcionamento aqui <br>
+A Div Main é o elemento pai agrupando outros elementos dentro dela;<br>
+H1 e a tag Ancora são elementos irmãos, pois estão no mesmo nível de identação;<br>
+img aqui é a tag filha da ancora;<br>
+O comportamento desse código consiste em uma imagem que ao ser clicada leva o úsuario para outra página, a do link que foi passado pelas propriedades.<br>
+
+(Caso esteja no mobile, abra a imagem)
 <img src="./assets/anchorexemple.png" width="900" height="400">
+<br>
+
+**Propriedades**<br>
+**href=""**, Referência de hiperlink. Propriedade que é passada um link de destino.<br>
+**src=""**, System Reference Code, um caminho que indica um conteúdo, no caso uma imagem.<br>
+**alt=""**, Texto alternativo para caso a imagem não seja carregada, fica como segunda opção de exibição.<br>
+**width/height**, parâmetros de largura de altura atribuídos a imagem.
+
+## Introdução ao CSS
+
 
 **[⬆ voltar ao topo](#index)**
 
