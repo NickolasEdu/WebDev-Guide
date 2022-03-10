@@ -198,7 +198,10 @@ O comportamento desse código consiste em uma imagem que ao ser clicada leva o �
 **width/height**, parâmetros de largura de altura atribuídos a imagem.
 
 ## Introdução ao CSS
+[Em Produção}
 
+## Material de Apoio
+[Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
 
 **[⬆ voltar ao topo](#index)**
 
