@@ -180,7 +180,7 @@ Até aqui fomos introduzidos as tags e as divs, que são basicamente caixas que 
 **Indentação:** Essa é ação de afastar o texto da margem, de forma que fique alinhado com as tags que o agrupa. Sempre devemos identar com a tecla tab, nunca com a barra de espaço.<br>
 **Hierarquia de Tags:** com o tempo vamos começar a falar sobre elementos pais e filhos. Um elemento pai é quando uma tag ou div agrupa outras tags dentro dela, tags irmãs são as tags dentro do mesmo alinhamento quando estão agrupadas.<br>
 
-![Tag Anchor e indentação exemplo](https://drive.google.com/file/d/1AJmxXbff4Ug2DhCt4b9tqHoKYwQ14Q-2/view?usp=sharing)
+[Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
 
 **[⬆ voltar ao topo](#index)**
 
