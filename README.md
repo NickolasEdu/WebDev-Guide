@@ -147,8 +147,13 @@ Também temos outras opções como Sublime Text e Atom, mas em questão de funci
 **[Em produção]**
 
 **Conteúdo de apoio**
+*Uma série de links com conteúdos para auxiliar quem está vindo do zero, e trazer outros meios de informação para quem estiver revisitando o conteúdo"
 -
-<a href="https://www.youtube.com/playlist?list=PLmPm9dwop78-WqqusnExiNlRJVHEwZjWQ" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
+
+Playlist com instalação do VS Code e primeiros passos HTML 
+<a href="https://www.youtube.com/playlist?list=PLmPm9dwop78-WqqusnExiNlRJVHEwZjWQ" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a><br>
+Dois sites com documentação das tecnologias trabalhadas, muito úteis para relembrar maneiras de uso e revisar syntax de elementos.
+<a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a> e <a href="https://www.w3schools.com/">W3Schools</a>
 
 A sigla de HTML signiica HyperText MArkup Language. Aqui já sabemos que o **https** é o protocolo de transferência de hipertexto, pois bem, o **HTML** é basicamente o arquivo de texto que o protocolo envia de um computador para outro.
 
