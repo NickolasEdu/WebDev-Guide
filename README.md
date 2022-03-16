@@ -144,18 +144,18 @@ Também temos outras opções como Sublime Text e Atom, mas em questão de funci
 
 
 # HTML
-**[Em produção]**
 
-**Conteúdo de apoio**
-*Uma série de links com conteúdos para auxiliar quem está vindo do zero, e trazer outros meios de informação para quem estiver revisitando o conteúdo"
--
+### Material de apoio do capítulo
 
-Playlist com instalação do VS Code e primeiros passos HTML 
-<a href="https://www.youtube.com/playlist?list=PLmPm9dwop78-WqqusnExiNlRJVHEwZjWQ" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a><br>
+Playlist com instalação do VS Code e primeiros passos HTML
+<br>
+<a href="https://www.youtube.com/playlist?list=PLmPm9dwop78-WqqusnExiNlRJVHEwZjWQ" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
+<br>
 Dois sites com documentação das tecnologias trabalhadas, muito úteis para relembrar maneiras de uso e revisar syntax de elementos.
 <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a> e <a href="https://www.w3schools.com/">W3Schools</a>
 
-A sigla de HTML signiica HyperText MArkup Language. Aqui já sabemos que o **https** é o protocolo de transferência de hipertexto, pois bem, o **HTML** é basicamente o arquivo de texto que o protocolo envia de um computador para outro.
+## Definição
+A sigla de HTML significa HyperText MArkup Language. Aqui já sabemos que o **https** é o protocolo de transferência de hipertexto, pois bem, o **HTML** é basicamente o arquivo de texto que o protocolo envia de um computador para outro.
 
 Pense no **HTML** como um texto, a diferença é que nesse texto podemos adicionar a ele outros arquivos como de imagens, vídeos, cores, etc. Então é nele que vamos escrever a maior parte do conteúdo por meio de tags e classes e posteriormente agregar com outros tipos de arquivo.
 
@@ -174,6 +174,7 @@ As tags são usadas para informar ao navegador a estrutura do site. Ou seja: qua
 A principal característica das tags é estarem sempre dentro dos sinais de chevron (sinal de “maior que” e “menor que”).
 
 Para o auxílio do entendimento das tags, criei um exemplo prático em um arquivo **HTML**. Sintasse a vontade para abrir o repositório, navegar pelo código, e até copiar para poder ver o formato que as tags são apresentadas visualmente no navegador com live server ou pelo HTML Preview.
+
 
 <a href="https://github.com/NickolasEdu/html-guide" target="_blank"><img title="HTML5" alt="HTML" height="35" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"></a>
 
@@ -202,11 +203,12 @@ O comportamento desse código consiste em uma imagem que ao ser clicada leva o �
 **alt=""**, Texto alternativo para caso a imagem não seja carregada, fica como segunda opção de exibição.<br>
 **width/height**, parâmetros de largura de altura atribuídos a imagem.
 
-## Introdução ao CSS
-[Em Produção}
-
-## Material de Apoio
+## Formulários
+**[Em Produção]**
 [Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
+
+## Introdução ao CSS
+
 
 **[⬆ voltar ao topo](#index)**
 
