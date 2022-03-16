@@ -193,8 +193,8 @@ H1 e a tag Ancora são elementos irmãos, pois estão no mesmo nível de identa�
 img aqui é a tag filha da ancora;<br>
 O comportamento desse código consiste em uma imagem que ao ser clicada leva o úsuario para outra página, a do link que foi passado pelas propriedades.<br>
 
-(Caso esteja no mobile, abra a imagem)
-<img src="./assets/anchorexemple.png" width="900" height="400">
+*(Caso esteja no mobile, abra a imagem)*
+<img src="./assets/anchorexemple.png" width="95%" height="400">
 <br>
 
 **Propriedades**<br>
@@ -230,7 +230,7 @@ O conteúdo continua em linha, mas agora seu tamanho pode ser alterado. Uma jun�
 **Mas afinal, o que são padding, margin e border?**
 Se todos os elementos pocisionados na tela são como caixar, o **Box Model** são as propriedades que englobam a caixa.
 <br>
-<img alt="Exemplo de imagem">
+<img src="./assets/boxmodel.jpg" alt="Exemplo de imagem" width="95%" height="600">
 <br>
 Legenda:
 - Margin é o espaço ao redor da caixa
