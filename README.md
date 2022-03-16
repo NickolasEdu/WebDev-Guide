@@ -208,7 +208,42 @@ O comportamento desse código consiste em uma imagem que ao ser clicada leva o �
 [Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
 
 ## Introdução ao CSS
+### Inline vs block
+Vamos considerar que tudo na nossa página será dividido em caixas - como no exemplo das Divs - e que elas terão propriedades de exibição, ou seja, nós colocamos conteúdos dentro dessas caixas que dependendo das tags, nós veremos diferentes comportamentos de como são mostradas na tela.
+<br>
+Então antes de aprender sobre manipular essas propriedades através do CSS, vamos entender um pouco de como são o comportamento padrão destas caixas.
 
+#### Display: Block;
+Nome referente a blocos, cada conteúdo com a propriedade **block** será alihado um em cima do outro, como se estivesse sendo alinhado numa coluna. Com elementos **Block** você pode alterar seu tamanho (width/height) e as propriedades de margin, padding e border.
+<br>
+exemplos: p, h1-h6, ul, divs (div, section, footer, etc).
+
+#### Display: Inline;
+Propriedade que alinha os elementos em linha, porém seu tamanho não pode ser alterado, apenas as distâncias de margin, padding e border.
+<br>
+exemplos: a, span, strong, img.
+
+#### Display: inline-block;
+O conteúdo continua em linha, mas agora seu tamanho pode ser alterado. Uma junção das duas propriedades de display, dando mais liberdade para manipulação.
+
+## Box Model
+**Mas afinal, o que são padding, margin e border?**
+Se todos os elementos pocisionados na tela são como caixar, o **Box Model** são as propriedades que englobam a caixa.
+<br>
+<img alt="Exemplo de imagem">
+<br>
+Legenda:
+- Margin é o espaço ao redor da caixa
+- Border é a borda ao redor da caixa
+- Padding é o espaço interno da caixa
+- Por fim, o conteúdo exibido na tela.
+
+**Na prática**, margin é uma forma de definir uma distância entre um elemento e outro, um texto de uma imagem por exemplo. O Padding é usado para definir o tamanho da caixa onde ficará o conteúdo, pode ser um botão, um background com cor diferente. Border é caso o que separa o espcaçamento externo do interno (margin do    padding). Tudo isso é manipulável a partir do CSS, porém existe um detalhe que devemos nos atentar.
+<br>
+Esses valores do **Box Model** já tem propriedades pré definidas pelo sistema, então ao manipular eu posso adicionar um valor de 10 pixels a margem e 5 de padding, mas esses valores ainda serão somados ao border que eu nem coloquei. Sendo assim para evitar esses problema, é usada a propriedade **Box-sizing**, que serve para unificar os valores das nossas caixas de conteúdos.
+<br>
+Essas podem ser informações ainda abstratas, mas ao decorrer do estudo de CSS tudo isso fará mais sentido. O intuito dessa introdução é como no capítulo sobre internet, falar sobre conceitos básicos que vão nos ajudar ao entendimento global dos outros conceitos.
+<br>
 
 **[⬆ voltar ao topo](#index)**
 
