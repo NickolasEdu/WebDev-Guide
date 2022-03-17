@@ -248,3 +248,9 @@ Essas podem ser informações ainda abstratas, mas ao decorrer do estudo de CSS 
 **[⬆ voltar ao topo](#index)**
 
 # CSS
+**Cascading Style Sheet - Folha de Estilo em Cascatas**
+É o arquivo que define o estilo de tudo aquilo que roda no client. Onde você altera como vemos a tela, os título, parágrafos, com espaçamentos, color, posicionamento etc. Cascading Style Sheet, é chamado assim por definir os estilos do conteúdo html aparecerá na tela, e o código CSS é escrito em forma de cascata, manipulando os elementos de cima até o final da página, numa ordem “decrescente”, ou em descida.
+
+## Seletores
+
+**[⬆ voltar ao topo](#index)**
