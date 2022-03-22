@@ -173,7 +173,7 @@ As tags são usadas para informar ao navegador a estrutura do site. Ou seja: qua
 
 A principal característica das tags é estarem sempre dentro dos sinais de chevron (sinal de “maior que” e “menor que”).
 
-Para o auxílio do entendimento das tags, criei um exemplo prático em um arquivo **HTML**. Sintasse a vontade para abrir o repositório, navegar pelo código, e até copiar para poder ver o formato que as tags são apresentadas visualmente no navegador com live server ou pelo HTML Preview.
+Para o auxílio do entendimento das tags, criei um exemplo prático em um arquivo **HTML**. Esse arquivo está disponível para ser clonado, navegar pelo código ou até para ser copiado amnualmente e ir acompanhando visualmente a apresentação das tags, seja no navegador com live server ou pelo HTML Preview.
 
 
 <a href="https://github.com/NickolasEdu/html-guide" target="_blank"><img title="HTML5" alt="HTML" height="35" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"></a>
@@ -204,8 +204,31 @@ O comportamento desse código consiste em uma imagem que ao ser clicada leva o �
 **width/height**, parâmetros de largura de altura atribuídos a imagem.
 
 ## Formulários
-**[Em Produção]**
-[Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
+São sessões de captação e controle de dados iseridos pelo usuário, quem recebe esses dados são os **inputs**
+<br>
+Mas o que são Inputs?
+<br>
+**inputs e outputs** são termos de programação referentes a entradas e saídas de dados. Como por exemplo uma página de cadastro, onde os inputs vão receber os dados de nome, email e outros tipos de informação.
+<br>
+Para estabelecer uma base melhor - e também uma indicação de estudo passivo - vou deixer o link de uma [Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link) com os aqueles que mais usamos.
+<br>
+Os formulários são colocados dentro de uma div específica, a Form, que nesse caso o uso não é apenas semântico mas também pelo uso de funcionalidades. A div Form oferece a possibilidade do uso de alguns parâmetros para manipulação dos dados..
+<br>
+**action="" -** aqui é passado para qual o endereço os dados serão enviados, se esse parâmetro não for definido, por padrão será enviado para a própria página onde está o formulário.
+<br>
+**method -** voltando a falar sobre o **http**, já sabemos que ele é o protocolo de comunicação de sistemas, pois bem, com essa propriedade podemos definir o método de envio dos arquivos.
+<br>
+**POST vs GET -** Quando trabalhamos com dados, o método indicado de se usar é o **POST**, pois ele oculta os dados na hora de fazer o envio. Já pelo método **GET** isso não acontece, um exemplo é a pesquisa do Google, ao buscar algo pelo navegador nós vamos ver no **URL** em meio a diversos caracteres especiais, as palavras chaves que colocamos no input de pesquisa. Essa é a forma de envio do método **GET**.
+<br>
+### Fieldset
+Cada página só pode conter uma tag Form, mas para dividirmos certos tipos de dados (cadastro pessoal, cadastro profissional) podemos usar a tag Fieldset. Passando os valores de cada campo por um ID. Assim como podemos passar um título com tags h1-6 para parágrafos, os Fieldsets também podem receber títulos por meio da tag legend.
+<br>
+
+### Button
+É possível criar um botão pela propriedade 'input type="button"' mas o mais comum é usar pelo formato de tag button mesmo, sempre que um formulário tiver um button ele será do tipo submit, mas podemos alterar esse tipo como para reset, por exemplo.
+
+### Datalist
+Abre uma aba de opções pré definidas, e é escrita como uma tag de lista. Datalist é a tag pai, cada item fica dentro de uma tag option e que podem ser filtradas e colocadas como tags filhas de alguma optiongroup
 
 ## Introdução ao CSS
 ### Inline vs block
