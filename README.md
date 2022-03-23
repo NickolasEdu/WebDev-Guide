@@ -287,8 +287,89 @@ Os seletores tem diferentes niveis de força e permitem combinações para espec
 ## Pseudo elementos
 {em produção}
 
+## Cores {com variáveis}
+{em produção}
+
 ## Maniuplação de Layout
+{em produção}
 
 ## Tipografia
+Não apenas com cores, mas as fontes e suas propriedades são fundamentais para passar alguma mensagem para o usuário. Importante lembrar que nem todos os tipos de fontes serão compatíveis com todas as propriedades.
+<dl>
+  <dt>Font-Family</dt>
+  <dd>Nessa propriedade é passada uma série de fontes que estão relacionadas, para indicar ao sistema qual font usar e quais as opções caso a primeira não seja encontrada. Isso na programação é conhecido como **fallback**, como um válvula de escape que previde um possível erro.</dd>
+</dl>
+
+<dl>
+  <dt>Fonts Web</dt>
+  <dd>São maneiras de importar fontes para o seu projeto, para que sejam carregadas pelos navegadores do usuário. O método de import pode ser feito pelo **Google fonts** e colocado na tag de link dentro do head do arquivo.</dd>
+</dl>
+
+
+<dl>
+  <dt>Font weight</dt>
+  <dd>Prorpiedade para definir a expessura de uma fonte, desde palavras chaves como bold, bolder, light ou por números de 100 a 900</dd>
+</dl>
+
+
+<dl>
+  <dt>font style</dt>
+  <dd>Permite adcionar um estilo a mais nas fonts, como o *itálico*</dd>
+</dl>
+
+
+<dl>
+  <dt>Font size</dt>
+  <dd>Define o tamanho da fonte, recebe unidades de medida</dd>
+</dl>
+
+
+<dl>
+  <dt>Font Variante</dt>
+  <dd>Define estilos especificos, como por exemplo a propriedade de small caps. Todos os caracteres minúsculos ficam com o mesmo tamanho</dd>
+</dl>
+
+
+<dl>
+  <dt>Font Stretch</dt>
+  <dd>Permite opções de comprimento das fontes, recebe nomes chave como: expended, condensed, normal e valores entre 20% até 50%</dd>
+</dl>
+
+
+<dl>
+  <dt>letter spacing / word spacing</dt>
+  <dd>Respectivamente define espaço entre as palavras ou letras. Recebe valores entre 1.0 e 2.9</dd>
+</dl>
+
+
+<dl>
+  <dt>Text Transform</dt>
+  <dd>Define algum estilo especifico, como todas as primeiras letras das palavras em maiusculo. Recebe palavras chave como: uppercase, capitalize, lowercase</dd>
+</dl>
+
+
+<dl>
+  <dt>text decoration</dt>
+  <dd>Remove traçado de links, ou adiciona em textos normais. O traço pode ser aplicado debaixo das palavras, em cima no cortando no meio.</dd>
+</dl>
+
+
+<dl>
+  <dt>text aling</dt>
+  <dd>Essa é uma funcionalidade muito usada no Microsoft word por exemplo, de alinhar o texto para algum lado ou preenchendo a página, com: center, right, left ou jutify</dd>
+</dl>
+
+
+<dl>
+  <dt>text shadow</dt>
+  <dd>Aplica uma sobra ao texto.</dd>
+</dl>
+
+
+<dl>
+  <dt></dt>
+  <dd></dd>
+</dl>
+
 
 **[⬆ voltar ao topo](#index)**
