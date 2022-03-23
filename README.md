@@ -274,6 +274,21 @@ Essas podem ser informações ainda abstratas, mas ao decorrer do estudo de CSS 
 **Cascading Style Sheet - Folha de Estilo em Cascatas**
 É o arquivo que define o estilo de tudo aquilo que roda no client. Onde você altera como vemos a tela, os título, parágrafos, com espaçamentos, color, posicionamento etc. Cascading Style Sheet, é chamado assim por definir os estilos do conteúdo html aparecerá na tela, e o código CSS é escrito em forma de cascata, manipulando os elementos de cima até o final da página, numa ordem “decrescente”, ou em descida.
 
-## Seletores
+# Tipos
+{Em Produção}
+
+# Seletores
+Os seletores tem diferentes niveis de força e permitem combinações para especificar qual elemento deve ser estilizados.
+- Seletor '*' é um seletor de menor nível, ele será responsavél por passar um valor que será aplicado em todos os elementos, até que estes recebam um novo estilo a partir de outro seletor. É majoritariamente usado para zerar as propriedades padrão dos próprios elementos, como **margin**, **border** e **box-sinzing**
+- Selecionar por tags, o próximo nível de força são as tags, é possivél decidir os estilos que uma tag específica terá sempre que aparecer.
+- Classes e ID's, mais fortes que as tags, é mais recomendado pois dentro de diferentes classes nós podemos ter tags semelhantes que serão atribuídas a diferentes estilos
+- Combinadores são as formas de combinar seletores, podendo passar um esmo estilo para diferentes seletores colocando entre vírgulas, como; "p, .classe" ou atribuir a um elemento filho específico dentro de outra tag, como; ".class ul li a".
+
+## Pseudo elementos
+{em produção}
+
+## Maniuplação de Layout
+
+## Tipografia
 
 **[⬆ voltar ao topo](#index)**
