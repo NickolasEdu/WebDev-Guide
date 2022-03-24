@@ -308,13 +308,61 @@ Os seletores tem diferentes niveis de força e permitem combinações para espec
 - Combinadores são as formas de combinar seletores, podendo passar um esmo estilo para diferentes seletores colocando entre vírgulas, como; "p, .classe" ou atribuir a um elemento filho específico dentro de outra tag, como; ".class ul li a".
 
 ## Pseudo elementos
-{em produção}
+[Lista de pseudo elementos](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
-## Cores {com variáveis}
-{em produção}
+## Cores Web
+Todas as cores na internet são definidas por variações de valores das cores azul, vermelha e verde. Ao atribuir um elemento alguma propriedade de cor, existem 3 tipos de valores, com mais um bônus.
 
-## Maniuplação de Layout
-{em produção}
+<dl>
+  <dt>RGB</dt>
+    <dd>
+      Sigla para as iniciais das cores web Red, Green, Blue. Sua sintaxe recebe 3 valores de 0 até 255, cada valor se refere a uma das três cores e resulta numa combinação entre elas. ex: rgb(0, 123, 255). Também á uma variação com o rgba, que recebe 4 valores sendo o último um valor de 0.1 até 0.9, que é referente a transparência da cor. O 'a' signifca alpha.
+  </dd>
+ </dl>
+ 
+ <dl>
+  <dt>HEX</dt>
+  <dd>
+    Tradução para cores Hexadecimais, o formato HEX nada mais é que um shorthand do rgb. A sintaxe é um valor em código com seis caracteres combinados entre letras e números seguintes de um '#', ex: #C1F4T7. Á quem prefira o formato rgb/rgba ao HEX, mas isso vai de gosto pessoal.
+  </dd>
+ </dl>
+  
+  
+<dl>
+  <dt>Nome</dt>
+  <dd>
+    A maneira mais simples é chamar a cor pelo nome em inglês, o CSS é capaz de reconhecer. Porém não é uma boa prática, pois dependendo do sitema ou navegador, pode causar algum erro. Porém existe uma maneira que nos possibilita nomear cores para usarmos no nosso código, são pelas variáveis.
+    Quando precisamos passar uma cor em vários elementos diferentes do nosso CSS, para evitar a perda de tempo de sempre precisar pesquisar pelo seu valor rgb ou HEX, ao passar o valor para uma variável, nós agora podemos colocar nos elementos o nome da variável que criamos.
+  </dd>
+</dl>
+
+## Posicionamento
+A posição padrão dos elementos na tela é **inline**, ou seja, ocupa a linha intera sendo um elemento colocado em baixo do outro.
+
+ <dl>
+  <dt>Relative</dt>
+  <dd>
+    [ em produção }
+  </dd>
+ </dl>
+ 
+ 
+ <dl>
+  <dt>Absolute</dt>
+  <dd>
+    Remove o padrão inline, e faz com que o elemento tenha a aparência de estar flutuando sob os outros elementos.
+  </dd>
+ </dl>
+ 
+ 
+ <dl>
+  <dt>Fixed</dt>
+  <dd>
+    O elemento ficará fixado sempre aparecendo na tela, acompanhando o scroll da página
+  </dd>
+ </dl>
+ 
+ *Também existe a propriedade z-index, para controlar a camada - altura - de cada elemento que está flutuando na tela, isso se chama **element stack** quando tenho mais de um elemento flutuante e é necessário definir uma ordem entre eles*
 
 ## Tipografia
 Não apenas com cores, mas as fontes e suas propriedades são fundamentais para passar alguma mensagem para o usuário. Importante lembrar que nem todos os tipos de fontes serão compatíveis com todas as propriedades.
