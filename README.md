@@ -274,8 +274,31 @@ Essas podem ser informações ainda abstratas, mas ao decorrer do estudo de CSS 
 **Cascading Style Sheet - Folha de Estilo em Cascatas**
 É o arquivo que define o estilo de tudo aquilo que roda no client. Onde você altera como vemos a tela, os título, parágrafos, com espaçamentos, color, posicionamento etc. Cascading Style Sheet, é chamado assim por definir os estilos do conteúdo html aparecerá na tela, e o código CSS é escrito em forma de cascata, manipulando os elementos de cima até o final da página, numa ordem “decrescente”, ou em descida.
 
-# Tipos
-{Em Produção}
+## Material de Apoio
+[Playlist de primeiros passos no CSS](https://www.youtube.com/watch?v=oSJgsGbmK4c&list=PLmPm9dwop78_WRFefS3xtQ--NlpmZiTer)
+
+## Tipos
+Existem 3 maneiras de estilizarmos o nosso arquivo HTML através do CSS, que são:
+
+<dl>
+  <dt>CSS Inline</dt>
+  <dd>O formato inline é passando os estilos como propriedades dentro de uma tag como 'style=""', esse modelo não é nada prático tanto para escrever como parar dar manuntenção.</dd>
+</dl>
+
+
+<dl>
+  <dt>Tag Style</dt>
+  <dd>A tag Style é colocada dentro do Head e funciona perfeitamente, recomendada para testes simples caso não prefira fazer através do DevTools ou até para páginas estáticas de um carregamento só, ou seja, todo o conteúdo da página está ali e não á nenhum tipo de navegação para outras páginas, pois a tag Style faz as maniupalções de estilo apenas na página no qual foi declarada.</dd>
+</dl>
+
+
+<dl>
+  <dt>Import do arquivo CSS</dt>
+  <dd>A melhor prática é a importação de um arquivo CSS. Essa importação é feita na tag head com uma tag de link indicando o caminho até o arquivo CSS com 'href="arquivo.css"'.</dd>
+</dl>
+
+*A sintaxe CSS recebe um seletor, uma propriedade e um valor*
+<img rel="Imagem exemplo da syntax" src="./assets/ph.jpg">
 
 # Seletores
 Os seletores tem diferentes niveis de força e permitem combinações para especificar qual elemento deve ser estilizados.
@@ -364,12 +387,5 @@ Não apenas com cores, mas as fontes e suas propriedades são fundamentais para 
   <dt>text shadow</dt>
   <dd>Aplica uma sobra ao texto.</dd>
 </dl>
-
-
-<dl>
-  <dt></dt>
-  <dd></dd>
-</dl>
-
 
 **[⬆ voltar ao topo](#index)**
