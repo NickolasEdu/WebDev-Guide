@@ -307,6 +307,17 @@ Os seletores tem diferentes niveis de força e permitem combinações para espec
 - Classes e ID's, mais fortes que as tags, é mais recomendado pois dentro de diferentes classes nós podemos ter tags semelhantes que serão atribuídas a diferentes estilos
 - Combinadores são as formas de combinar seletores, podendo passar um esmo estilo para diferentes seletores colocando entre vírgulas, como; "p, .classe" ou atribuir a um elemento filho específico dentro de outra tag, como; ".class ul li a".
 
+Cada seletor tem uma força, que faz com que exista uma pirâmide de força onde um seletor se sobrepõe ao outro. Segue um exemplo das forças de seletores, sendo quanto maior o número, maior a força.
+
+<ol>
+  <li>Seletor universal '*' e pseudo classes</li>
+  <li>Seletores de elemento e combinadores</li>
+  <li>pseudo elementos</li>
+  <li>classes e propriedades de tag</li>
+  <li>Seletor de ID</li>
+  <li>CSS Inline</li>
+ </ol>
+
 ## Pseudo elementos
 [Lista de pseudo elementos](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
@@ -342,7 +353,7 @@ A posição padrão dos elementos na tela é **inline**, ou seja, ocupa a linha 
  <dl>
   <dt>Relative</dt>
   <dd>
-    [ em produção }
+    Essa posição é relativa a alguém, desde o elemento pai, ao algum dos valores top, right, left, botton. Independente de ao que o elemento fica relativo, o CSS mantém o espaço da sua posição inicial como ocupado.
   </dd>
  </dl>
  
@@ -435,5 +446,17 @@ Não apenas com cores, mas as fontes e suas propriedades são fundamentais para 
   <dt>text shadow</dt>
   <dd>Aplica uma sobra ao texto.</dd>
 </dl>
+
+## Posicionamentos responsivos
+
+### Flexbox vs Grid
+Temos duas prorpriedades avançadas de layout do CSS, dois métodos que oferecem melhor controle sobre a distribuição dos items na tela. Porém é importante lembrar que, não é possível usar grid e flexbox no mesmo elemento, na mesma aplicação é possível, mas sempre atribuídos a diferentes objetos.
+
+### Flexbox
+Atribuído a um elemento pai, nos permite controlar a orientação de todos os elementos dentro dessa caixa. Com as propriedades flex-direction, justify-content, align-items, flex-row.
+
+[Lista de exemplos](#Link)
+
+### Grid
 
 **[⬆ voltar ao topo](#index)**
