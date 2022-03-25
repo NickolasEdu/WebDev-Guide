@@ -13,7 +13,7 @@ Eu não sou nenhum desenvolvedor Pleno ou Sênior, ainda não sou nem um Júnior
 2. [Programação](#programação)
 3. [HTML](#html)
 4. [CSS](#css)
-5. Javascript
+5. [Javascript](#javascript)
 
 # Ingles
 
@@ -347,6 +347,9 @@ Todas as cores na internet são definidas por variações de valores das cores a
   </dd>
 </dl>
 
+## Elementos na tela
+{PLACEHOLDER}
+
 ## Posicionamento
 A posição padrão dos elementos na tela é **inline**, ou seja, ocupa a linha intera sendo um elemento colocado em baixo do outro.
 
@@ -450,13 +453,51 @@ Não apenas com cores, mas as fontes e suas propriedades são fundamentais para 
 ## Posicionamentos responsivos
 
 ### Flexbox vs Grid
-Temos duas prorpriedades avançadas de layout do CSS, dois métodos que oferecem melhor controle sobre a distribuição dos items na tela. Porém é importante lembrar que, não é possível usar grid e flexbox no mesmo elemento, na mesma aplicação é possível, mas sempre atribuídos a diferentes objetos.
+Temos duas prorpriedades avançadas de layout do CSS, dois métodos que oferecem melhor controle sobre a distribuição dos items na tela. Porém é importante lembrar que, não é possível usar grid e flexbox no mesmo elemento, na mesma aplicação é possível, mas sempre atribuídos a diferentes objetos. A declaração de ambos é semelehante, passando o valor de Flexbox ou Grid para um elemento pai, e assim manipulando os elementos dentro dele.
 
 ### Flexbox
-Atribuído a um elemento pai, nos permite controlar a orientação de todos os elementos dentro dessa caixa. Com as propriedades flex-direction, justify-content, align-items, flex-row.
+Ao ser atribuído a um elemento pai, nos permite controlar a orientação de todos os elementos dentro dessa caixa. Com as propriedades flex-direction, justify-content, align-items, flex-row.
 
 [Lista de exemplos](#Link)
 
 ### Grid
+
+**[⬆ voltar ao topo](#index)**
+
+# Javascript
+{PLACEHOLDER}
+
+## Material de Apoio
+{PLACEHOLDER}
+
+## Variavéis
+{PLACEHOLDER}
+
+## Operadores
+{PLACEHOLDER}
+
+## Statements
+{PLACEHOLDER}
+
+## Functions
+{PLACEHOLDER}
+
+## Loops
+{PLACEHOLDER}
+
+## Arrays e Objects
+{PLACEHOLDER}
+
+## Métodos
+{PLACEHOLDER}
+
+## Síncrono vs Assíncrono
+{PLACEHOLDER}
+
+## Callback vs Promise
+{PLACEHOLDER}
+
+## API + JSON
+{PLACEHOLDER}
 
 **[⬆ voltar ao topo](#index)**
