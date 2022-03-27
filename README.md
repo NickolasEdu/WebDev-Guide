@@ -465,7 +465,9 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 **[⬆ voltar ao topo](#index)**
 
 # Javascript
-{PLACEHOLDER}
+Ciada em 1995 por Breandan Eich, o Javascript está em 97% das páginas web na internet. Por mais que o nome seja semelhante, não devemos confundir com Java. Essa é uma liguangem diferente, lá em sua criação a sacada de usar o nome foi uma questão de marketing para popularizar o JS mais rápido, então juntaram o nome Java com Script (de roteiro) para alto explicar a linguagem que antes era  chamada de LiveScript.
+<br>
+E para os curiosos, o nome Java é em homenagem a uma ilha da Indonésia que era responsável pelo exportação do café que um grupo de programadores consumia quando criaram essa linguagem. Tanto que o simbolo deles é uma xícara de café.
 
 ## Material de Apoio
 {PLACEHOLDER}
