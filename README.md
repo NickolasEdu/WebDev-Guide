@@ -456,7 +456,7 @@ Não apenas com cores, mas as fontes e suas propriedades são fundamentais para 
 Temos duas prorpriedades avançadas de layout do CSS, dois métodos que oferecem melhor controle sobre a distribuição dos items na tela. Porém é importante lembrar que, não é possível usar grid e flexbox no mesmo elemento, na mesma aplicação é possível, mas sempre atribuídos a diferentes objetos. A declaração de ambos é semelehante, passando o valor de Flexbox ou Grid para um elemento pai, e assim manipulando os elementos dentro dele.
 
 ### Flexbox
-Ao ser atribuído a um elemento pai, nos permite controlar a orientação de todos os elementos dentro dessa caixa. Com as propriedades flex-direction, justify-content, align-items, flex-row.
+Ao ser atribuído a um elemento pai, nos permite controlar a orientação de todos os elementos dentro dessa caixa. Com as propriedades flex-direction, justify-content, align-items, flex-row. Segue um arquivo em pdf exemplificando as posições de cada elemento dentro de uma caixa para diferentes propriedades. [Lista Flexbox](./docs/Flexbox.pdf)
 
 [Lista de exemplos](#Link)
 
