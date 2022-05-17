@@ -188,7 +188,7 @@ Até aqui fomos introduzidos as tags e as divs, que são basicamente caixas que 
 
 
 Bora entender o funcionamento aqui <br>
-A Div Main é o elemento pai agrupando outros elementos dentro dela;<br>
+A tag Main é o elemento pai agrupando outros elementos dentro dela;<br>
 H1 e a tag Ancora são elementos irmãos, pois estão no mesmo nível de identação;<br>
 img aqui é a tag filha da ancora;<br>
 O comportamento desse código consiste em uma imagem que ao ser clicada leva o úsuario para outra página, a do link que foi passado pelas propriedades.<br>
@@ -208,46 +208,90 @@ São sessões de captação e controle de dados iseridos pelo usuário, quem rec
 <br>
 Mas o que são Inputs?
 <br>
-**inputs e outputs** são termos de programação referentes a entradas e saídas de dados. Como por exemplo uma página de cadastro, onde os inputs vão receber os dados de nome, email e outros tipos de informação.
+
+<dl>
+  <dt>Inputs e Outputs</dt>
+  <dd>
+   São termos de programação referentes a entradas e saídas de dados. Como por exemplo uma página de cadastro, onde os inputs vão receber os dados de nome, email e outros tipos de informação. Para estabelecer uma base melhor - e também uma indicação de estudo passivo - vou deixer o link de uma com os inputs que mais usamos.
+  </dd>
+</dl>
+
+[Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
+
+
+<dl>
+  <dt>Form</dt>
+  <dd>
+  Os formulários são colocados dentro de uma div específica, a Form, que nesse caso o uso não é apenas semântico mas também pelo uso de funcionalidades. A div Form oferece a possibilidade do uso de alguns parâmetros para manipulação dos dados..
+  </dd>
+</dl>
+
+action="" - aqui é passado para qual o endereço os dados serão enviados, se esse parâmetro não for definido, por padrão será enviado para a própria página onde está o formulário.
 <br>
-Para estabelecer uma base melhor - e também uma indicação de estudo passivo - vou deixer o link de uma [Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link) com os aqueles que mais usamos.
+method - voltando a falar sobre o http, já sabemos que ele é o protocolo de comunicação de sistemas, pois bem, com essa propriedade podemos definir o método de envio dos arquivos.
 <br>
-Os formulários são colocados dentro de uma div específica, a Form, que nesse caso o uso não é apenas semântico mas também pelo uso de funcionalidades. A div Form oferece a possibilidade do uso de alguns parâmetros para manipulação dos dados..
-<br>
-**action="" -** aqui é passado para qual o endereço os dados serão enviados, se esse parâmetro não for definido, por padrão será enviado para a própria página onde está o formulário.
-<br>
-**method -** voltando a falar sobre o **http**, já sabemos que ele é o protocolo de comunicação de sistemas, pois bem, com essa propriedade podemos definir o método de envio dos arquivos.
-<br>
-**POST vs GET -** Quando trabalhamos com dados, o método indicado de se usar é o **POST**, pois ele oculta os dados na hora de fazer o envio. Já pelo método **GET** isso não acontece, um exemplo é a pesquisa do Google, ao buscar algo pelo navegador nós vamos ver no **URL** em meio a diversos caracteres especiais, as palavras chaves que colocamos no input de pesquisa. Essa é a forma de envio do método **GET**.
-<br>
-### Fieldset
-Cada página só pode conter uma tag Form, mas para dividirmos certos tipos de dados (cadastro pessoal, cadastro profissional) podemos usar a tag Fieldset. Passando os valores de cada campo por um ID. Assim como podemos passar um título com tags h1-6 para parágrafos, os Fieldsets também podem receber títulos por meio da tag legend.
+POST vs GET - Quando trabalhamos com dados, o método indicado de se usar é o **POST**, pois ele oculta os dados na hora de fazer o envio. Já pelo método **GET** isso não acontece, um exemplo é a pesquisa do Google, ao buscar algo pelo navegador nós vamos ver no **URL** em meio a diversos caracteres especiais, as palavras chaves que colocamos no input de pesquisa. Essa é a forma de envio do método **GET**.
 <br>
 
-### Button
-É possível criar um botão pela propriedade 'input type="button"' mas o mais comum é usar pelo formato de tag button mesmo, sempre que um formulário tiver um button ele será do tipo submit, mas podemos alterar esse tipo como para reset, por exemplo.
 
-### Datalist
-Abre uma aba de opções pré definidas, e é escrita como uma tag de lista. Datalist é a tag pai, cada item fica dentro de uma tag option e que podem ser filtradas e colocadas como tags filhas de alguma optiongroup
+<dl>
+  <dt>Fieldset</dt>
+  <dd>
+    Cada página só pode conter uma tag Form, mas para dividirmos certos tipos de dados (cadastro pessoal, cadastro profissional) podemos usar a tag Fieldset. Passando os valores de cada campo por um ID. Assim como podemos passar um título com tags h1-6 para parágrafos, os Fieldsets também podem receber títulos por meio da tag legend.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>Button</dt>
+  <dd>
+    É possível criar um botão pela propriedade 'input type="button"' mas o mais comum é usar pelo formato de tag button mesmo, sempre que um formulário tiver um button ele será do tipo submit, mas podemos alterar esse tipo como para reset, por exemplo.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>Datalist</dt>
+  <dd>
+  Abre uma aba de opções pré definidas, e é escrita como uma tag de lista. Datalist é a tag pai, cada item fica dentro de uma tag option e que podem ser filtradas e colocadas como tags filhas de alguma optiongroup.
+  </dd>
+</dl>
 
 ## Introdução ao CSS
-### Inline vs block
-Vamos considerar que tudo na nossa página será dividido em caixas - como no exemplo das Divs - e que elas terão propriedades de exibição, ou seja, nós colocamos conteúdos dentro dessas caixas que dependendo das tags, nós veremos diferentes comportamentos de como são mostradas na tela.
-<br>
+
+<dl>
+  <dt>Inline vs Block</dt>
+  <dd>
+    Vamos considerar que tudo na nossa página será dividido em caixas - como no exemplo das Divs - e que elas terão propriedades de exibição, ou seja, nós colocamos conteúdos dentro dessas caixas que dependendo das tags, nós veremos diferentes comportamentos de como são mostradas na tela.
+  </dd>
+</dl>
+
 Então antes de aprender sobre manipular essas propriedades através do CSS, vamos entender um pouco de como são o comportamento padrão destas caixas.
 
-#### Display: Block;
-Nome referente a blocos, cada conteúdo com a propriedade **block** será alihado um em cima do outro, como se estivesse sendo alinhado numa coluna. Com elementos **Block** você pode alterar seu tamanho (width/height) e as propriedades de margin, padding e border.
+<dl>
+  <dt>Display: block</dt>
+  <dd>
+  Nome referente a blocos, cada conteúdo com a propriedade block será alihado um em cima do outro, como se estivesse sendo alinhado numa coluna. Com elementos Block você pode alterar seu tamanho (width/height) e as propriedades de margin, padding e border.
 <br>
-exemplos: p, h1-h6, ul, divs (div, section, footer, etc).
+exemplos: p, h1-h6, ul, divs (div, section, footer).
+  </dd>
+</dl>
 
-#### Display: Inline;
-Propriedade que alinha os elementos em linha, porém seu tamanho não pode ser alterado, apenas as distâncias de margin, padding e border.
+<dl>
+  <dt>Dislay: Inline</dt>
+  <dd>
+  Propriedade que alinha os elementos em linha, porém seu tamanho não pode ser alterado, apenas as distâncias de margin, padding e border.
 <br>
 exemplos: a, span, strong, img.
+  </dd>
+</dl>
 
-#### Display: inline-block;
-O conteúdo continua em linha, mas agora seu tamanho pode ser alterado. Uma junção das duas propriedades de display, dando mais liberdade para manipulação.
+<dl>
+  <dt>Display: inline-block</dt>
+  <dd>
+  O conteúdo continua em linha, mas agora seu tamanho pode ser alterado. Uma junção das duas propriedades de display, dando mais liberdade para manipulação.
+  </dd>
+</dl>
 
 ## Box Model
 **Mas afinal, o que são padding, margin e border?**
@@ -261,12 +305,16 @@ Legenda:
 - Padding é o espaço interno da caixa
 - Por fim, o conteúdo exibido na tela.
 
-**Na prática**, margin é uma forma de definir uma distância entre um elemento e outro, um texto de uma imagem por exemplo. O Padding é usado para definir o tamanho da caixa onde ficará o conteúdo, pode ser um botão, um background com cor diferente. Border é caso o que separa o espcaçamento externo do interno (margin do    padding). Tudo isso é manipulável a partir do CSS, porém existe um detalhe que devemos nos atentar.
-<br>
-Esses valores do **Box Model** já tem propriedades pré definidas pelo sistema, então ao manipular eu posso adicionar um valor de 10 pixels a margem e 5 de padding, mas esses valores ainda serão somados ao border que eu nem coloquei. Sendo assim para evitar esses problema, é usada a propriedade **Box-sizing**, que serve para unificar os valores das nossas caixas de conteúdos.
-<br>
-Essas podem ser informações ainda abstratas, mas ao decorrer do estudo de CSS tudo isso fará mais sentido. O intuito dessa introdução é como no capítulo sobre internet, falar sobre conceitos básicos que vão nos ajudar ao entendimento global dos outros conceitos.
-<br>
+<p>
+  **Na prática**, margin é uma forma de definir uma distância entre um elemento e outro, um texto de uma imagem por exemplo. O Padding é usado para definir o tamanho da caixa onde ficará o conteúdo, pode ser um botão, um background com cor diferente. Border é caso o que separa o espcaçamento externo do interno (margin do    padding). Tudo isso é manipulável a partir do CSS, porém existe um detalhe que devemos nos atentar.
+</p>
+
+<p>
+  Esses valores do **Box Model** já tem propriedades pré definidas pelo sistema, então ao manipular eu posso adicionar um valor de 10 pixels a margem e 5 de padding, mas esses valores ainda serão somados ao border que eu nem coloquei. Sendo assim para evitar esses problema, é usada a propriedade **Box-sizing**, que serve para unificar os valores das nossas caixas de conteúdos.
+</p>
+<p>
+  Essas podem ser informações ainda abstratas, mas ao decorrer do estudo de CSS tudo isso fará mais sentido. O intuito dessa introdução é como no capítulo sobre internet, falar sobre conceitos básicos que vão nos ajudar ao entendimento global dos outros conceitos.
+</p>
 
 **[⬆ voltar ao topo](#index)**
 
