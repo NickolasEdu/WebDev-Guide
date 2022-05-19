@@ -513,12 +513,28 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 **[⬆ voltar ao topo](#index)**
 
 # Javascript
-Ciada em 1995 por Breandan Eich, o Javascript está em 97% das páginas web na internet. Por mais que o nome seja semelhante, não devemos confundir com Java. Essa é uma liguangem diferente, lá em sua criação a sacada de usar o nome foi uma questão de marketing para popularizar o JS mais rápido, então juntaram o nome Java com Script (de roteiro) para alto explicar a linguagem que antes era  chamada de LiveScript.
+
+## O Básico
+No desenvolvimento web o **HTML** é a estrutura da página, o **CSS** é a forma que as elementos são apresentados e o **Javascript** é uma maneira de criar funcionalidades para a nossa aplicação. Numa explicação mais simples, o HTML é o corpo, CSS a aparência e o Javascript será o cérebro, esta linguagem é capaz de manipular todo o nosso site.
+
+Criada em 1995 por Breandan Eich, o Javascript está em mais de 90% das páginas web na internet. Por mais que o nome seja semelhante, não devemos confundir com Java. Essa é uma liguangem diferente, lá em sua criação a sacada de usar o nome foi uma questão de marketing para popularizar o JS mais rápido, então juntaram o nome Java com Script (de roteiro) para alto explicar a linguagem que antes era  chamada de LiveScript.
 <br>
-E para os curiosos, o nome Java é em homenagem a uma ilha da Indonésia que era responsável pelo exportação do café que um grupo de programadores consumia quando criaram essa linguagem. Tanto que o simbolo deles é uma xícara de café.
+E para os curiosos, o nome Java é em homenagem a uma ilha da Indonésia que era responsável pelo exportação do café que um grupo de programadores consumia quando criaram essa linguagem. Tanto que o simbolo do Java é uma xícara de café. Nesse caso, a única semelhança entre as linguagens é realmente o nome que foi usado como inspiração.
+<br>
+Evolução do Javascript....
+
+## Fundamentos
+Árvore de DOM...
+
+Como HTML e CSS o JS tem regras de uso que são muito importantes ficarmos atentos, visto que, por ser verdadeiramente uma linguagem de programação, como qualquer outra língua existem regras gramaticais para que possa ser entendida, isso na programação é chamado de Syntax - ou sintaxe. Assim como o CSS existe mais de uma maneira de fazer o link do seu arquivo index com o de javascript, mas é importante se atentar ao comportamento do sistema.
+<br>
+O CSS seja - interno ou externo - é sempre importado na parte de cima do index, pois assim o navegador ao fazer o carregamento dos elementos já terá carregado os seus estilos, evitando bugs visuais. Porém o comportamento do JS é diferente, ao encontrar um arquivo **script** no index o navegador vai automaticamente parar de carregar todo o resto até que termine de carregar o arquivo javascript, e isso com certeza vai travar o carregamento da aplicação. Então para previnir isso todo o script deve ser colocado logo acima da tag de fechamento do body, no final após todos os elementos HTML. Seguindo essa boa prática, no momento em que o navegador for carregar o aqrquivo JS, todo o resto já estará carregado, melhorando o desempenho do seu site.
+<br>
+O código javascript é linkado ao HTML pela tag script, de forma interna escrevendo todo o código entre a tag de abertuda e de fechamento - meio não recomendado, usado apenas para projetos simples e testes - ou passando a propriedade **src** com o caminho do seu arquivo.
+Exemplo: ...
 
 ## Material de Apoio
-{PLACEHOLDER}
+[Intensivão Javascript](https://www.youtube.com/watch?v=i6Oi-YtXnAU)
 
 ## Variavéis
 {PLACEHOLDER}
