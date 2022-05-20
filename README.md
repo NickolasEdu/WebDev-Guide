@@ -536,14 +536,57 @@ Exemplo: ...
 ## Material de Apoio
 [Intensivão Javascript](https://www.youtube.com/watch?v=i6Oi-YtXnAU)
 
+## Statements
+Os Statements são as instrunções de uso para passarmos comandos para o sistema.
+
+<dl>
+  <dt>Syntax</dt>
+  <dd>Como já vimos, são as regras de escrita. Seria as "vírgulas" e ascentos de um texto</dd>
+</dl>
+
+<dl>
+  <dt>Palavras chave</dt>
+  <dd>São palavras reservadas pelo sistema, então o uso delas não são recomendadas na maioria dos casos, pois quando escritas no interpretador ele pode não entender o comando que queremos passar. Alguns exemplos de palavras-chave: if, else, case, switch.</dd>
+</dl>
+
+<dl>
+  <dt>Valores</dt>
+  <dd>Para manipular a nossa aplicação será necessário muitas vezes receber, enviar e alterar dados dentro do nosso sistema, para isso existem maneiras de armazenar, manipular e trabalhar com esses valores.</dd>
+</dl>
+
+## Tipos de Dados
+
+<dl>
+  <dt>String</dt>
+  <dd>Dado do tipo de texto, sempre entre aspas sendo elas 'simples' ou "completas". Porém é indicado manter um padrão e não ficar alternando dentro de um mesmo sistema, outra dica é o uso da aspas completa, pois evita problemas caso se depare com um texto em inglês que contenha palavras como "can't"</dd>
+</dl>
+
+<dl>
+  <dt>Template String</dt>
+  <dd>String literal é simplismente um texto entre dois sinais de crase - sim, aquele acima do é - que abre mais possibilidades de uso que veremos mais a frente</dd>
+</dl>
+
+<dl>
+  <dt>Number</dt>
+  <dd>Referente a qualquer tipo de número: 1, 45, 200, 1238, etc...</dd>
+</dl>
+
+<dl>
+  <dt>Float Number</dt>
+  <dd>São números quebrados: 1.8, 2.5, 4.9, etc...</dd>
+</dl>
+
+<dl>
+  <dt>Booolean</dt>
+  <dd>Os boleanos são valores de um ou outro que fica dividido entre true e false. Um boleano tem valor oposto do outro</dd>
+</dl>
+
 ## Variavéis
 {PLACEHOLDER}
 
 ## Operadores
 {PLACEHOLDER}
 
-## Statements
-{PLACEHOLDER}
 
 ## Functions
 {PLACEHOLDER}
