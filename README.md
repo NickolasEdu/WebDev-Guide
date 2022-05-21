@@ -611,19 +611,27 @@ O funcionamento de uma variável vai ser muito definida pelo escopo em qual foi 
 As funções guardam comandos que só são executados quando chamados, também existem diferentes maneiras de declarar uma função:
 
 <dl>
-  <dt>Funcção anônima</dt>
-  <dd></dd>
+  <dt>Anonymous function</dt>
+  <dd>Uma função que não é nomeada - ou função anônima</dd>
 </dl>
 
 <dl>
-  <dt>var</dt>
-  <dd></dd>
+  <dt>Expression function</dt>
+  <dd>Uma função com um nome atribuído a ela</dd>
 </dl>
 
 <dl>
   <dt>Arrow Function</dt>
-  <dd></dd>
+  <dd>Uma função passada dentro de uma constante e seu valor final é retornado para aquela variável</dd>
 </dl>
+
+Exemplo:
+
+
+### Paramêtros e Argumentos
+
+### Hoisting
+
 
 ## Operadores
 {PLACEHOLDER}
