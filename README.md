@@ -581,15 +581,53 @@ Os Statements são as instrunções de uso para passarmos comandos para o sistem
   <dd>Os boleanos são valores de um ou outro que fica dividido entre true e false. Um boleano tem valor oposto do outro</dd>
 </dl>
 
+<dl>
+  <dt>Sem-Dados</dt>
+  <dd>Null, NaN, undefined, ""</dd>
+</dl>
+
 ## Variavéis
-{PLACEHOLDER}
+São são recipientes de valores, sejam eles de números, texto, elementos, funções. Podemos guardar valores dentro de variáveis enquanto declaramos elas com os nomes que melhor acharmos adequado para facilitar a reutilização. Porém como toda linguagem, precisamos entender as regras e o seu comportamento. Ao declarar uma variável temos as seguintes opções:
+
+<dl>
+  <dt>var</dt>
+  <dd>Essa maneira de declarar variáveis foi descontinuada, pois ela tem um scopo global e pode ser sobreescrevida, causando bugs com seu uso.</dd>
+</dl>
+
+<dl>
+  <dt>let</dt>
+  <dd>Permite a reatribuição de valor, porém seu escopo é especifico e isso previne os bugs</dd>
+</dl>
+
+<dl>
+  <dt>const</dt>
+  <dd>Variável constante, ou seja: o seu valor será sempre fixo. Tem o escopo especifico porém seu valor não pode ser reatribuído</dd>
+</dl>
+
+### Escopo Global vs Especifico
+O funcionamento de uma variável vai ser muito definida pelo escopo em qual foi declarada, o escopo global é no corpo comum do script, onde pode ser usada em qualquer outra parte do código. Escopo especifico ocorre quando declaramos uma variavel dentro de uma function e ela só irá existir ali dentro.
+
+## Functions
+As funções guardam comandos que só são executados quando chamados, também existem diferentes maneiras de declarar uma função:
+
+<dl>
+  <dt>Funcção anônima</dt>
+  <dd></dd>
+</dl>
+
+<dl>
+  <dt>var</dt>
+  <dd></dd>
+</dl>
+
+<dl>
+  <dt>Arrow Function</dt>
+  <dd></dd>
+</dl>
 
 ## Operadores
 {PLACEHOLDER}
 
-
-## Functions
-{PLACEHOLDER}
 
 ## Loops
 {PLACEHOLDER}
