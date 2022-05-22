@@ -656,7 +656,19 @@ Como já sabemos, o javascript lê tudo de cima para baixo, então as funções 
 {PLACEHOLDER}
 
 ## Operadores
-{PLACEHOLDER}
+Os operadores servem para fazer alterações nos valores que estamos usando, e são essenciais para desenvolver os nosso algoritmos.
+
+### Operadores Aritméticos
+<img src="./assets/arithmetic.png" alt="Exemplo de imagem" width="95%" height="600">
+
+### Operadores de Comparação
+<img src="./assets/compare.png" alt="Exemplo de imagem" width="95%" height="600">
+
+### Operadores de Atribuição
+<img src="./assets/assignment.png" alt="Exemplo de imagem" width="95%" height="600">
+
+### Operadores Lógicos
+<img src="./assets/logic.png" alt="Exemplo de imagem" width="95%" height="600">
 
 ## Loops
 {PLACEHOLDER}
