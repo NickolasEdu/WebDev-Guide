@@ -636,15 +636,20 @@ As funções guardam comandos que só são executados quando chamados, também e
 
 <dl>
   <dt>Arrow Function</dt>
-  <dd>Uma função passada dentro de uma constante e seu valor final é retornado para aquela variável</dd>
+  <dd>Uma função passada dentro de uma constante e seu valor final é retornado para aquela variável. A Arrow Function é chamada assim pela a sua aparência, sendo declarada com os o sinal de '=>' além dos sinais de parênteses para indicar ao sistema que é uma função</dd>
 </dl>
 
 Exemplo:
 
+<img src="./assets/exfunctions.png" alt="Exemplo de imagem" width="650px" height="600">
+
 
 ### Paramêtros e Argumentos
 A Syntax das funções consiste em, usar '()' na declaração e na chamada da função. Para atrabalhar dados no escopo interno da função, sem depender de variáveis, é feito o uso dos argumentos e paramêtros. Os parâmetros são os nomes que passamos na declaração da função, os argumentos são os valores que serão atribuídos aos parâmetros
-EXEMPLO:
+
+Ex:
+
+<img src="./assets/argumentPar.png" alt="Exemplo de imagem" width="650px" height="600">
 
 ### Hoisting
 Como já sabemos, o javascript lê tudo de cima para baixo, então as funções sempre serão chamas na sequência em que foram escritas. Sendo assim, o hoisting serve para subir uma função - na tradução literal seria erguer - para alguma linha acima de onde ela foi declarada, isso faz com que o interpretador deixe de executar o quem em seguida, e vai primeiro atrás da função que você mandou chamar primeiro, depois disso que ele seguirá lendo e executando o resto do seu código. Porém devemos ficar atentos ao fato de que o hoisting não funciona com variáveis, elas precisam ser declaradas antes de serem chamadas, então devem estar em sequência no código, dessa forma o hoisting com Arrow Functions fica inviável.
@@ -657,6 +662,8 @@ Como já sabemos, o javascript lê tudo de cima para baixo, então as funções 
 
 ## Operadores
 Os operadores servem para fazer alterações nos valores que estamos usando, e são essenciais para desenvolver os nosso algoritmos.
+
+_É necessário abrir as imagens para visualizar melhor_
 
 ### Operadores Aritméticos
 <img src="./assets/arithmetic.png" alt="Exemplo de imagem" min-width="650px" height="600">
