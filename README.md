@@ -396,7 +396,36 @@ Todas as cores na internet são definidas por variações de valores das cores a
 </dl>
 
 ## Elementos na tela
-{PLACEHOLDER}
+
+Manipulação da apresentação dos elementos na tela
+
+**Display: none** - O elemento é praticamente removido, como se não existisse mais
+
+**Visibility**: hidden - O elemento fica oculto, mas sua posição na tela continua preservada
+
+**Opacity: 0.5** - Com valores entre 0 e 1, você altera a transparência do elemento na
+
+**Elementos** **vazados** - Quando o elemento ocupa um tamanho maior que o definido
+
+**Overflow:** Atributo para manipular elementos que não couberam na tela, fazendo um autoajuste
+
+**hidden** - mostra apenas o conteúdo que não vazou
+
+**Scroll** - Define uma barra de Scroll lateral.
+
+**Scroll x/y** - aplicar a batera apenas horizontal ou vertical
+
+**Auto**: Aplica uma barra padrão, baseada nos parâmetros do elemento
+
+## Background
+
+Conteúdo ao fundo de todos os elementos
+
+**background-color:** que recebe algum parâmetro de cor;
+
+**background-image:** para definir uma imagem com **url('imagem.jpg')**, que também pode receber o **background-repeate:** com 'no-repeate' ou 'repeate', para fazer que a imagem seja posicionada repetidas vezes para cobrir a tela, ou para previvir esse comportamento.
+
+## Position
 
 ## Posicionamento
 A posição padrão dos elementos na tela é **inline**, ou seja, ocupa a linha intera sendo um elemento colocado em baixo do outro.
@@ -622,7 +651,7 @@ São são recipientes de valores, sejam eles de números, texto, elementos, fun�
 O funcionamento de uma variável vai ser muito definida pelo escopo em qual foi declarada, o escopo global é no corpo comum do script, onde pode ser usada em qualquer outra parte do código. Escopo especifico ocorre quando declaramos uma variavel dentro de uma function e ela só irá existir ali dentro.
 
 ## Functions
-As funções guardam comandos que só são executados quando chamados, também existem diferentes maneiras de declarar uma função:
+As funções guardam comandos que só são executados quando chamados, sua syntax báscica consiste em **()** para indicar que aquilo é uma função, e agrupar tudo que será amarzenado dentro dela com **{}**, também existem diferentes maneiras de declarar uma função:
 
 <dl>
   <dt>Anonymous function</dt>
@@ -643,6 +672,9 @@ Exemplo:
 
 <img src="./assets/exfunctions.png" alt="Exemplo de imagem" width="650px" height="600">
 
+
+### Return
+Seu comportamento básico é parar a execução de uma função, veremos esse uso melhor com condicionais. Ou usar o **return** com um valor, esse valor será retornado para quem chamou a função. 
 
 ### Paramêtros e Argumentos
 A Syntax das funções consiste em, usar '()' na declaração e na chamada da função. Para atrabalhar dados no escopo interno da função, sem depender de variáveis, é feito o uso dos argumentos e paramêtros. Os parâmetros são os nomes que passamos na declaração da função, os argumentos são os valores que serão atribuídos aos parâmetros
