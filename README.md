@@ -521,11 +521,13 @@ Criada em 1995 por Breandan Eich, o Javascript está em mais de 90% das páginas
 <br>
 E para os curiosos, o nome Java é em homenagem a uma ilha da Indonésia que era responsável pelo exportação do café que um grupo de programadores consumia quando criaram essa linguagem. Tanto que o simbolo do Java é uma xícara de café. Nesse caso, a única semelhança entre as linguagens é realmente o nome que foi usado como inspiração.
 <br>
-Evolução do Javascript....
+Javascript é uma linguagem muito abrangente, além de vários frameworks - como o React.js por exemplo - é possível também desenvover backend e suas branchs de desenvolvimento chegam até mesmo ao Typescript. Mas para introduzir aqui, vamos falar do Javascript no DOM.
 
 ## Fundamentos
-Árvore de DOM...
-
+Árvore de DOM - Document Object Model. Se baseia em todo o Javascript que roda no lado do cliente, é o documento que o navegador interpreta e no qual podemos manipular toda a estrutura do nosso site. O DOM é o que faz a ligação entre o Hyper Text com o JS.
+<br>
+Sabendo disso, então podemos concluir que tudo no HTML é elemento, tudo no CSS são caixas e tudo no Javascript é Objeto.
+<br>
 Como HTML e CSS o JS tem regras de uso que são muito importantes ficarmos atentos, visto que, por ser verdadeiramente uma linguagem de programação, como qualquer outra língua existem regras gramaticais para que possa ser entendida, isso na programação é chamado de Syntax - ou sintaxe. Assim como o CSS existe mais de uma maneira de fazer o link do seu arquivo index com o de javascript, mas é importante se atentar ao comportamento do sistema.
 <br>
 O CSS seja - interno ou externo - é sempre importado na parte de cima do index, pois assim o navegador ao fazer o carregamento dos elementos já terá carregado os seus estilos, evitando bugs visuais. Porém o comportamento do JS é diferente, ao encontrar um arquivo **script** no index o navegador vai automaticamente parar de carregar todo o resto até que termine de carregar o arquivo javascript, e isso com certeza vai travar o carregamento da aplicação. Então para previnir isso todo o script deve ser colocado logo acima da tag de fechamento do body, no final após todos os elementos HTML. Seguindo essa boa prática, no momento em que o navegador for carregar o aqrquivo JS, todo o resto já estará carregado, melhorando o desempenho do seu site.
@@ -581,9 +583,21 @@ Os Statements são as instrunções de uso para passarmos comandos para o sistem
   <dd>Os boleanos são valores de um ou outro que fica dividido entre true e false. Um boleano tem valor oposto do outro</dd>
 </dl>
 
+### Sem Dados
+
 <dl>
-  <dt>Sem-Dados</dt>
-  <dd>Null, NaN, undefined, ""</dd>
+  <dt>Undefined</dt>
+  <dd>Foi declarado, mas não foi definido - nenhum valor atribuído</dd>
+</dl>
+
+<dl>
+  <dt>null</dt>
+  <dd>Foi declarado, foi atribuído mas não há nada dentro dele.</dd>
+</dl>
+
+<dl>
+  <dt>NaN</dt>
+  <dd>Not a Number ou não é um número, ocorre quando tentamos pegar o valor de alguma operação entre um número e outro tipo de dado.</dd>
 </dl>
 
 ## Variavéis
@@ -629,16 +643,26 @@ Exemplo:
 
 
 ### Paramêtros e Argumentos
+A Syntax das funções consiste em, usar '()' na declaração e na chamada da função. Para atrabalhar dados no escopo interno da função, sem depender de variáveis, é feito o uso dos argumentos e paramêtros. Os parâmetros são os nomes que passamos na declaração da função, os argumentos são os valores que serão atribuídos aos parâmetros
+EXEMPLO:
 
 ### Hoisting
+Como já sabemos, o javascript lê tudo de cima para baixo, então as funções sempre serão chamas na sequência em que foram escritas. Sendo assim, o hoisting serve para subir uma função - na tradução literal seria erguer - para alguma linha acima de onde ela foi declarada, isso faz com que o interpretador deixe de executar o quem em seguida, e vai primeiro atrás da função que você mandou chamar primeiro, depois disso que ele seguirá lendo e executando o resto do seu código. Porém devemos ficar atentos ao fato de que o hoisting não funciona com variáveis, elas precisam ser declaradas antes de serem chamadas, então devem estar em sequência no código, dessa forma o hoisting com Arrow Functions fica inviável.
 
+## Síncrono vs Assíncrono
+{PLACEHOLDER}
+
+## Callback vs Promise
+{PLACEHOLDER}
 
 ## Operadores
 {PLACEHOLDER}
 
-
 ## Loops
 {PLACEHOLDER}
+
+## Condicionais
+PLACEHOLDER
 
 ## Arrays e Objects
 {PLACEHOLDER}
@@ -646,11 +670,10 @@ Exemplo:
 ## Métodos
 {PLACEHOLDER}
 
-## Síncrono vs Assíncrono
-{PLACEHOLDER}
+## Eventos
+PLACEHOLDER
 
-## Callback vs Promise
-{PLACEHOLDER}
+## Prototype / Expressions
 
 ## API + JSON
 {PLACEHOLDER}
