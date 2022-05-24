@@ -721,7 +721,22 @@ _É necessário abrir as imagens para visualizar melhor_
 <img src="./assets/logic.png" alt="Exemplo de imagem" width="650px" height="600">
 
 ## Loops
-{PLACEHOLDER}
+Os loops são laços de repetição, ou seja, uma condição que irá repetir uma função enquanto um valor foi determinado. Os tipos de loops definem esse valor.
+
+<dl>
+  <dt>For</dt>
+  <dd>Uma função que não é nomeada - ou função anônima</dd>
+</dl>
+
+<dl>
+  <dt>For of/in</dt>
+  <dd>Uma função que não é nomeada - ou função anônima</dd>
+</dl>
+
+<dl>
+  <dt>While/do...while</dt>
+  <dd>Uma função que não é nomeada - ou função anônima</dd>
+</dl>
 
 ## Condicionais
 PLACEHOLDER
