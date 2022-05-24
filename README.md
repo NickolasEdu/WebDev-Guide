@@ -687,10 +687,21 @@ Ex:
 Como já sabemos, o javascript lê tudo de cima para baixo, então as funções sempre serão chamas na sequência em que foram escritas. Sendo assim, o hoisting serve para subir uma função - na tradução literal seria erguer - para alguma linha acima de onde ela foi declarada, isso faz com que o interpretador deixe de executar o quem em seguida, e vai primeiro atrás da função que você mandou chamar primeiro, depois disso que ele seguirá lendo e executando o resto do seu código. Porém devemos ficar atentos ao fato de que o hoisting não funciona com variáveis, elas precisam ser declaradas antes de serem chamadas, então devem estar em sequência no código, dessa forma o hoisting com Arrow Functions fica inviável.
 
 ## Síncrono vs Assíncrono
-{PLACEHOLDER}
+A execução do javascript é de maneira **síncrona**, que no caso é o comportamento padrão do interpretador, o código irá executar aquilo que lhe for apresentado na ordem do script. Nesse comportamento o sistema só vai carregar a próxima função depois que a atual estiver concluída.
+
+Ou seja, o comportamento padrão é de executar na ordem em que foi escrito, mas isso pode ser manipulado ao escrever um código em que algumas partes serão assíncronas. Assim, podemos definir quais funções do nosso código terão um tempo de execução diferente do padrão. 
 
 ## Callback vs Promise
-{PLACEHOLDER}
+**Callback**
+
+É quando uma função fica de chamar outra assim que for terminada sua execução, usada para quando uma função específica depende de outra para ser executada. Exemplo, um sistema que precisa receber um valor e depois exibir ele. Não é possível exibir um valor antes dele ser atribuído, então a primeira função vai ficar responsável por receber uma ação de dado e depois chamar a função que irá exibir os dados.
+
+**Promisse**
+
+As Promises são um método mais moderno que o de Callback, aqui a intenção de uso é praticamente a mesma, mas com comportamento diferente. Aqui a ideia também é chamar uma função depois que outra for executada, porém a próxima função será chamada referente a uma condição estabelecida, já que a promise deve ser retornada para alguém (variável ou função) e recebe dois parâmetros(resolve, reject) um em caso de condição concluída, outro em caso de condição não concluída.
+
+## Exemplos
+{JS Classes 05}
 
 ## Operadores
 Os operadores servem para fazer alterações nos valores que estamos usando, e são essenciais para desenvolver os nosso algoritmos.
