@@ -720,6 +720,13 @@ _É necessário abrir as imagens para visualizar melhor_
 ### Operadores Lógicos
 <img src="./assets/logic.png" alt="Exemplo de imagem" width="650px" height="600">
 
+## Condicionais
+```
+function test() {
+  console.log('ok')
+}
+```
+
 ## Loops
 Os loops são laços de repetição, ou seja, uma condição que irá repetir uma função enquanto um valor foi determinado. Os tipos de loops definem esse valor.
 
@@ -737,9 +744,6 @@ Os loops são laços de repetição, ou seja, uma condição que irá repetir um
   <dt>While/do...while</dt>
   <dd>Uma função que não é nomeada - ou função anônima</dd>
 </dl>
-
-## Condicionais
-PLACEHOLDER
 
 ## Arrays e Objects
 {PLACEHOLDER}
