@@ -703,6 +703,9 @@ As Promises são um método mais moderno que o de Callback, aqui a intenção de
 ## Exemplos
 {JS Classes 05}
 
+## Arrays e Objects
+{PLACEHOLDER}
+
 ## Operadores
 Os operadores servem para fazer alterações nos valores que estamos usando, e são essenciais para desenvolver os nosso algoritmos.
 
@@ -728,25 +731,89 @@ function test() {
 ```
 
 ## Loops
-Os loops são laços de repetição, ou seja, uma condição que irá repetir uma função enquanto um valor foi determinado. Os tipos de loops definem esse valor.
+Os loops são laços de repetição, ou seja, uma condição que irá repetir uma função enquanto um valor de rodadas - vezes que a função será executada - for determinado. Os tipos de loops definem esse valor.
 
 <dl>
-  <dt>For</dt>
-  <dd>Uma função que não é nomeada - ou função anônima</dd>
+  <dt>For()</dt>
+  <dd>O For recebe três parâmetros, uma váriavel com o valor inicial da contagem, uma condição com a quantidade da contagem e o operador do contagem.</dd>
+</dl>
+
+```
+for(let contador = 0; contador <= 100; contador++) {
+  console.log(contador)
+}
+
+```
+Neste exemplo, enquanto a contagem não chegar a 100 a função será repetida somando +1 a cada rodada até o número desejado. O for() ainda
+trás dois controles, o _break_ e o _continue_. O _break_ permite definir um valor que irá parar o resto da execução, ou o _continue_, que ao definir uma condição ele pula essa rodada do loop.
+
+Ex:
+```
+for(let contador = 0; contador <= 100; contador++) {
+  if (contador === 10) {
+    continue;
+  }
+
+  console.log(contador)
+}
+```
+Com isso a contagem irá pular do '9' para o '11'.
+
+<dl>
+  <dt>For of</dt>
+  <dd>Fará uma rodada para cada posição do item selecionado, exemplo: se for string será uma rodada para cada letra escrita, se for array, será uma rodada para cada objeto lá dentro.</dd>
+</dl>
+
+```
+let rodadas = "cinco"
+
+for(let rodada of rodadas) {
+  console.log(rodada)
+}
+```
+O console retornará cinco rodadas, imprimindo uma letra de cada vez para a palavra escrita
+
+Ou
+
+```
+let names = ["Alex", "Breno", "Carol", "Dani"]
+
+for(let name of names) {
+  console.log(name)
+}
+```
+Aqui serão quatro rodadas, uma para cada posição do array imprimindo um nome por loop.
+
+<dl>
+  <dt>For in</dt>
+  <dd>Basicamente faz o mesmo que o for of, porém faz uma rodada para objeto do array</dd>
 </dl>
 
 <dl>
-  <dt>For of/in</dt>
-  <dd>Uma função que não é nomeada - ou função anônima</dd>
+  <dt>Do...While / While</dt>
+  <dd>A tradução literal já explica, fazer...enquanto a condição definida for real. Fazem a mesma função, com comportamentos diferentes. O Do...while inicia um loop e então confere as condições da repetição. Enquanto o While confere primeiro a condição e depois dá inicio ao loop - comportamento muito mais parecido com os laços anteriores</dd>
 </dl>
 
-<dl>
-  <dt>While/do...while</dt>
-  <dd>Uma função que não é nomeada - ou função anônima</dd>
-</dl>
+Do...while:
+```
+let contador = 1;
 
-## Arrays e Objects
-{PLACEHOLDER}
+do {
+	console.log(contador);
+	
+	count++;
+} while ( contador <= 10 )
+```
+
+While
+```
+let contador = 1
+
+while ( count <= 10 ) {
+  console.log(contador)
+	contador++
+} 
+```
 
 ## Métodos
 {PLACEHOLDER}
