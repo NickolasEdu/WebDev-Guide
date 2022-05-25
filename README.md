@@ -738,7 +738,7 @@ Os loops são laços de repetição, ou seja, uma condição que irá repetir um
   <dd>O For recebe três parâmetros, uma váriavel com o valor inicial da contagem, uma condição com a quantidade da contagem e o operador do contagem.</dd>
 </dl>
 
-```
+```javascript
 for(let contador = 0; contador <= 100; contador++) {
   console.log(contador)
 }
@@ -748,7 +748,7 @@ Neste exemplo, enquanto a contagem não chegar a 100 a função será repetida s
 trás dois controles, o _break_ e o _continue_. O _break_ permite definir um valor que irá parar o resto da execução, ou o _continue_, que ao definir uma condição ele pula essa rodada do loop.
 
 Ex:
-```
+```javascript
 for(let contador = 0; contador <= 100; contador++) {
   if (contador === 10) {
     continue;
@@ -764,7 +764,7 @@ Com isso a contagem irá pular do '9' para o '11'.
   <dd>Fará uma rodada para cada posição do item selecionado, exemplo: se for string será uma rodada para cada letra escrita, se for array, será uma rodada para cada objeto lá dentro.</dd>
 </dl>
 
-```
+```javascript
 let rodadas = "cinco"
 
 for(let rodada of rodadas) {
@@ -775,7 +775,7 @@ O console retornará cinco rodadas, imprimindo uma letra de cada vez para a pala
 
 Ou
 
-```
+```javascript
 let names = ["Alex", "Breno", "Carol", "Dani"]
 
 for(let name of names) {
@@ -795,7 +795,7 @@ Aqui serão quatro rodadas, uma para cada posição do array imprimindo um nome 
 </dl>
 
 Do...while:
-```
+```javascript
 let contador = 1;
 
 do {
@@ -806,7 +806,7 @@ do {
 ```
 
 While
-```
+```javascript
 let contador = 1
 
 while ( count <= 10 ) {
