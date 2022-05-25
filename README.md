@@ -701,10 +701,92 @@ Ou seja, o comportamento padrão é de executar na ordem em que foi escrito, mas
 As Promises são um método mais moderno que o de Callback, aqui a intenção de uso é praticamente a mesma, mas com comportamento diferente. Aqui a ideia também é chamar uma função depois que outra for executada, porém a próxima função será chamada referente a uma condição estabelecida, já que a promise deve ser retornada para alguém (variável ou função) e recebe dois parâmetros(resolve, reject) um em caso de condição concluída, outro em caso de condição não concluída.
 
 ## Exemplos
-{JS Classes 05}
+Síncrono
+
+```javascript
+function defaultFunction() {
+  console.log('Ok, comportamento padrão')
+}
+
+defaultFunction()
+```
+Assíncrono com setTimeout() - Esse método chama a função e recebe um valor em ms para defniir o tempo de espera até ser executado
+
+```javascript
+function assyncronousFunction() {
+  console.log('Ok, Assíncrono resolvido')
+}
+
+setTimeout(assyncronousFunction, 5000)
+```
+Callback - É preciso passar a indicação da callback por paramêtro e o tempo de espera também é definido pelo setTimeout()
+```javascript
+function main() {
+  wait(print)
+}
+
+function wait(callback) {
+  if (callback) {
+  setTimeout(callback, 5000)
+  }
+}
+
+function print() {
+console.log('Ok, callback resolvida')
+}
+main()
+```
+
+//Promise - Basicamente é uma maneira mais moderna de fazer callbacks, encadeando sequências de funções que só são executadas após a anterior ser concluída.
+
+```javascript
+
+function startPromise() {
+  return main()
+  .then(succes)
+  .catch(error)
+}
+              
+function main() {
+  return new Promise((resolve, reject) => {
+    const valid = true
+      if (valid == true) {
+        setTimeout(resolve, 10000)
+      }
+  
+      if (valid == false) {
+        reject()
+      }
+  })
+}
+
+function error() {
+  console.log('Promise falhou com sucesso')
+}
+
+function succes() {
+  console.log('Ok, Promise resolvida')
+}
+
+startPromise()
+```
 
 ## Arrays e Objects
-{PLACEHOLDER}
+Arrays são como variáveis, que ao invés de armazenar um valor ele armazena vários do mesmo valor, desde que seja do mesmo tipo
+Ex:
+```javascript
+const names = ["Augusto","Bruna","Camila", "Danilo"]
+```
+
+Objetos são parecidos, mas com ele somos capazes de armazenar diferentes tipos de dados
+Ex:
+```javascript
+const person = {
+  name: "Amanda",
+  age: 18,
+  city: "Londrina",
+}
+```
 
 ## Operadores
 Os operadores servem para fazer alterações nos valores que estamos usando, e são essenciais para desenvolver os nosso algoritmos.
@@ -771,7 +853,7 @@ for(let rodada of rodadas) {
   console.log(rodada)
 }
 ```
-O console retornará cinco rodadas, imprimindo uma letra de cada vez para a palavra escrita
+O console retornará cinco rodadas, imprimindo uma letra individualmente para a string escrita
 
 Ou
 
