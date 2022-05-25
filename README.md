@@ -806,10 +806,50 @@ _É necessário abrir as imagens para visualizar melhor_
 <img src="./assets/logic.png" alt="Exemplo de imagem" width="650px" height="600">
 
 ## Condicionais
-```
+São quase como uma função fragmentada, que ao invés de realizar uma ação especifíca, ela irá executar uma determinada linha de comando baseada nas condições que nós definirmos.
+
+As condições básicas são 'if' e 'else'
+
+```javascript
 function test() {
-  console.log('ok')
+  if (condição = true) {
+    console.log('Se a condição estiver correta, essa linha de comando será executada')
+  } else {
+    console.log('caso qualquer situação contrária, essa linha de código será executada')
+  }
 }
+```
+  
+  Para criarmos mais de duas condições, podemos fazer o uso de 'else if' que cria condições intermediárias entre if/else
+
+```javascript
+function test() {
+  if (condição = true) {
+    console.log('Se a condição estiver correta, essa linha de comando será executada')
+  } else  if (condição === null) {
+    console.log('caso a condição inicial não seja a válida, existe essa segunda opção')
+  } else {
+    console.log('caso qualquer situação contrária, essa linha de código será executada')
+  }
+}
+```
+
+Também podemos fazer o uso de _switch_ _case_, nesse formato a condicional observa um valor que em algum momento será alterado, e no block de código escrevemos o que será feito em caso desse valor ser alterado para outro especifico. A syntax dessa condicional consiste na funlão switch, o parâmetro do valor que será observado, o case que define qual os possíveis valores, o que irá ser feito, e o break para parar a leitura dessa linha.
+
+```javascript
+
+let x = "0";
+switch (x) {
+  case 0:
+    text = "Off";
+    break;
+  case 1:
+    text = "On";
+    break;
+  default:
+    text = "No value found";
+}
+
 ```
 
 ## Loops
@@ -898,7 +938,55 @@ while ( count <= 10 ) {
 ```
 
 ## Métodos
-{PLACEHOLDER}
+Description
+
+<dl>
+  <dt>Reduce()</dt>
+  <dd>
+    O filter serve para filtrar parâmetros de um Array, e criar outro. No caso, pegar um array existente e baseado em algum dado do object, criar um novo array com os valores relativos a condição do filter.
+    Importante lembrar que a syntax do filter se baseia em retornar o valor mediante a true, os objetos que se encaixarem nesse parâmetro são adicionados ao novo Array.
+  </dd>
+</dl>
+
+Ex:
+
+<dl>
+  <dt>Map()</dt>
+  <dd>
+    O map é uma maneira de  gerar novos dados de objetos de um Array, sem alterar a coleção original. Basicamente ele pega diferentes dados dos objetos e retorna um novo Array com esses dados modificados.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>Filter()</dt>
+  <dd>
+    O filter serve para filtrar parâmetros de um Array, e criar outro. No caso, pegar um array existente e baseado em algum dado do object, criar um novo array com os valores relativos a condição do filter.
+    Importante lembrar que a syntax do filter se baseia em retornar o valor mediante a true, os objetos que se encaixarem nesse parâmetro são adicionados ao novo Array.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>Math()</dt>
+  <dd>
+   O Math pode ser usado para operar qualquer valor, detalhe para que nesse método é iniciado com “M” maiúsculo
+  Math.round - Retorna o valor mais próximo do número inteiro.
+  Math.ceil - Retorna o valor do número inteiro mais alto.
+  Math.floor - Retorna o valor do número inteiro menor.
+  Math.trunc - Retorna o número referente ao primeiro dígito do valor. Ex: Math.trunc(7.1, 7.9) = (7, 7)
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>Reduce()</dt>
+  <dd>
+    O filter serve para filtrar parâmetros de um Array, e criar outro. No caso, pegar um array existente e baseado em algum dado do object, criar um novo array com os valores relativos a condição do filter.
+    Importante lembrar que a syntax do filter se baseia em retornar o valor mediante a true, os objetos que se encaixarem nesse parâmetro são adicionados ao novo Array.
+  </dd>
+</dl>
+
 
 ## Eventos
 PLACEHOLDER
