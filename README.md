@@ -1146,6 +1146,35 @@ const students = [
 </dl>
 
 ## Seletores JS
+Assim como no CSS, precisamos dar um identificador par os elementos HTML para que sejam manipulados, no Javascript não é diferente. É possível fazer pelos seletores:
+
+<dl>
+  <dt>getElementByTag('tagName')</dt>
+  <dd>
+    Selecionar pela tag, porém é um seletor que se o uso não for muito específico, irá trazer bugs de manipulação dependendo da tag selecionada
+  </dd>
+</dl>
+
+<dl>
+  <dt>getElementByClass('className')</dt>
+  <dd>
+    Seleciona pela classe, assim como é feito no CSS
+  </dd>
+</dl>
+
+<dl>
+  <dt>getElementById('idName')</dt>
+  <dd>
+    Selecionando o elemento pelo seu identificador
+  </dd>
+</dl>
+
+<dl>
+  <dt>querySelector('#id') ou ('.class')</dt>
+  <dd>
+    Permite esolher entre classe ou Id, mas é preciso indicar para o sistema pelos sinais de '#' ou '.' - Também existe o querySelectorAll()...
+  </dd>
+</dl>
 
 ## Eventos
 PLACEHOLDER
