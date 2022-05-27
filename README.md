@@ -980,10 +980,32 @@ Os métodos são maneiras de alteração e manipulação de dados.
 <dl>
   <dt>Reduce()</dt>
   <dd>
-    O filter serve para filtrar parâmetros de um Array, e criar outro. No caso, pegar um array existente e baseado em algum dado do object, criar um novo array com os valores relativos a condição do filter.
-    Importante lembrar que a syntax do filter se baseia em retornar o valor mediante a true, os objetos que se encaixarem nesse parâmetro são adicionados ao novo Array.
+    Se baseia em pegar uma quantidade de valores, e reduzir em um único valor. Com reduzir, no caso a quantidade de retorno de valores, não necessáriamente reduzir os valores individualmentes
   </dd>
 </dl>
+
+```javascript
+const student = {
+            name: 'Maria',
+            last: 'Silva',
+            scores: [7, 10, 8, 5, 7, 9],
+}
+
+  const name = student.name
+  const media = student.scores
+  const sem = student.scores.length
+
+  const finalScore = media.reduce((acc, cur) => {
+    const grade = acc + cur / sem
+    return grade
+  }, 0)
+
+  const finalGrade = Math.ceil(finalScore)
+
+  let print = `A média de ${name} foi de ${finalGrade}, em um total de ${sem} semestres.`
+
+  console.log(print)
+```
 
 Ex:
 
@@ -994,6 +1016,22 @@ Ex:
   </dd>
 </dl>
 
+```javascript
+
+const students = [
+            { name: 'Maria', last: 'Silva', score: 7, },
+            { name: 'Luiz', last: 'Cardozo', score: 4, },
+            { name: 'Camila', last: 'Matos', score: 9, },
+            { name: 'Luiza', last: 'Picon', score: 6, },
+]
+
+  const allStudents = students.map((student) => {
+   return `${students.name} ${students.last}`
+  })
+
+console.log(allStudents)
+```
+
 
 <dl>
   <dt>Filter()</dt>
@@ -1002,6 +1040,28 @@ Ex:
     Importante lembrar que a syntax do filter se baseia em retornar o valor mediante a true, os objetos que se encaixarem nesse parâmetro são adicionados ao novo Array.
   </dd>
 </dl>
+
+```javascript
+
+const students = [
+            { name: 'Maria', last: 'Silva', score: 7 },
+            { name: 'Luiz', last: 'Cardozo', score: 4 },
+            { name: 'Camila', last: 'Matos', score: 9 },
+            { name: 'Luiza', last: 'Picon', score: 6 },
+]
+
+  const media = 6
+
+  const scoreReach = students.filter((scoreNeed) => {
+    let grade = false
+    if (scoreNeed.score >= media) {
+      grade = true
+    }
+    return grade
+  })
+
+  console.log(scoreReach)
+```
 
 
 <dl>
@@ -1016,16 +1076,6 @@ Ex:
   </ul>
   </dd>
 </dl>
-
-
-<dl>
-  <dt>Reduce()</dt>
-  <dd>
-    O filter serve para filtrar parâmetros de um Array, e criar outro. No caso, pegar um array existente e baseado em algum dado do object, criar um novo array com os valores relativos a condição do filter.
-    Importante lembrar que a syntax do filter se baseia em retornar o valor mediante a true, os objetos que se encaixarem nesse parâmetro são adicionados ao novo Array.
-  </dd>
-</dl>
-
 
 ## Eventos
 PLACEHOLDER
