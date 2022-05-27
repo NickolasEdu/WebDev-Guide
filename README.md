@@ -975,7 +975,7 @@ while ( count <= 10 ) {
 ```
 
 ## Métodos
-Os métodos são maneiras de alteração e manipulação de dados.
+Os métodos são maneiras de alteração e manipulação de dados de objetos ou arrays.
 
 <dl>
   <dt>Reduce()</dt>
@@ -1062,7 +1062,75 @@ const students = [
 
   console.log(scoreReach)
 ```
+<dl>
+  <dt>.length</dt>
+  <dd>
+    Indica o tamanho do objeto, ou quantas posições há no array.
+  </dd>
+</dl>
 
+<dl>
+  <dt>toLowerCase()/toUpperCase</dt>
+  <dd>
+    Transformar todas as letras em minúsculo ou maiúsculo, respectivamente
+  </dd>
+</dl>
+
+<dl>
+  <dt>objeto.split</dt>
+  <dd>
+    Define um caractere em que o texto será separado a partir dele - isso se aplica também a espaços vazios " ".
+  </dd>
+</dl>
+
+<dl>
+  <dt>join()</dt>
+  <dd>
+    Faz o contrário do split, recebe um caractere que será inserido entre as posições do array ao unir todas os valores.
+  </dd>
+</dl>
+
+<dl>
+  <dt>includes()</dt>
+  <dd>
+    Filtrar uma string buscando por uma palavra específica.
+  </dd>
+</dl>
+
+<dl>
+  <dt>Push()</dt>
+  <dd>
+    Adiciona um elemento no final do array
+  </dd>
+</dl>
+
+<dl>
+  <dt>Unshift()</dt>
+  <dd>
+    Adiciona um elemento no inicio do array
+  </dd>
+</dl>
+
+<dl>
+  <dt>Pop()</dt>
+  <dd>
+    Remove o último elemento.
+  </dd>
+</dl>
+
+<dl>
+  <dt>Shift()</dt>
+  <dd>
+    Remove o primeiro elemento.
+  </dd>
+</dl>
+
+<dl>
+  <dt>Indexof()</dt>
+  <dd>
+    Encontrar a posição no index do array.
+  </dd>
+</dl>
 
 <dl>
   <dt>Math()</dt>
@@ -1076,6 +1144,8 @@ const students = [
   </ul>
   </dd>
 </dl>
+
+## Seletores JS
 
 ## Eventos
 PLACEHOLDER
