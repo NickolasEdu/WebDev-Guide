@@ -629,6 +629,40 @@ Os Statements são as instrunções de uso para passarmos comandos para o sistem
   <dd>Not a Number ou não é um número, ocorre quando tentamos pegar o valor de alguma operação entre um número e outro tipo de dado.</dd>
 </dl>
 
+## Expressions
+As expressões são toda as linhas de atribuição de valor, ou ação.
+
+<dl>
+  <dt>Variáveis</dt>
+  <dd>
+    Aonde armazenamos valores fixos ou não, para serem usados posteiormente no desenvolvimento do nosso algoritmo
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>New</dt>
+  <dd>
+    Uma função construtora do próprio Javascript que serve para criar um novo objeto, ela recebe a função com o tipo de objeto que será criado [ex: string(), number(), date()] e os dados desse objeto, dentro dos parâmetros e entre aspas.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>Typeof</dt>
+  <dd>
+    Literalmente "Tipo de..." dá um feedback sobre qual o tipo de dado é aquele objeto.
+  </dd>
+</dl>
+
+<dl>
+  <dt>Delete</dt>
+  <dd>
+    Para deletar um dado especifíco, recebe a expressão que está armazenado e o objeto desejado. ex: Delete array.name, assim deletendo todos os valores de nome.
+  </dd>
+</dl>
+
+
 ## Variavéis
 São são recipientes de valores, sejam eles de números, texto, elementos, funções. Podemos guardar valores dentro de variáveis enquanto declaramos elas com os nomes que melhor acharmos adequado para facilitar a reutilização. Porém como toda linguagem, precisamos entender as regras e o seu comportamento. Ao declarar uma variável temos as seguintes opções:
 
@@ -788,6 +822,9 @@ const person = {
 }
 ```
 
+## Prototype
+O Javascript é uma linguagem baseada em protótipos, nesse caso, a maioria dos objetos herda uma cadeia de protótipos com usos prédinifidos pelo sistema. Isso pode ser observado acessando a partir do .__proto__ após qualquer objeto. Mostrando assim a cadeia de dados deste protótipo e várias de suas funções, como .length que mostra as posições (quantidade de items) desse objeto. 
+
 ## Operadores
 Os operadores servem para fazer alterações nos valores que estamos usando, e são essenciais para desenvolver os nosso algoritmos.
 
@@ -938,7 +975,7 @@ while ( count <= 10 ) {
 ```
 
 ## Métodos
-Description
+Os métodos são maneiras de alteração e manipulação de dados.
 
 <dl>
   <dt>Reduce()</dt>
@@ -970,11 +1007,13 @@ Ex:
 <dl>
   <dt>Math()</dt>
   <dd>
-   O Math pode ser usado para operar qualquer valor, detalhe para que nesse método é iniciado com “M” maiúsculo
-  Math.round - Retorna o valor mais próximo do número inteiro.
-  Math.ceil - Retorna o valor do número inteiro mais alto.
-  Math.floor - Retorna o valor do número inteiro menor.
-  Math.trunc - Retorna o número referente ao primeiro dígito do valor. Ex: Math.trunc(7.1, 7.9) = (7, 7)
+  O Math pode ser usado para operar qualquer valor, detalhe para que nesse método é iniciado com “M” maiúsculo
+  <ul>
+    <li>Math.round - Retorna o valor mais próximo do número inteiro.</li>
+    <li>Math.ceil - Retorna o valor do número inteiro mais alto.</li>
+    <li>Math.floor - Retorna o valor do número inteiro menor.</li>
+    <li>Math.trunc - Retorna o número referente ao primeiro dígito do valor. Ex: Math.trunc(7.1, 7.9) = (7, 7)</li>
+  </ul>
   </dd>
 </dl>
 
@@ -990,8 +1029,6 @@ Ex:
 
 ## Eventos
 PLACEHOLDER
-
-## Prototype / Expressions
 
 ## API + JSON
 {PLACEHOLDER}
