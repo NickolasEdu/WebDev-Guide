@@ -1196,11 +1196,34 @@ Ao selecionar elementos que já existem no HTML, nós podemos navegar por eles p
 
 Ex:
 
-```javascript
+_Neste exemplo o elemento é uma div central que há apenas uma imagem dentro, na sequência eu criei um título e uma descrição para a imagem e inseri pelo próprio JS_
 
+```javascript
+  const mainElement = document.getElementById('mainDiv')
+
+  const headline = document.createElement('h1')
+  headline.innerText = "Esse é um título"
+  mainElement.prepend(headline)
+
+  const description = document.createElement('p')
+  description.innerText = "Esse é um texto"
+  mainElement.append(description)
 
 ```
 
+<dl>
+  <dt>Pegando elementos pai</dt>
+  <dd>
+    seletor.parentElement / ou seletor parentNode - assim é possível inserir algo antes ou depois desse elemento especifíco.
+  </dd>
+</dl>
+
+<dl>
+  <dt>Pegando elementos filhos ou irmãos</dt>
+  <dd>
+    seletor. firstChild ou firstElementChild e firstSibling ou firstElementSubling - Esses seletores são para os elementos filhos e irmãos, respectivamente. A diferença entre eles é que, ao pegar o primeiro elemento filho e houver um espaço entre ele e o elemento pai, nada será selecinado, o firstElement previne isso e busca o próximo elemento html, idependente de espaços ou indentação.
+  </dd>
+</dl>
 
 
 ## Eventos
