@@ -1265,10 +1265,28 @@ Adicionar um evento de escuta, sempre que esse evento for chamado ele executa um
 </dl>
 
 ## Conversão de Dados
-{Parse, coersion e JSON}
+Aqui é de nosso conhecimento que no javascript a operação '4' + 4 = 44, porém é possível alterar esses valores com os métodos:
+
+String(4 + 4) e com isso retornando em string.
+
+Number(4 + '4') Retornando em formato de números.
+
+JSON.stringfy e JSON.parse
+
+O JSON é uma forma de comunicação de dados entre sistemas, no consumo de API por exemplo, mas o Javascript em si não traduz o JSON. Nesse caso, o método stringfy() pega os objetos, transforma em json e retorna para algo, uma variável por exemplo. Já o  parse(); Recebe um objeto json e retorna para alguém, no caso uma variavel em formato de objeto javascript, para que possa ser lido e usado no nosso sistema. 
 
 
 ## API + JSON
 {PLACEHOLDER}
 
 **[⬆ voltar ao topo](#index)**
+
+# Node
+
+Criado em 2009 por Ryan Dahl, o uso do Node cresceu muito, tanto que em 2015 foi criado o Node Fundation, para discutir e analisar melhorias no sistema que é open source. Mas o que é o Node.js? É um interpretador de Javascritp, que faz isso a partir do backend - diferente do javascript que é interpretado pelo browser, aqui o código roda do lado do servidor interpretado pelo V8 do Google e tem algumas particularidades, uma delas por exemplo é que não temos o DOM - Seu uso é variado, mas uma de suas maiores vantagens é não precisar dividir o seu projeto em diferentes linguagens para o front e para o back, tudo é desenvolvido baseado em Javascript.
+Bascicamente é um ambiente de execução em tempo real - JS Runtime Enviroment.
+
+## Comportamento
+No JS convencional a execução é sincrona e feita na sequencia que foi escrita, já no Node por padrão é de forma assincrona a partir dos eventos em loop. De inicio o Nodejs registra todas as funções declaradas e põe em uma fila de execução, e responsável por tirar dessa fila e fazer com que seja executado é o Event Loop, ele está o tempo "de olho" para não deixar nada na fila, sempre trazendo uma função de cada vez para a execução.
+
+{Exemplo}
