@@ -572,7 +572,7 @@ Os Statements são as instrunções de uso para passarmos comandos para o sistem
 
 <dl>
   <dt>Syntax</dt>
-  <dd>Como já vimos, são as regras de escrita. Seria as "vírgulas" e ascentos de um texto</dd>
+  <dd>Como já vimos, são as regras de escrita. Seriam as "vírgulas" e ascentos de um texto</dd>
 </dl>
 
 <dl>
@@ -985,11 +985,11 @@ Os métodos são maneiras de alteração e manipulação de dados de objetos ou 
 </dl>
 
 ```javascript
-const student = {
-            name: 'Maria',
-            last: 'Silva',
-            scores: [7, 10, 8, 5, 7, 9],
-}
+  const student = {
+    name: 'Maria',
+    last: 'Silva',
+    scores: [7, 10, 8, 5, 7, 9],
+  }
 
   const name = student.name
   const media = student.scores
@@ -1176,8 +1176,97 @@ Assim como no CSS, precisamos dar um identificador par os elementos HTML para qu
   </dd>
 </dl>
 
+## Manipulação dos elementos HTML
+
+Ao selecionar elementos que já existem no HTML, nós podemos navegar por eles para alterar, criar e inserir novos elementos a partir do JS.
+
+<dl>
+  <dt>texto HTML</dt>
+  <dd>
+    Algumas das maneiras de alterar um texto no html, é ao selecionar a tag onde o texto está escrito, pelo JS criar uma váriavel com um texto em string e inserir ele no javascript através de algum dos métodos como: <b>.innerText</b>, .innerHTML, .textContent. No geral esses três métodos funcionam com comportamentos semelhentes, no caso do innerHTML é possível inserir outras tags e usar dados de outras váriaveis com a string literal, então se a necessidade for especificamente apenas alterar um texto, então o uso do innerText seja melhor recomendada. 
+  </dd>
+</dl>
+
+<dl>
+  <dt>Criando um novo elemento</dt>
+  <dd>
+    PAra criar um novo elemento a partir do JS usados o createElement('elemento'), passando como parâmetro o tipo de elemento que vamos criar - div, p, h1, etc - e atribuindo a uma variável, temos total liberdade de manipulação para podermos inserir este novo elemento antes ou depois de outro.
+  </dd>
+</dl>
+
+Ex:
+
+```javascript
+
+
+```
+
+
+
 ## Eventos
-PLACEHOLDER
+
+Eventos são como uma função especifica pré definidas, isso faz com que a sintax também tenha suas particularidades.
+
+**objeto.onevent**
+
+Syntax baseada no objeto selecionado e o tipo de evento, para ai sim atribuir a uma função.
+
+**addEventListener('evento', function())**
+
+Adicionar um evento de escuta, sempre que esse evento for chamado ele executa uma função. Mas é importante primeiro indicar qual o tipo do evento, neste caso sem o uso do 'on'.
+
+<dl>
+  <dt>on change</dt>
+  <dd>
+    Evento especifico para observar a mudança de um input - tipo radio por exemplo.
+  </dd>
+</dl>
+
+<dl>
+  <dt>on click</dt>
+  <dd>
+    Executa um evento ao elemento ser clicado.
+  </dd>
+</dl>
+
+<dl>
+  <dt>on submit</dt>
+  <dd>
+    Evento especifico para botão de enviar dentro da tag de formulário.
+  </dd>
+</dl>
+
+<dl>
+  <dt>on mouse hover</dt>
+  <dd>
+    Evento executado no momento em que o mouse está em cima do elemento. Função inversa é o on mouse out.
+  </dd>
+</dl>
+
+<dl>
+  <dt>on mouse move</dt>
+  <dd>
+    Evento executado enquanto o mause está se movendo em cima do elemento.
+  </dd>
+</dl>
+
+<dl>
+  <dt>on load</dt>
+  <dd>
+    Executado assim que a página terminar de carregar por completo. 
+  </dd>
+</dl>
+
+<dl>
+  <dt>on key (pres, down, up...)</dt>
+  <dd>
+    Evento especifico para cada tecla apertada.
+  </dd>
+</dl>
+
+## Conversão de Dados
+{Parse, coersion e JSON}
+
 
 ## API + JSON
 {PLACEHOLDER}
