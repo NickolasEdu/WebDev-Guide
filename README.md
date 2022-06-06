@@ -1,4 +1,4 @@
-Prazer meu nome é Nickolas Eduardo, eu criei este repositório como uma forma de revisar todos os conteúdos que eu estudei relacionados a desenvolvimento web. De inicio eu fiz esses resumos para uso próprio, mas com o tempo conhecendo outros desenvolvedores iniciantes eu cheguei a conclusão de que esses meus resumos poderiam de alguma forma serem úteis para outros desenvolvedores.
+Prazer meu nome é Nickolas Eduardo, eu criei este repositório como uma forma de revisar todos os conteúdos que eu estudei relacionados a desenvolvimento web. De inicio eu fiz esses resumos para uso próprio, mas com o tempo conhecendo outros desenvolvedores iniciantes eu cheguei a conclusão de que esses meus resumos poderiam de alguma forma, serem úteis para outros desenvolvedores.
 
 Eu não sou nenhum desenvolvedor Pleno ou Sênior, ainda não sou nem um Júnior. Mas eu sei como é difícil no começo encontrar um norte, sendo assim eu espero que esse projeto ajude e seja útil para aqueles que estiverem lendo.
 
@@ -9,8 +9,8 @@ Eu não sou nenhum desenvolvedor Pleno ou Sênior, ainda não sou nem um Júnior
 ## Index
 
 0. [Inglês](#ingles)
-1. [Conceitos web](#conceitos-web)
-2. [Programação](#programação)
+1. [Conceitos Web](#conceitos-web)
+2. [Desenvolvimento Web](#desenvolvimento-web)
 3. [HTML](#html)
 4. [CSS](#css)
 5. [Javascript](#javascript)
@@ -103,7 +103,7 @@ Agora a função de fazer que isso funcione, cabe o programador que seguindo alg
 
 **[⬆ voltar ao topo](#index)**
 
-# Programação
+# Desenvolvimento Web
 
 ## Linguagem de programação
 
@@ -131,14 +131,22 @@ Também temos outras opções como Sublime Text e Atom, mas em questão de funci
 
 ## Ambiente de desenvolvimento
 
-*Um ambiente de desenvolvimento é tudo aquilo que te auxilia a ser mais produtivo. Para esse ínicio vou apresentar algumas ferramentas e extensões do VS Code que nos ajudam.*<br>
+*Um ambiente de desenvolvimento é tudo aquilo que te auxilia a ser mais produtivo. Para esse ínicio vou apresentar algumas ferramentas e extensões do VS Code que nos ajudam.*
+
 - **Tema do editor**, a escolha de um tema pode ser muito útil no começo pois ao se acostumar com uma paleta de cores, você logo vai encontrar os elementos na tela só de bater o olho, ajudando muito a diferenciar funções, variaveis e constantes.
 - **HTML Preview**, ele te trás uma pré visualização numa janela ao lado do próprio código, bastante simples mas ajuda a você ver como o HTML está sendo apresentado, no inicio pode ser útil para pegar o comportamento das Tags.
 - **Live Server**, esse sim é mais completo que o HTML Peview. O Live Server roda seu arquino direto no navegador e a cada vez que salva você pode ver com qual cara seu site está ficando de maneira semi-automática
 - **Codesnap**, Uma situação muito comum quando um dev precisa compartilhar um código que não está no GitHub ou precisa achar um erro em uma parte especifíca. O Codesnap é essencial para isso, essa extenção tira um print em ótima qualidade do trecho do código que você escolher, já importa para imagem pronta para ser enviada para outro dev.
 - **Dev Tools**, ou ferramente do desenvolvedor que abrimos pelo próprio navegador. Com ela conseguimos ver dados do código fonte, Estilos, consultas ao servidor de quase qualquer site que visitamos, e principalmente para estudarmos o comportamento dos nossos próprios projetos.
 
+## GitHub
+PLACEHOLDER
 
+## Terminal - Git Bash
+PLACEHOLDER
+
+## Dicionário Dev
+PLACEHOLDER
 
 **[⬆ voltar ao topo](#index)**
 
@@ -147,12 +155,13 @@ Também temos outras opções como Sublime Text e Atom, mas em questão de funci
 
 ### Material de apoio do capítulo
 
-Playlist com instalação do VS Code e primeiros passos HTML
-<br>
-<a href="https://www.youtube.com/playlist?list=PLmPm9dwop78-WqqusnExiNlRJVHEwZjWQ" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
-<br>
-Dois sites com documentação das tecnologias trabalhadas, muito úteis para relembrar maneiras de uso e revisar syntax de elementos.
-<a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a> e <a href="https://www.w3schools.com/">W3Schools</a>
+[Playlist com instalação do VS Code e primeiros passos HTML](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
+
+Dois sites com documentação das tecnologias trabalhadas, muito úteis para relembrar maneiras de uso e revisar syntax de elementos:
+
+[MDN Web Docs](https://developer.mozilla.org/en-US/)
+&
+[W3Schools]("https://www.w3schools.com/")
 
 ## Definição
 A sigla de HTML significa HyperText MArkup Language. Aqui já sabemos que o **https** é o protocolo de transferência de hipertexto, pois bem, o **HTML** é basicamente o arquivo de texto que o protocolo envia de um computador para outro.
@@ -175,8 +184,7 @@ A principal característica das tags é estarem sempre dentro dos sinais de chev
 
 Para o auxílio do entendimento das tags, criei um exemplo prático em um arquivo **HTML**. Esse arquivo está disponível para ser clonado, navegar pelo código ou até para ser copiado amnualmente e ir acompanhando visualmente a apresentação das tags, seja no navegador com live server ou pelo HTML Preview.
 
-
-<a href="https://github.com/NickolasEdu/html-guide" target="_blank"><img title="HTML5" alt="HTML" height="35" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"></a>
+[Exemplos de uso](https://github.com/NickolasEdu/html-guide)
 
 Ao navegar pelo código de exemplo, notamos que: Tudo dentro da tag 'head' é referente a configuração, encaixe na tela, título da aba, ícone da janela, importação de fonte, importação de CSS, é a cabeça do nosso sitema. Já no 'body' vai literalmente o corpo, todo o conteúdo visivél para o usuário. <br>
 Até aqui fomos introduzidos as tags e as divs, que são basicamente caixas que agrupam certos conteúdos. Div 'header' por exemplo agrupa todas as tags que estão no cabeçalho da página. E que cada div pode receber uma classe. <br>
@@ -1313,3 +1321,5 @@ Bascicamente é um ambiente de execução em tempo real - JS Runtime Enviroment.
 No JS convencional a execução é sincrona e feita na sequencia que foi escrita, já no Node por padrão é de forma assincrona a partir dos eventos em loop. De inicio o Nodejs registra todas as funções declaradas e põe em uma fila de execução, e responsável por tirar dessa fila e fazer com que seja executado é o Event Loop, ele está o tempo "de olho" para não deixar nada na fila, sempre trazendo uma função de cada vez para a execução.
 
 {Exemplo}
+
+**[⬆ voltar ao topo](#index)**
