@@ -1322,4 +1322,46 @@ No JS convencional a execução é sincrona e feita na sequencia que foi escrita
 
 {Exemplo}
 
+
+## NPM
+
+O Node Packged Meneger é um gerenciador de pacotes do Node, ele já vem com diversas funções nativas, porém existem outras das quais podemos adicionar individualmente em cada projeto e fazer uso delas - essas funções extras são chamadas de modules, packages ou dependencies e são como se fossem uma extensão do Nodejs.
+
+**Comandos**
+
+<dl>
+  <dt>node -v</dt>
+  <dd>
+    Consultar a versão instalada do node.
+  </dd>
+</dl>
+
+<dl>
+  <dt>npm init -y</dt>
+  <dd>
+    O npm init faz a instalação do packed.json, as configurações do node em formato JSON. Além de algumas especificações e controle do arquivo, sendo o -y o atalho para fazer a instalação com as configurações rápidas do arquivo.
+  </dd>
+</dl>
+
+<dl>
+  <dt>npm uninstall</dt>
+  <dd>
+    Faz a desintalação de um pacote
+  </dd>
+</dl>
+
+<dl>
+  <dt>npm -D</dt>
+  <dd>
+    Faz a instalação no ambiente dev...
+  </dd>
+</dl>
+
+<dl>
+  <dt>scripts</dt>
+  <dd>
+    Os scripts do packed.json...
+  </dd>
+</dl>
+
 **[⬆ voltar ao topo](#index)**
