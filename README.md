@@ -1375,9 +1375,136 @@ O Node Packged Meneger é um gerenciador de pacotes do Node, ele já vem com div
 {PLACEHOLDER}
 
 ## Timers
-{PLACEHOLDER}
+Funções semelhantes a vistas antes no javascript, onde são usadas em códigos assincronos e uso de callbacks.
+
+### setTimeout
+Essa função recebe dois argumentos, primeiro o que será executado e o tempo que irá levar até que seja feita a execução. ex: setTimeout(callback, 3000), aqui está fazendo a callback de uma função e o tempo de espera é de 3 segundos, já que o valor passado no timer está em milissegundos.
+
+Assim como no lugar dos valores de tempo podemos passar uma variável com esse número atribuído, também podemos escrever toda a função dentro da própria declaração do timer. ex: setTimeout(function() { console.log(’HelloWorld’)}, Timer), mas não é uma boa prática declarar tudo dentro do timer.
+
+```javascript
+const timer = 3000
+const finished = () => console.log("All Done!")
+
+setTimeout(finished, timer)
+```
+
+## clearTimeout
+Essa função simplesmente cancela o timer, no caso do exemplo do setTimeout, foi declarado para ser executado em 3 segundos. Porém se for definido um clear para esta função logo após ele, o sistema automaticamente cancela a execução dele.
+
+```jsx
+const timer = 3000
+const finished = () => console.log("All Done!")
+
+cont timeOut = setTimeout(finished, timer)
+clearTimeout(timeOut)
+```
+
+## setInterval
+
+ A syntax dessa função é semelhante ao setTimeout, recebe a função que será executada e o tempo dela, mas a diferença está no comportamento. O timer definido será referente ao espaço de tempo que a função será executada, ou seja, se definirmos um tempo de 3 segundos o sistema entenderá que a cada vez que passar esse tempo ele precisa chamar a função novamente.
+
+```jsx
+const timer = 5000
+const callback = () => console.log('Interval OK')
+
+setInterval(callback, timer)
+```
+
+## clearInterval
+
+ Para parar a execução de um interval do qual não definimos no código seu encerramento, usamos o crtl+c do terminal. Para definir o cancelamento do intervalo o método é o mesmo do clearTimeout
+
+```jsx
+const timer = 5000
+const callback = () => console.log('Interval OK')
+
+const interval = setInterval(callback, timer)
+clearInterval(interval)
+```
+
+### Exemplo
+
+Definindo um intervalo de execução de 1 segundo que após 5 segundos é cancelado.
+
+```jsx
+const timer = 1000
+const check = () => console.log('Check')
+
+const interval = setInterval(check, timer)
+
+setTimeout( () => clearInterval(interval), 5000)
+```
 
 ## Events
-{PLACEHOLDER}
+Events Modules são como as notificações que recebemos de aplicativos por exemplo, a configuração padrão é para ouvir um evento que quando é acionado dispara uma ação. Vimos casos semelhantes no método on() por exemplo.
+
+O ‘events’ já é um module padrão do Node, para criarmos a estrutura inicial de emissão de eventos é feito a importação de destructuring do EventEmitter.
+
+```jsx
+const { EventEmitter } = require('events')
+
+const e = new EventEmitter()
+
+e.on('helloWorld', () => {
+    console.log('Evento emitido, escutado e executado')
+})
+
+e.emit('helloWorld')
+```
+
+Primeiro a importação desestruturada do require de events trazendo o Emitter e então criando um novo evento, atribuído a uma função. A nova função está sendo escutada pelo on() que ao perceber que o primeiro paramêtro passado foi emitido, ele executa uma função.
+
+Output esperado:
+
+Evento emitido, escutado e executado
+
+### Event Emitter com parâmetros
+
+```jsx
+const { EventEmitter } = require('events')
+
+const e = new EventEmitter()
+
+e.on('helloWorld', (text) => {
+    console.log('Evento emitido, escutado e executado', text)
+})
+
+e.emit('helloWorld', 'Primeiro')
+e.emit('helloWorld', 'Segundo')
+e.emit('helloWorld', 'Terceiro')
+```
+
+Ao passar um parâmetro para a função que é chamado pelo evento de escuta - text - a cada vez que o evento é emitido, podemos retornar um valor diferente para cada emissão.
+
+Output esperado:
+
+Evento emitido, escutado e executado primeiro
+
+Evento emitido, escutado e executado segundo
+
+Evento emitido, escutado e executado terceiro
+
+### Evento com disparo único
+
+A função de escuta on() permite que uma função seja executada a quantidade de disparos que houver no código, uma muito semelhante faz com que o evento de escuta ouça apenas o primeiro disparo, ignorando todos os outros depois dele.
+
+```jsx
+const { EventEmitter } = require('events')
+
+const e = new EventEmitter()
+
+e.once('helloWorld', (text) => {
+    console.log('Evento emitido, escutado e executado', text)
+})
+
+e.emit('helloWorld', 'Primeiro')
+e.emit('helloWorld', 'Segundo')
+e.emit('helloWorld', 'Terceiro')
+```
+
+Output esperado:
+
+Evento emitido, escutado e executado Primeiro
 
 **[⬆ voltar ao topo](#index)**
