@@ -14,6 +14,7 @@ Eu não sou nenhum desenvolvedor Pleno ou Sênior, ainda não sou nem um Júnior
 3. [HTML](#html)
 4. [CSS](#css)
 5. [Javascript](#javascript)
+6. [Node](#node)
 
 # Ingles
 
@@ -1363,5 +1364,20 @@ O Node Packged Meneger é um gerenciador de pacotes do Node, ele já vem com div
     Os scripts do packed.json...
   </dd>
 </dl>
+
+## packed.JSON
+{PLACEHOLDER}
+
+## Modules
+{PLACEHOLDER}
+
+## Process
+{PLACEHOLDER}
+
+## Timers
+{PLACEHOLDER}
+
+## Events
+{PLACEHOLDER}
 
 **[⬆ voltar ao topo](#index)**
