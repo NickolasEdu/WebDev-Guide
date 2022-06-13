@@ -1365,8 +1365,15 @@ O Node Packged Meneger é um gerenciador de pacotes do Node, ele já vem com div
   </dd>
 </dl>
 
-## packed.JSON
-{PLACEHOLDER}
+## Instalação de pacotes
+
+Ao fazer o **npm init** o node instala o arquivos de packed.json, packed.lock.json e o node_modules.
+
+Tanto o packed.lock.json quanto o node_modules são arquivos fixos para o funcionamento do node, exemplo: para usarmos os módulos raiz do nodejs é preciso dos arquivos no node_modules. Sendo assim não é feita nenhuma alteração nesses dois arquivos.
+
+Já o packed.json em uma estrutura que podemos consultar e manipular, ele consiste em trazer as informações do nosso projeto. Desde versão, nome, autor, arquivo principal para ser executado pela linha de comando. Como também os scripts, que são atalhos do nosso projeto para rodar no terminal, como comandos de run, test, stop e etc.
+
+Outro objeto da estrutura do packed.json são as **dependencies**, nesse objeto podemos ver todos os pacotes intalados e suas versões. Assim como há também os **devdependencies**, no qual mostra os pacotes instaladas somente para acesso e manipulação dos desenvolvedores, e que para fazer a instalação nas diferentes dependencies são usados comandos diferentes. *npm install 'pacote'* para instalações normais e *npm install 'pacote' --save-dev* para instalar um pacote dentro do dev dependencies.
 
 ## Modules
 {PLACEHOLDER}
