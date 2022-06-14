@@ -1319,9 +1319,9 @@ Criado em 2009 por Ryan Dahl, o uso do Node cresceu muito, tanto que em 2015 foi
 Bascicamente é um ambiente de execução em tempo real - JS Runtime Enviroment.
 
 ## Comportamento
-No JS convencional a execução é sincrona e feita na sequencia que foi escrita, já no Node por padrão é de forma assincrona a partir dos eventos em loop. De inicio o Nodejs registra todas as funções declaradas e põe em uma fila de execução, e responsável por tirar dessa fila e fazer com que seja executado é o Event Loop, ele está o tempo "de olho" para não deixar nada na fila, sempre trazendo uma função de cada vez para a execução.
+No JS convencional a execução é sincrona e feita na sequencia que foi escrita, já no Node por padrão é de forma assincrona no blocking -não bloqueante -  a partir dos eventos em loop. De inicio o Nodejs registra todas as funções declaradas e põe em uma fila de execução, sempre que uma função precisa de tempo para ser processada ela vai parar na fila de processos e deixa que a fila de execução continue normalmente, até que ela seja executada por último. E responsável por tirar dessa fila e fazer com que seja executado é o Event Loop, ele está o tempo "de olho" para não deixar nada na fila, sempre trazendo uma função de cada vez para a execução.
 
-{Exemplo}
+Sendo assim, mesmo que uma função receba um timeout de zero segundos, ao identificar que há um timeout definido, o event loop coloca a função na fila dos processos o que faz ir para o final da fila de execução. Então ela só será executada após todas as outras da sequência, mesmo que o timeout já tenha sido concluído.
 
 
 ## NPM
@@ -1361,7 +1361,7 @@ O Node Packged Meneger é um gerenciador de pacotes do Node, ele já vem com div
 <dl>
   <dt>scripts</dt>
   <dd>
-    Os scripts do packed.json...
+    Os scripts do packed.json são atalhos que definimos para execuções rápidas.
   </dd>
 </dl>
 
@@ -1376,10 +1376,84 @@ Já o packed.json em uma estrutura que podemos consultar e manipular, ele consis
 Outro objeto da estrutura do packed.json são as **dependencies**, nesse objeto podemos ver todos os pacotes intalados e suas versões. Assim como há também os **devdependencies**, no qual mostra os pacotes instaladas somente para acesso e manipulação dos desenvolvedores, e que para fazer a instalação nas diferentes dependencies são usados comandos diferentes. *npm install 'pacote'* para instalações normais e *npm install 'pacote' --save-dev* para instalar um pacote dentro do dev dependencies.
 
 ## Modules
-{PLACEHOLDER}
+Os módulos são funções globais do node, ao fazer o npm init nós temos acesso a uma biblioteca de funções que são nativas do nodejs, e para fazer seu uso podemos atribuir uma váriavel e fazer a importação a partir do **require()**.
+
+ex:
+```jsx
+
+const fileSystem = require('fs')
+
+
+
+```
+
+Temos um arquivo principal com código javascript  
+Deverá ter outro arquivo .js que o nosso módulo será declarado  
+Os módulos são como variáveis, podemos armazenar o que for dentro deles - string, numeros, array e objetos
+Porém para “declarar essa variável” usamos o module.exports = ‘conteúdo do módulo’  
+Sendo assim, como não á uma atribuição de nome para o módulo - como é feito com variáveis - na hora de chamar este valor será usadoo título do arquivo js em que ele foi declarado
+No arquivo principal é feito o require(’./caminho/para/o/arquivo.js’) e o retornamos para uma variável.
+
+Sendo posspivel também fazer a importação de mais de uma função com o destructuring
+
+ex:
+
+Arquivo de funções
+```javascript
+
+function soma(n1, n2) {
+  return n1 + n2
+}
+
+function multi(n1, n2) {
+  return n1 * n2
+}
+
+module.exports = {
+  soma,
+  multi
+}
+```
+
+Importação no arquivo principal:
+```javascript
+
+const { soma, multi } = require('./functions.js')
+
+const somando = soma(10, 20)
+const multiplicando = multi(10, 20)
+
+console.log(somando)
+console.log(multiplicando)
+```
 
 ## Process
-{PLACEHOLDER}
+
+O process é uma variável global do node - lembra um pouco o prototype do Javascript - ele consiste em um objeto que trás todas as informações sobre a execução do arquivo, de vizualização e de controle. O argv por exemplo retorna em formato de array, tudo aquilo que está sendo rodado no projeto.
+
+**stdout & stdin**
+.process.stdout.write(”Output /n”), Standard Output - ou saída padrão - output de texto, do qual é a raiz do ‘console.log’. O comando console já trás manipulações do process.stdout pré definidas, exemplo o comando ‘/n’ que significa new line, ou seja, ao terminar de escrever o texto ele pula para a próxima linha, o que é o comportamento padrão do console.log.
+Já o .process.stdin() é o Standard Input - entrada padrão - input para inserção de dados.
+
+**exit()**
+Para indicar a finalização de um process, existe a função process.exit(). Da qual termina a execução de algum processo em andamento - de receber inputs por exemplo
+
+## Métodos
+
+<dl>
+  <dt>on()</dt>
+  <dd>
+    Evento de escuta, recebe dois parâmetros, primeiro o tipo de evento que vai escutar e em seguida a callback que irá executar - bastante semelhante ao addEventListener() no javascript, onde o evento também é colocado entre aspas - ex: escutando evento de exit
+    process.on('exit', function stop())
+  </dd>
+</dl>
+
+<dl>
+  <dt>once()</dt>
+  <dd>
+    Faz praticamente a mesma função que o on, porém ele escuta e executa uma ação apenas uma vez - assim como seu nome indica - ex: se no último caso usei o exit, então a função declarada será executada apenas na primeira vez que exit for usado, se isso por acaso se repita o evento once() não será executado novamente.
+  </dd>
+</dl>
 
 ## Timers
 Funções semelhantes a vistas antes no javascript, onde são usadas em códigos assincronos e uso de callbacks.
