@@ -212,6 +212,69 @@ O comportamento desse código consiste em uma imagem que ao ser clicada leva o �
 **alt=""**, Texto alternativo para caso a imagem não seja carregada, fica como segunda opção de exibição.<br>
 **width/height**, parâmetros de largura de altura atribuídos a imagem.
 
+**Tabelas**
+Uma tag que agrupa textos em linhas e colunas.
+
+{Syntax}
+
+<dl>
+  <dt>table</dt>
+  <dd>
+    tag pai da apresentação em tabela
+  </dd>
+</dl>
+
+<dl>
+  <dt>th</dt>
+  <dd>
+    O titulo de cada coluna
+  </dd>
+</dl>
+
+<dl>
+  <dt>tr</dt>
+  <dd>
+    O título de cada linha
+  </dd>
+</dl>
+
+<dl>
+  <dt>td</dt>
+  <dd>
+    Os condeúdos inseridos
+  </dd>
+</dl>
+
+<dl>
+  <dt>thead, tbody, tfooter</dt>
+  <dd>
+    função semelhante as tags comuns do html, servem como div para fazer a sepração do conteúdo.
+  </dd>
+</dl>
+
+<dl>
+  <dt>rowspan/columnspan</dt>
+  <dd>
+    Recebe um valor numérico de linhas ou colunas que irá ocupar e que serão apresentados em branco no conteúdo.
+  </dd>
+</dl>
+
+<dl>
+  <dt>Caption</dt>
+  <dd>
+    A descrição da tabela
+  </dd>
+</dl>
+
+<dl>
+  <dt>colgrup</dt>
+  <dd>
+    Estilização do conteúdo
+  </dd>
+</dl>
+
+{Syntax}
+
 ## Formulários
 São sessões de captação e controle de dados iseridos pelo usuário, quem recebe esses dados são os **inputs**
 <br>
