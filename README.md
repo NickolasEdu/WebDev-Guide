@@ -428,11 +428,53 @@ Manipulação da apresentação dos elementos na tela
 
 ## Background
 
-Conteúdo ao fundo de todos os elementos
-
-**background-color:** que recebe algum parâmetro de cor;
+A propriedade de background define a aparência de fundo do elemento selecionado.
 
 **background-image:** para definir uma imagem com **url('imagem.jpg')**, que também pode receber o **background-repeate:** com 'no-repeate' ou 'repeate', para fazer que a imagem seja posicionada repetidas vezes para cobrir a tela, ou para previvir esse comportamento.
+
+<dl>
+  <dt>background-color</dt>
+  <dd>
+  Recebe alguma propriedade de color, assim como o gradient.
+  </dd>
+</dl>
+
+{GRADIENT-SYNTAX}
+
+<dl>
+  <dt>background-image: url()</dt>
+  <dd>
+    Recebe uma imagem como background, caso a imagem não seja grande o suficiente ele se repetirá. Para previnir este comportamento é pasado o parâmetro <b>background-repeat: no-repeat</b>.
+  </dd>
+</dl>
+
+<dl>
+  <dt>background-attachment: fixed</dt>
+  <dd>
+    Fixa a posição da imagem de fundo em relação ao scroll da página.
+  </dd>
+</dl>
+
+<dl>
+  <dt>background-origin/clip</dt>
+  <dd>
+    Recebem box-sizing, content-box, padding-box</b>. O <b>origin</b> é o ponto de partida do conteúdo, é de comum prática atribuir o bpx-sizing para compactar o tamanho de todos os elementos, mas também pode definir a origem a partir do padding ou do conteúdo dentro - como podemos observar no exemplo da imagem de box-model - o <b>clip</b> é a partir de onde ele é apresentado, ou seja, ele pode até começar antes, mas se o clip estiver definido para uma camada acima o conteúdo é cortado. Exemplo, a origem é a partir do padding, mas só será apresentado na tela a partir do content.
+  </dd>
+</dl>
+
+<dl>
+  <dt>background-position</dt>
+  <dd>
+    Posicionamento especifíco para o background, recebe como parâmetro <b>top, left, bottom, right ou center</b>
+  </dd>
+</dl>
+
+<dl>
+  <dt>background-size</dt>
+  <dd>
+    Além de receber como parâmetro os valores: <b>px, %, em</b>. Támbem recebe <b>contain</b>: imagem cobre todo o seu tamanho original, <b>cover</b>: cobre todo o tamanho disponível.
+  </dd>
+</dl>
 
 ## Position
 
