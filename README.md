@@ -438,8 +438,54 @@ Cada seletor tem uma força, que faz com que exista uma pirâmide de força onde
   <li>CSS Inline</li>
  </ol>
 
+
+## Pseudo classes
+São atributos colocados após seletores com "::pseudo-class"
+
+<dl>
+  <dt>::first-child</dt>
+  <dd>
+    Seleciona o primeiro elemento filho.
+  </dd>
+</dl>
+
+<dl>
+  <dt>::nth-of-type()</dt>
+  <dd>
+    Seleciona algum elemento pelo index dele dentro do container, que é passado como argumento.
+  </dd>
+</dl>
+
+<dl>
+  <dt>::nth-child()</dt>
+  <dd>
+    Faz a mesma navegação que o of-type, mas considera apenas elementos filhos.
+  </dd>
+</dl>
+
+<dl>
+  <dt>nth-child-odd/guen</dt>
+  <dd>
+    Revesa a aplicação entre os elementos filhos, pelo número do index sendo ele par ou ímpar.
+  </dd>
+</dl>
+
+<dl>
+  <dt>::hover</dt>
+  <dd>
+    Define um estilo ao passar o mouse por cima.
+  </dd>
+</dl>
+
+<dl>
+  <dt>::focus</dt>
+  <dd>
+    Foca ao selecionar um input.
+  </dd>
+</dl>
+
 ## Pseudo elementos
-[Lista de pseudo elementos](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+Inserindo elementos HTML pelo CSS, por padrão deve haver uma propriedade **content: ""** vazio desta maneira para que seja manipulado. Para inserir o elemento a syntax é semelhante aos pseudo classes e recebe ::before e ::after. Para inserir um elemento antes, ou depois.
 
 ## Cores Web
 Todas as cores na internet são definidas por variações de valores das cores azul, vermelha e verde. Ao atribuir um elemento alguma propriedade de cor, existem 3 tipos de valores, com mais um bônus.
