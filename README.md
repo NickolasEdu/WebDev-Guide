@@ -290,6 +290,9 @@ Mas o que são Inputs?
 
 [Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
 
+## Audio e Vídeo
+
+{Syntax}
 
 <dl>
   <dt>Form</dt>
@@ -486,6 +489,13 @@ São atributos colocados após seletores com "::pseudo-class"
 
 ## Pseudo elementos
 Inserindo elementos HTML pelo CSS, por padrão deve haver uma propriedade **content: ""** vazio desta maneira para que seja manipulado. Para inserir o elemento a syntax é semelhante aos pseudo classes e recebe ::before e ::after. Para inserir um elemento antes, ou depois.
+
+<dl>
+  <dt>::first-line</dt>
+  <dd>
+    Semelhante ao first-child, mas que seleciona apenas as primeiras linhas dos elementos de texto.
+  </dd>
+</dl>
 
 ## Cores Web
 Todas as cores na internet são definidas por variações de valores das cores azul, vermelha e verde. Ao atribuir um elemento alguma propriedade de cor, existem 3 tipos de valores, com mais um bônus.
@@ -686,6 +696,9 @@ Não apenas com cores, mas as fontes e suas propriedades são fundamentais para 
   <dt>text shadow</dt>
   <dd>Aplica uma sobra ao texto.</dd>
 </dl>
+
+## SVG
+Essa é uma tag de criação de imagens vetorizadas, que são diferentes de imagens rasterizadas - jpg, png, etc - a diferença é que a imagem em estilo svg é melhor manipulada e responde muito bem ao uso de incones, além de receber estilos de tamanho e cores, propriedades que as outras imagens não recebem, porém tem um uso geral mais comum.
 
 ## Posicionamentos responsivos
 
