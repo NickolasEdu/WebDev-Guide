@@ -215,7 +215,32 @@ O comportamento desse código consiste em uma imagem que ao ser clicada leva o �
 **Tabelas**
 Uma tag que agrupa textos em linhas e colunas.
 
-{Syntax}
+```javascript
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>Alan</th>
+      <th>33</th>
+    </tr>
+  </tbody>
+
+<tfooter>
+    <tr>
+      <th>Total</th>
+      <th>Número</th>
+    </tr>
+  </tfooter>
+</table>
+
+```
 
 <dl>
   <dt>table</dt>
@@ -292,9 +317,21 @@ Mas o que são Inputs?
 
 ## Audio e Vídeo
 
-Apresenação e importação de arquivos.
+Apresentação e importação de arquivos no HTML, podemos trazer esses arquivos do nosso repositório assim como fazemos com imagens - apesar dessa prática consumir muito processamento. Porém existe a opção de importar estes arquivos de outro servidores, por exemplo, do youtube com link personalizado.
 
-{Syntax}
+Tanto a tag de audio como a de vídeo recebem parâmetros semelhantes que permitem que seja feito o controle de execução.
+
+**audio** recebe as dimensões e a tag de controls para manipulção de execução do usuário.
+**Source** recebe o caminho e o tipo do arquivo.
+
+```javascript
+
+<audio width="100px" height="100px" controls>
+  <source src='./directory/arquivo'
+    type="audio/mp3"
+  >
+</audio>
+```
 
 <dl>
   <dt>Form</dt>
@@ -1553,7 +1590,13 @@ ex:
 
 const fileSystem = require('fs')
 
-
+fileSystem('./packed.json', funciton(error, content) {
+  if (error) {
+    console.log('error 404', error)
+  } else {
+    console.log(JSON.parse(content))
+  }
+})
 
 ```
 
