@@ -292,6 +292,8 @@ Mas o que são Inputs?
 
 ## Audio e Vídeo
 
+Apresenação e importação de arquivos.
+
 {Syntax}
 
 <dl>
@@ -699,6 +701,10 @@ Não apenas com cores, mas as fontes e suas propriedades são fundamentais para 
 
 ## SVG
 Essa é uma tag de criação de imagens vetorizadas, que são diferentes de imagens rasterizadas - jpg, png, etc - a diferença é que a imagem em estilo svg é melhor manipulada e responde muito bem ao uso de incones, além de receber estilos de tamanho e cores, propriedades que as outras imagens não recebem, porém tem um uso geral mais comum.
+
+**Font Awesome**
+{Syntax}
+Maneira de uso
 
 ## Posicionamentos responsivos
 
