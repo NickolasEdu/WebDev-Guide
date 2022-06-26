@@ -143,8 +143,53 @@ Também temos outras opções como Sublime Text e Atom, mas em questão de funci
 ## GitHub
 PLACEHOLDER
 
-## Terminal - Git Bash
-PLACEHOLDER
+## Terminal - Shell
+
+O terminal recebe linhas de comandos, atalhos escritos de um software não visual. Para lembrar algum comando que não lembre exatamente a syntax o próprio terminal oferece ajudas, como comando -help, algum caractere + tab que retornará todas as opções de comando com aquelas letras e no terminal ele ainda pode indicar algum comando, quando escrevemos algo semelhante mas não idêntico.
+
+<dl>
+  <dt>pwd</dt>
+  <dd>
+    Retorna o path do diretório atual
+  </dd>
+</dl>
+
+<dl>
+  <dt>cd</dt>
+  <dd>
+    Comando para mudar o diretório - change directory - recebe dc + nome da pasta. Ou cd + .. para retornar para o diretório anterior. Ou todo o caminho até o diretório para pular etapas, ex: cd diretorio/outro/final.
+  </dd>
+</dl>
+
+<dl>
+  <dt>ls</dt>
+  <dd>
+    Lista os arquivos e diretórios dentro daquele diretório. Recebe também argumentos para controlar essa listagem, sempre com '-' antes do argumento, e que podem ser combinados. Exemplo, -l retorna mais informações + -h trás informações de melhor interpretação. Logo, pode usar o comando 'ls -lh'. Argumento -a para trazer todos os arquivos, mesmo os ocultados pelo sistema. Argumento -R lista todos os diretórios dentro de outros diretórios.
+  </dd>
+</dl>
+
+<dl>
+  <dt>file</dt>
+  <dd>
+    Pega arquivos - foto, audio, video, etc - retorna todos os dados de propriedades dos arquivos. ex: file photo.png.
+  </dd>
+</dl>
+
+<dl>
+  <dt>pwd</dt>
+  <dd>
+    Retorna o path do diretório atual
+  </dd>
+</dl>
+
+<dl>
+  <dt>pwd</dt>
+  <dd>
+    Retorna o path do diretório atual
+  </dd>
+</dl>
+
+
 
 ## Dicionário Dev
 PLACEHOLDER
