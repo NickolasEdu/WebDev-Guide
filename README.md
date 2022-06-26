@@ -169,26 +169,74 @@ O terminal recebe linhas de comandos, atalhos escritos de um software não visua
 </dl>
 
 <dl>
-  <dt>file</dt>
+  <dt>file e stat</dt>
   <dd>
-    Pega arquivos - foto, audio, video, etc - retorna todos os dados de propriedades dos arquivos. ex: file photo.png.
+    Pega arquivos - foto, audio, video, etc - retorna todos os dados de propriedades dos arquivos. Enquanto o stat trás iformações sobre dono, modificação e tamanho do arquivo ex: file photo.png ou stat photo.png.
   </dd>
 </dl>
 
 <dl>
-  <dt>pwd</dt>
+  <dt>mkdir</dt>
   <dd>
-    Retorna o path do diretório atual
+    Criar um diretório novo - make-directory - e pode receber um argumento -p para criar o repositório e outro dentro dele. ex: mkdir -p main/outro.
   </dd>
 </dl>
 
 <dl>
-  <dt>pwd</dt>
+  <dt>touch</dt>
   <dd>
-    Retorna o path do diretório atual
+    Criação de arquivos, possibilitando adcionar arquivos no diretório direto pelo terminal. Também permite criar vários arquivos. ex: touch index.hmtl main.js style.css.
   </dd>
 </dl>
 
+<dl>
+  <dt>cp</dt>
+  <dd>
+    Recebe arquivos como argumento para serem copiados para outro diretório, que é o último argumento. Para copiar diretórios é o mesmo formato, a pasta de destino deve vir no final e para funcionar no inicio por no comando -r. ex: -r directory1 directory2 directory3
+  </dd>
+</dl>
+
+<dl>
+  <dt>mv</dt>
+  <dd>
+    Mover arquivos entre diretórios. Recebe o arquivo - ou arquivos -  e o destino no último argumento. E também renomeia arquivos, recebendo o arquivo e seu novo nome. ex: mv index.html main.html.
+  </dd>
+</dl>
+
+<dl>
+  <dt>rm</dt>
+  <dd>
+    Remover arquivos do software, recebe arquivos unicos ou multiplos, para remover diretórios recebe -r e para forçar remoção de algum arquivo especifico -rf.
+  </dd>
+</dl>
+
+<dl>
+  <dt>wildcards</dt>
+  <dd>
+    Os coringas da linha de comando, * e ?. São usados aliados aos outros comandos, exemplo: mv directory* = nesse caso vai mover todos os diretórios que começam com diretory e tem alguma descrição (directoryMain, directoryOutro, directoryEtc) já mv directory? = pegara apenas as pastas que tem mais um caractere depois do nome (directory1, directory2, directory3).
+  </dd>
+</dl>
+
+<dl>
+  <dt>find</dt>
+  <dd>
+    Um filtro de busca que recebe parâmetros de pesquisa. exemplo: find . -type f -name *.png* = recebe o comando . para indicar que é no diretório atual, f de file para indicar que é um arquivo, -name para pesquisar por aquivos que contém estas palavras. Para diretórios o comando é find . -type d -name *directory*.
+  </dd>
+</dl>
+
+<dl>
+  <dt>nano</dt>
+  <dd>
+    Recebe um arquivo para ser editado. Para sair crtl + x
+  </dd>
+</dl>
+
+<dl>
+  <dt></dt>
+  <dd>
+
+  </dd>
+</dl>
 
 
 ## Dicionário Dev
