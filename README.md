@@ -308,7 +308,7 @@ O comportamento desse código consiste em uma imagem que ao ser clicada leva o �
 **Tabelas**
 Uma tag que agrupa textos em linhas e colunas.
 
-```javascript
+```html
 
 <table>
   <thead>
@@ -325,12 +325,12 @@ Uma tag que agrupa textos em linhas e colunas.
     </tr>
   </tbody>
 
-<tfooter>
+  <tfoot>
     <tr>
       <th>Total</th>
       <th>Número</th>
     </tr>
-  </tfooter>
+  </tfoot>
 </table>
 
 ```
@@ -391,8 +391,6 @@ Uma tag que agrupa textos em linhas e colunas.
   </dd>
 </dl>
 
-{Syntax}
-
 ## Formulários
 São sessões de captação e controle de dados iseridos pelo usuário, quem recebe esses dados são os **inputs**
 <br>
@@ -410,7 +408,7 @@ Mas o que são Inputs?
 
 ## Audio e Vídeo
 
-Apresentação e importação de arquivos no HTML, podemos trazer esses arquivos do nosso repositório assim como fazemos com imagens - apesar dessa prática consumir muito processamento. Porém existe a opção de importar estes arquivos de outro servidores, por exemplo, do youtube com link personalizado.
+Apresentação e importação de arquivos no HTML, podemos trazer esses arquivos do nosso repositório assim como fazemos com imagens - apesar dessa prática consumir muito processamento.
 
 Tanto a tag de audio como a de vídeo recebem parâmetros semelhantes que permitem que seja feito o controle de execução.
 
@@ -425,6 +423,15 @@ Tanto a tag de audio como a de vídeo recebem parâmetros semelhantes que permit
   >
 </audio>
 ```
+
+<dl>
+  <dt>iFrame</dt>
+  <dd>
+    Porém existe a opção de importar estes arquivos de outro servidores, por exemplo, do youtube com link personalizado. São os links embed, já preparados para serem usados dentro da tag iFrame, onde será feita a importação e dentro dessa tag a apresentação do conteúdo externo.
+  </dd>
+</dl>
+
+## Formulários
 
 <dl>
   <dt>Form</dt>
@@ -686,11 +693,44 @@ A propriedade de background define a aparência de fundo do elemento selecionado
 <dl>
   <dt>background-color</dt>
   <dd>
-  Recebe alguma propriedade de color, assim como o gradient.
+  Recebe alguma propriedade de color, assim como algum gradient.
   </dd>
 </dl>
 
-{GRADIENT-SYNTAX}
+Os tipos de gradient são:
+
+<ul>
+  <li>
+    Linear Gradient - De um ponto ao outro (topo-baixo, direita-esquerda)
+  </li>
+  <li>
+    Radial Gradients - a partir do centro
+  </li>
+  <li>
+    Conic Gradients - circula um ponto central
+  </li>
+</ul>
+
+O Linear gradiente como padrão é direcioado do topo para baixo, e recebe entre duas ou três cores.
+
+ex:
+```css
+
+.class {
+  background-image: linear-gradient(to right, red , yellow);
+}
+```
+
+Ou valores para cada cor individualmente, como no uso do gradiente similar as cores do Instagram
+
+```css
+
+.class {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+```
+
+É por esse motivo que geralmente são usados geradores de gradiente, para ter mais precisão e menos trabalho na hora de definir um, como o [CSS Gradiente Maker](https://cssgradient.io/).
 
 <dl>
   <dt>background-image: url()</dt>
@@ -830,11 +870,8 @@ Não apenas com cores, mas as fontes e suas propriedades são fundamentais para 
 </dl>
 
 ## SVG
-Essa é uma tag de criação de imagens vetorizadas, que são diferentes de imagens rasterizadas - jpg, png, etc - a diferença é que a imagem em estilo svg é melhor manipulada e responde muito bem ao uso de incones, além de receber estilos de tamanho e cores, propriedades que as outras imagens não recebem, porém tem um uso geral mais comum.
-
-**Font Awesome**
-{Syntax}
-Maneira de uso
+Essa é uma tag de criação de imagens vetorizadas, que são diferentes de imagens rasterizadas - jpg, png, etc - a diferença é que a imagem em estilo svg é melhor manipulada e responde muito bem ao uso de incones, além de receber estilos de tamanho e cores, propriedades que as outras imagens não recebem, porém tem um uso geral mais comum. Por ser um processo extenso é comum usarmos formas pré prontas, ou importar ícones já definidos para uso.
+Como por exemplo a partir do [Font Awesome](https://fontawesome.com/icons), onde importamos os ícones e podemos personalizar seus estilos.
 
 ## Posicionamentos responsivos
 
