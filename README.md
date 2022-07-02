@@ -37,6 +37,21 @@ Se você tem tempo e pode investir em um curso de inglês, compre a vontade que 
 
 # Conceitos Web
 
+### Dev - Index
+
+-[A Internet](#a-internet)
+-[URL](#link-url)
+-[HTTPS](#https)
+-[IP](#ip)
+-[TCP](#tcp)
+-[DNS](#dns)
+-[Proxy](#proxy)
+-[Cliente x Server](#client-vs-server)
+-[Browser](#browser)
+-[Sites: Estático x SPA](#site-estatico-vs-spa)
+
+## Introdução
+
 *Para se tornar um desenvolvedor web, antes de tudo, devemos entender um pouco sobre o que é a Web. Nesse capítulo eu trouxe algumas definições sobre como a internet funciona. **Mas é importante ressaltar,** que não é necessário decorar tudo o que estiver aqui, a intenção desse artigo como um todo é de que seja um material de apoio para estudos. Sendo assim, aqui nesse capítulo irei trazer alguns conceitos que se tornarão familiares para o desenvolvedor com o tempo, ao decorrer da sua trajetória de estudos quando algum desses termos ou outro semelhante aparecer na sua frente, o conteúdo aqui já servirá como base para fixar os conceitos e revisão para cada vez que estiver com alguma dúvida*.
 
 ## A Internet
@@ -51,19 +66,21 @@ Estes computadores interligados, estão recebendo e enviando dados durante todo 
 
 O URL (**Uniform Resource Locator) esse conceito é traduzido como** Localizador e Identificador de Recursos. Aqui, recursos são os endereços das aplicações web, os sites que desenvolvemos. Para fazer essa localização e comunicação entre os computadores, ele é integrado ao protocolo **HTTP**. Usando regras de comunicação do sistema para passar as informações
 
-## **HTTPS – Hiper Text Transfer Protocol (Protocolo de Transferência de Hipertexto)**
+## HTTPS
+
+Hiper Text Transfer Protocol (Protocolo de Transferência de Hipertexto)
 
 Esse é o método básico de como os computadores conversam, chamado de Request-response (ou Request-Reply), são os protocolos de requisitos feitos entre os computadores e servidores para qual e como os dados serão trafegados.
 
 Basicamente é um conjunto de recursos que tem como função fazer a conversa do PC do client converse de forma segura, rápida e otimizada com o **IP** dos servidores.
 
-## **IP - Internet Protocol**
+## IP
 
 O Internet Protocol, mais conhecido como **IP**, nada mais é o endereço de cada computador, como um número de CEP ou CPF. Quando você baixa uma foto, vídeo ou carrega um site, esses dados são divididos em partes, nesses dados são registrados o endereço de **IP** do seu dispositivo, e do dispositivo em que estes dados estão armazenados.
 
 Como se você enviasse uma cadeira desmontada, mas cada parte dela você enviasse em pacotes separadamente pelo correio, e junto destas informações você envia um guia informando em quantas partes a cadeira está dividida e como ela deve ser montada, sendo esse sendo o trabalho do **TCP**.  A  diferença, claro, é que com a Internet de hoje, o envio de dados é feito de forma praticamente instantânea, por conta dos milhões de computadores interconectados.
 
-## **TCP - Transmission Control Protocol**
+## TCP
 
 Após os dados serem divididos, e terem sido registrados com os **IP's** de destinatário e remetente, essa informação navega desde o servidor alocado, navegando pelos cabos submarinos de internet, roteadores e todos os tipos de conexão, até encontrarem o dispositivo de destino.
 
@@ -71,9 +88,9 @@ Quando a informação chega é o **TCP** (Transmission Control Protocol) que ir
 
 Se essa informação sobre número de **IP**, servidores e banco de dados pode parecer confusa, é porque realmente é. Por esse motivo que existe o **DNS**.
 
-## **DNS - Domain Name System**
+## DNS 
 
-Esse é o sistema que dá nome aos **IP's**, basicamente o conhecido "WWW" Com esse sistema , facilita nossa vida ao pesquisarmos algum site, e também facilitando a transmissão de dados, pois se em um computador usado como um servidor de dado que armazena vários domínios, seria muito mais complicado encontrar o site requisitado dentro daquele **IP**.
+Domain Name System é o sistema que dá nome aos **IP's**, basicamente o conhecido "WWW" Com esse sistema , facilita nossa vida ao pesquisarmos algum site, e também facilitando a transmissão de dados, pois se em um computador usado como um servidor de dado que armazena vários domínios, seria muito mais complicado encontrar o site requisitado dentro daquele **IP**.
 
 ## Proxy
 
@@ -83,7 +100,7 @@ Proxy nada mais é que os meios que esses dados vão de um lado para outro, seja
 
 Client se refere ao computador do usuário (como o seu no caso) o Servidor é um computador ou uma rede especifica onde existe alguma informação armazenada e para ser exibida na máquina do usuário, é necessário criar uma comunicação. Onde o **Client** fará um pedido/request para o servidor, o **Server** irá consultar se essa informação existe, e se caso ele tenha armazenado o que foi pedido, o servidor fará o Response mandando a informação de volta para o computador do usuário do lado do **Client**.
 
-## Explicação prática
+**Explicação prática**
 
 Vamos usar o funcionamento do YouTube como exemplo, você abre a plataforma pelo seu navegador e usa a barra de pesquisa para procurar um vídeo ou canal pelo nome.
 
@@ -95,7 +112,7 @@ Aqui seu computador mandou outro **Request** para os servidores do Youtube, que 
 
 E no final das contas, após toda essa troca de informações e comunicação em máquina e servidor. É o navegador que irá fazer a interpretação de todo o código que foi recebido vindo do servidor (html, css, javascript, imagens etc...).
 
-## Aplicação Estática vs SPA
+## Site estatico vs SPA
 
 Um site estático é quando ele enviar para o navegador tudo de uma vez, para ver algum conteúdo atualizado é preciso recarregar a página (dar um F5). Uma SPA - Single Page Aplication (Aplicação de uma página só) é quando a página vai trazendo as informações conforme você vai requisitando, exemplo o Facebook que na página inicial existe dados de Feed, stories, chat que são carregados de forma simultanea. 
 
