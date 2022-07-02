@@ -124,6 +124,14 @@ Agora a função de fazer que isso funcione, cabe o programador que seguindo alg
 
 # Desenvolvimento Web
 
+**Index**
+
+- [Linguagem de programação](#linguagem-de-programação)
+- [IDE's](#ide)
+- [Ambiente de Desenvolvimento](#ambiente-de-desenvolvimento)
+- [GitHub](#github)
+- [Terminal - Shell](#terminal---shell)
+
 ## Linguagem de programação
 
 Os computadores não falam a mesma íngua que nós, basicamente eles entendem linguagem binária, aqueles clássicos zeros e uns (010101) que estamos acostumados a ver em filmes. As linguagens de programação é a maneira que foi criada para que nós possamos passar instruções para ser interpretadas pelos computadores.
@@ -140,7 +148,9 @@ Se você usando alguma forma de comando mande um computador ensaboar e enxaguar 
 
 O que ocorre é **existem muitas maneiras se se escrever códigos e desenvolver sistemas, e com o tempo você irá aprender boas práticas. Como iniciante não deve se preocupar com isso agora, mas o que eu quero dizer é que, as vezes nós não sabemos se o que fazemos está certo ou não, então por agora tente focar em aprender o básico que a evolução e a autocrítica virão naturalmente com o tempo**.
 
-## IDE's - Integrated Development Environment (Ambientes de Desenvolvimento Integrado)
+## IDE 
+
+Integrated Development Environment (Ambientes de Desenvolvimento Integrado)
 
 Esses são os editores de código, a ferramenta fundamental do programador.
 
@@ -265,6 +275,15 @@ PLACEHOLDER
 
 # HTML
 
+**Index**
+
+- [Definição](#definição-do-html)
+- [Tags](#tags-html)
+- [Formulários](#formulários)
+- [Audio e Video](#audio-e-vídeo)
+- [Introdução ao CSS](#introdução-ao-css)
+- [Box Model](#box-model)
+
 ### Material de apoio do capítulo
 
 [Playlist com instalação do VS Code e primeiros passos HTML](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
@@ -275,7 +294,8 @@ Dois sites com documentação das tecnologias trabalhadas, muito úteis para rel
 &
 [W3Schools]("https://www.w3schools.com/")
 
-## Definição
+## Definição do HTML
+
 A sigla de HTML significa HyperText MArkup Language. Aqui já sabemos que o **https** é o protocolo de transferência de hipertexto, pois bem, o **HTML** é basicamente o arquivo de texto que o protocolo envia de um computador para outro.
 
 Pense no **HTML** como um texto, a diferença é que nesse texto podemos adicionar a ele outros arquivos como de imagens, vídeos, cores, etc. Então é nele que vamos escrever a maior parte do conteúdo por meio de tags e classes e posteriormente agregar com outros tipos de arquivo.
@@ -409,20 +429,6 @@ Uma tag que agrupa textos em linhas e colunas.
   </dd>
 </dl>
 
-## Formulários
-São sessões de captação e controle de dados iseridos pelo usuário, quem recebe esses dados são os **inputs**
-<br>
-Mas o que são Inputs?
-<br>
-
-<dl>
-  <dt>Inputs e Outputs</dt>
-  <dd>
-   São termos de programação referentes a entradas e saídas de dados. Como por exemplo uma página de cadastro, onde os inputs vão receber os dados de nome, email e outros tipos de informação. Para estabelecer uma base melhor - e também uma indicação de estudo passivo - vou deixer o link de uma com os inputs que mais usamos.
-  </dd>
-</dl>
-
-[Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
 
 ## Audio e Vídeo
 
@@ -450,6 +456,21 @@ Tanto a tag de audio como a de vídeo recebem parâmetros semelhantes que permit
 </dl>
 
 ## Formulários
+
+São sessões de captação e controle de dados iseridos pelo usuário, quem recebe esses dados são os **inputs**
+<br>
+Mas o que são Inputs?
+<br>
+
+<dl>
+  <dt>Inputs e Outputs</dt>
+  <dd>
+   São termos de programação referentes a entradas e saídas de dados. Como por exemplo uma página de cadastro, onde os inputs vão receber os dados de nome, email e outros tipos de informação. Para estabelecer uma base melhor - e também uma indicação de estudo passivo - vou deixer o link de uma com os inputs que mais usamos.
+  </dd>
+</dl>
+
+[Lista de Inputs](https://www.instagram.com/p/CZ7WyHKFO3e/?utm_medium=copy_link)
+
 
 <dl>
   <dt>Form</dt>
