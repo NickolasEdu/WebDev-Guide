@@ -572,13 +572,31 @@ Legenda:
 **[⬆ voltar ao topo](#index)**
 
 # CSS
+
+**Index**
+- [Definição do CSS](#definição-css)
+- [Tipos de importação](#tipos-de-estilização)
+- [Seletores](#seletores)
+- [Pseudo Class](#pseudo-classes)
+- [Pseudo Element](#pseudo-elementos)
+- [Cores Web](#cores-web)
+- [Elementos na tela](#elementos-na-tela)
+- [Background](#background)
+- [Position](#position)
+- [Tipografia](#tipografia)
+- [SVG](#svg)
+- [Posicionamentos Responsivos](#posicionamentos-responsivos)
+- [Flexbox](#flexbox)
+- [Grid](#grid)
+
+## Definição CSS
 **Cascading Style Sheet - Folha de Estilo em Cascatas**
 É o arquivo que define o estilo de tudo aquilo que roda no client. Onde você altera como vemos a tela, os título, parágrafos, com espaçamentos, color, posicionamento etc. Cascading Style Sheet, é chamado assim por definir os estilos do conteúdo html aparecerá na tela, e o código CSS é escrito em forma de cascata, manipulando os elementos de cima até o final da página, numa ordem “decrescente”, ou em descida.
 
 ## Material de Apoio
 [Playlist de primeiros passos no CSS](https://www.youtube.com/watch?v=oSJgsGbmK4c&list=PLmPm9dwop78_WRFefS3xtQ--NlpmZiTer)
 
-## Tipos
+## Tipos de estilização
 Existem 3 maneiras de estilizarmos o nosso arquivo HTML através do CSS, que são:
 
 <dl>
@@ -808,7 +826,6 @@ Ou valores para cada cor individualmente, como no uso do gradiente similar as co
 
 ## Position
 
-## Posicionamento
 A posição padrão dos elementos na tela é **inline**, ou seja, ocupa a linha intera sendo um elemento colocado em baixo do outro.
 
  <dl>
