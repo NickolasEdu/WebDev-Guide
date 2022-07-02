@@ -259,14 +259,6 @@ O terminal recebe linhas de comandos, atalhos escritos de um software não visua
   </dd>
 </dl>
 
-<dl>
-  <dt></dt>
-  <dd>
-
-  </dd>
-</dl>
-
-
 ## Dicionário Dev
 PLACEHOLDER
 
@@ -307,6 +299,8 @@ O **5** se refere apenas a qual versão que o programa está.
 O HTML4 (comumente referido apenas como “HTML”) foi publicado em 1999, enquanto que a maior e mais recente atualização foi lançada em 2014. Chamada de HTML5, a atualização introduziu diversos novos recursos à linguagem.
 
 O HTML5 introduziu algumas melhorias de semântica. As novas tags semânticas informam ao navegador sobre o significado do conteúdo, ajudando na sua interpretação.
+
+**[⬆ voltar ao capitulo](#html)**
 
 ## Tags HTML
 
@@ -429,6 +423,7 @@ Uma tag que agrupa textos em linhas e colunas.
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#html)**
 
 ## Audio e Vídeo
 
@@ -454,6 +449,8 @@ Tanto a tag de audio como a de vídeo recebem parâmetros semelhantes que permit
     Porém existe a opção de importar estes arquivos de outro servidores, por exemplo, do youtube com link personalizado. São os links embed, já preparados para serem usados dentro da tag iFrame, onde será feita a importação e dentro dessa tag a apresentação do conteúdo externo.
   </dd>
 </dl>
+
+**[⬆ voltar ao capitulo](#html)**
 
 ## Formulários
 
@@ -510,6 +507,8 @@ POST vs GET - Quando trabalhamos com dados, o método indicado de se usar é o *
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#html)**
+
 ## Introdução ao CSS
 
 <dl>
@@ -545,6 +544,8 @@ exemplos: a, span, strong, img.
   O conteúdo continua em linha, mas agora seu tamanho pode ser alterado. Uma junção das duas propriedades de display, dando mais liberdade para manipulação.
   </dd>
 </dl>
+
+**[⬆ voltar ao capitulo](#html)**
 
 ## Box Model
 **Mas afinal, o que são padding, margin e border?**
@@ -619,6 +620,8 @@ Existem 3 maneiras de estilizarmos o nosso arquivo HTML através do CSS, que sã
 *A sintaxe CSS recebe um seletor, uma propriedade e um valor*
 <img rel="Imagem exemplo da syntax" src="./assets/ph.jpg">
 
+**[⬆ voltar ao capitulo](#css)**
+
 # Seletores
 Os seletores tem diferentes niveis de força e permitem combinações para especificar qual elemento deve ser estilizados.
 - Seletor '*' é um seletor de menor nível, ele será responsavél por passar um valor que será aplicado em todos os elementos, até que estes recebam um novo estilo a partir de outro seletor. É majoritariamente usado para zerar as propriedades padrão dos próprios elementos, como **margin**, **border** e **box-sinzing**
@@ -637,6 +640,7 @@ Cada seletor tem uma força, que faz com que exista uma pirâmide de força onde
   <li>CSS Inline</li>
  </ol>
 
+**[⬆ voltar ao capitulo](#css)**
 
 ## Pseudo classes
 São atributos colocados após seletores com "::pseudo-class"
@@ -683,6 +687,8 @@ São atributos colocados após seletores com "::pseudo-class"
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#css)**
+
 ## Pseudo elementos
 Inserindo elementos HTML pelo CSS, por padrão deve haver uma propriedade **content: ""** vazio desta maneira para que seja manipulado. Para inserir o elemento a syntax é semelhante aos pseudo classes e recebe ::before e ::after. Para inserir um elemento antes, ou depois.
 
@@ -692,6 +698,8 @@ Inserindo elementos HTML pelo CSS, por padrão deve haver uma propriedade **cont
     Semelhante ao first-child, mas que seleciona apenas as primeiras linhas dos elementos de texto.
   </dd>
 </dl>
+
+**[⬆ voltar ao capitulo](#css)**
 
 ## Cores Web
 Todas as cores na internet são definidas por variações de valores das cores azul, vermelha e verde. Ao atribuir um elemento alguma propriedade de cor, existem 3 tipos de valores, com mais um bônus.
@@ -719,6 +727,8 @@ Todas as cores na internet são definidas por variações de valores das cores a
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#css)**
+
 ## Elementos na tela
 
 Manipulação da apresentação dos elementos na tela
@@ -740,6 +750,8 @@ Manipulação da apresentação dos elementos na tela
 **Scroll x/y** - aplicar a batera apenas horizontal ou vertical
 
 **Auto**: Aplica uma barra padrão, baseada nos parâmetros do elemento
+
+**[⬆ voltar ao capitulo](#css)**
 
 ## Background
 
@@ -824,6 +836,8 @@ Ou valores para cada cor individualmente, como no uso do gradiente similar as co
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#css)**
+
 ## Position
 
 A posição padrão dos elementos na tela é **inline**, ou seja, ocupa a linha intera sendo um elemento colocado em baixo do outro.
@@ -852,6 +866,8 @@ A posição padrão dos elementos na tela é **inline**, ou seja, ocupa a linha 
  </dl>
  
  *Também existe a propriedade z-index, para controlar a camada - altura - de cada elemento que está flutuando na tela, isso se chama **element stack** quando tenho mais de um elemento flutuante e é necessário definir uma ordem entre eles*
+
+ **[⬆ voltar ao capitulo](#css)**
 
 ## Tipografia
 Não apenas com cores, mas as fontes e suas propriedades são fundamentais para passar alguma mensagem para o usuário. Importante lembrar que nem todos os tipos de fontes serão compatíveis com todas as propriedades.
@@ -925,9 +941,13 @@ Não apenas com cores, mas as fontes e suas propriedades são fundamentais para 
   <dd>Aplica uma sobra ao texto.</dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#css)**
+
 ## SVG
 Essa é uma tag de criação de imagens vetorizadas, que são diferentes de imagens rasterizadas - jpg, png, etc - a diferença é que a imagem em estilo svg é melhor manipulada e responde muito bem ao uso de incones, além de receber estilos de tamanho e cores, propriedades que as outras imagens não recebem, porém tem um uso geral mais comum. Por ser um processo extenso é comum usarmos formas pré prontas, ou importar ícones já definidos para uso.
 Como por exemplo a partir do [Font Awesome](https://fontawesome.com/icons), onde importamos os ícones e podemos personalizar seus estilos.
+
+**[⬆ voltar ao capitulo](#css)**
 
 ## Posicionamentos responsivos
 
@@ -974,20 +994,22 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 No desenvolvimento web o **HTML** é a estrutura da página, o **CSS** é a forma que as elementos são apresentados e o **Javascript** é uma maneira de criar funcionalidades para a nossa aplicação. Numa explicação mais simples, o HTML é o corpo, CSS a aparência e o Javascript será o cérebro, esta linguagem é capaz de manipular todo o nosso site.
 
 Criada em 1995 por Breandan Eich, o Javascript está em mais de 90% das páginas web na internet. Por mais que o nome seja semelhante, não devemos confundir com Java. Essa é uma liguangem diferente, lá em sua criação a sacada de usar o nome foi uma questão de marketing para popularizar o JS mais rápido, então juntaram o nome Java com Script (de roteiro) para alto explicar a linguagem que antes era  chamada de LiveScript.
-<br>
+
 E para os curiosos, o nome Java é em homenagem a uma ilha da Indonésia que era responsável pelo exportação do café que um grupo de programadores consumia quando criaram essa linguagem. Tanto que o simbolo do Java é uma xícara de café. Nesse caso, a única semelhança entre as linguagens é realmente o nome que foi usado como inspiração.
-<br>
+
 Javascript é uma linguagem muito abrangente, além de vários frameworks - como o React.js por exemplo - é possível também desenvover backend e suas branchs de desenvolvimento chegam até mesmo ao Typescript. Mas para introduzir aqui, vamos falar do Javascript no DOM.
+
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Fundamentos
 Árvore de DOM - Document Object Model. Se baseia em todo o Javascript que roda no lado do cliente, é o documento que o navegador interpreta e no qual podemos manipular toda a estrutura do nosso site. O DOM é o que faz a ligação entre o Hyper Text com o JS.
-<br>
+
 Sabendo disso, então podemos concluir que tudo no HTML é elemento, tudo no CSS são caixas e tudo no Javascript é Objeto.
-<br>
+
 Como HTML e CSS o JS tem regras de uso que são muito importantes ficarmos atentos, visto que, por ser verdadeiramente uma linguagem de programação, como qualquer outra língua existem regras gramaticais para que possa ser entendida, isso na programação é chamado de Syntax - ou sintaxe. Assim como o CSS existe mais de uma maneira de fazer o link do seu arquivo index com o de javascript, mas é importante se atentar ao comportamento do sistema.
-<br>
+
 O CSS seja - interno ou externo - é sempre importado na parte de cima do index, pois assim o navegador ao fazer o carregamento dos elementos já terá carregado os seus estilos, evitando bugs visuais. Porém o comportamento do JS é diferente, ao encontrar um arquivo **script** no index o navegador vai automaticamente parar de carregar todo o resto até que termine de carregar o arquivo javascript, e isso com certeza vai travar o carregamento da aplicação. Então para previnir isso todo o script deve ser colocado logo acima da tag de fechamento do body, no final após todos os elementos HTML. Seguindo essa boa prática, no momento em que o navegador for carregar o aqrquivo JS, todo o resto já estará carregado, melhorando o desempenho do seu site.
-<br>
+
 O código javascript é linkado ao HTML pela tag script, de forma interna escrevendo todo o código entre a tag de abertuda e de fechamento - meio não recomendado, usado apenas para projetos simples e testes - ou passando a propriedade **src** com o caminho do seu arquivo.
 Exemplo: ...
 
@@ -1014,6 +1036,8 @@ Os Statements são as instrunções de uso para passarmos comandos para o sistem
   <dt>Valores</dt>
   <dd>Para manipular a nossa aplicação será necessário muitas vezes receber, enviar e alterar dados dentro do nosso sistema, para isso existem maneiras de armazenar, manipular e trabalhar com esses valores.</dd>
 </dl>
+
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Tipos de Dados
 
@@ -1059,6 +1083,8 @@ Os Statements são as instrunções de uso para passarmos comandos para o sistem
   <dd>Not a Number ou não é um número, ocorre quando tentamos pegar o valor de alguma operação entre um número e outro tipo de dado.</dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#javascript)**
+
 ## Expressions
 As expressões são toda as linhas de atribuição de valor, ou ação.
 
@@ -1092,6 +1118,8 @@ As expressões são toda as linhas de atribuição de valor, ou ação.
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#javascript)**
+
 
 ## Variavéis
 São são recipientes de valores, sejam eles de números, texto, elementos, funções. Podemos guardar valores dentro de variáveis enquanto declaramos elas com os nomes que melhor acharmos adequado para facilitar a reutilização. Porém como toda linguagem, precisamos entender as regras e o seu comportamento. Ao declarar uma variável temos as seguintes opções:
@@ -1111,8 +1139,12 @@ São são recipientes de valores, sejam eles de números, texto, elementos, fun�
   <dd>Variável constante, ou seja: o seu valor será sempre fixo. Tem o escopo especifico porém seu valor não pode ser reatribuído</dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#javascript)**
+
 ### Escopo Global vs Especifico
 O funcionamento de uma variável vai ser muito definida pelo escopo em qual foi declarada, o escopo global é no corpo comum do script, onde pode ser usada em qualquer outra parte do código. Escopo especifico ocorre quando declaramos uma variavel dentro de uma function e ela só irá existir ali dentro.
+
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Functions
 As funções guardam comandos que só são executados quando chamados, sua syntax báscica consiste em **()** para indicar que aquilo é uma função, e agrupar tudo que será amarzenado dentro dela com **{}**, também existem diferentes maneiras de declarar uma função:
@@ -1150,10 +1182,14 @@ Ex:
 ### Hoisting
 Como já sabemos, o javascript lê tudo de cima para baixo, então as funções sempre serão chamas na sequência em que foram escritas. Sendo assim, o hoisting serve para subir uma função - na tradução literal seria erguer - para alguma linha acima de onde ela foi declarada, isso faz com que o interpretador deixe de executar o quem em seguida, e vai primeiro atrás da função que você mandou chamar primeiro, depois disso que ele seguirá lendo e executando o resto do seu código. Porém devemos ficar atentos ao fato de que o hoisting não funciona com variáveis, elas precisam ser declaradas antes de serem chamadas, então devem estar em sequência no código, dessa forma o hoisting com Arrow Functions fica inviável.
 
+**[⬆ voltar ao capitulo](#javascript)**
+
 ## Síncrono vs Assíncrono
 A execução do javascript é de maneira **síncrona**, que no caso é o comportamento padrão do interpretador, o código irá executar aquilo que lhe for apresentado na ordem do script. Nesse comportamento o sistema só vai carregar a próxima função depois que a atual estiver concluída.
 
 Ou seja, o comportamento padrão é de executar na ordem em que foi escrito, mas isso pode ser manipulado ao escrever um código em que algumas partes serão assíncronas. Assim, podemos definir quais funções do nosso código terão um tempo de execução diferente do padrão. 
+
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Callback vs Promise
 **Callback**
@@ -1235,6 +1271,8 @@ function succes() {
 startPromise()
 ```
 
+**[⬆ voltar ao capitulo](#javascript)**
+
 ## Arrays e Objects
 Arrays são como variáveis, que ao invés de armazenar um valor ele armazena vários do mesmo valor, desde que seja do mesmo tipo
 Ex:
@@ -1251,6 +1289,7 @@ const person = {
   city: "Londrina",
 }
 ```
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Operadores
 Os operadores servem para fazer alterações nos valores que estamos usando, e são essenciais para desenvolver os nosso algoritmos.
@@ -1268,6 +1307,8 @@ _É necessário abrir as imagens para visualizar melhor_
 
 ### Operadores Lógicos
 <img src="./assets/logic.png" alt="Exemplo de imagem" width="650px" height="600">
+
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Condicionais
 São quase como uma função fragmentada, que ao invés de realizar uma ação especifíca, ela irá executar uma determinada linha de comando baseada nas condições que nós definirmos.
@@ -1315,6 +1356,8 @@ switch (x) {
 }
 
 ```
+
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Loops
 Os loops são laços de repetição, ou seja, uma condição que irá repetir uma função enquanto um valor de rodadas - vezes que a função será executada - for determinado. Os tipos de loops definem esse valor.
@@ -1400,6 +1443,8 @@ while ( count <= 10 ) {
 	contador++
 } 
 ```
+
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Métodos - JS
 Os métodos são maneiras de alteração e manipulação de dados de objetos ou arrays.
@@ -1572,6 +1617,8 @@ const students = [
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#javascript)**
+
 ## Seletores JS
 Assim como no CSS, precisamos dar um identificador par os elementos HTML para que sejam manipulados, no Javascript não é diferente. É possível fazer pelos seletores:
 
@@ -1602,6 +1649,8 @@ Assim como no CSS, precisamos dar um identificador par os elementos HTML para qu
     Permite esolher entre classe ou Id, mas é preciso indicar para o sistema pelos sinais de '#' ou '.' - Também existe o querySelectorAll()...
   </dd>
 </dl>
+
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Manipulação dos elementos HTML
 
@@ -1652,6 +1701,7 @@ _Neste exemplo o elemento é uma div central que há apenas uma imagem dentro, n
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## Eventos - JS
 
@@ -1714,6 +1764,8 @@ Adicionar um evento de escuta, sempre que esse evento for chamado ele executa um
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#javascript)**
+
 ## Conversão de Dados
 Aqui é de nosso conhecimento que no javascript a operação '4' + 4 = 44, porém é possível alterar esses valores com os métodos:
 
@@ -1725,10 +1777,12 @@ JSON.stringfy e JSON.parse
 
 O JSON é uma forma de comunicação de dados entre sistemas, no consumo de API por exemplo, mas o Javascript em si não traduz o JSON. Nesse caso, o método stringfy() pega os objetos, transforma em json e retorna para algo, uma variável por exemplo. Já o  parse(); Recebe um objeto json e retorna para alguém, no caso uma variavel em formato de objeto javascript, para que possa ser lido e usado no nosso sistema. 
 
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## API + JSON
 {PLACEHOLDER}
 
+**[⬆ voltar ao capitulo](#javascript)**
 
 ## ECMAScript - 2022
 
@@ -1802,6 +1856,8 @@ No JS convencional a execução é sincrona e feita na sequencia que foi escrita
 
 Sendo assim, mesmo que uma função receba um timeout de zero segundos, ao identificar que há um timeout definido, o event loop coloca a função na fila dos processos o que faz ir para o final da fila de execução. Então ela só será executada após todas as outras da sequência, mesmo que o timeout já tenha sido concluído.
 
+**[⬆ voltar ao capitulo](#node)**
+
 
 ## NPM
 
@@ -1844,6 +1900,8 @@ O Node Packged Meneger é um gerenciador de pacotes do Node, ele já vem com div
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#node)**
+
 ## Instalação de pacotes
 
 Ao fazer o **npm init** o node instala o arquivos de packed.json, packed.lock.json e o node_modules.
@@ -1853,6 +1911,8 @@ Tanto o packed.lock.json quanto o node_modules são arquivos fixos para o funcio
 Já o packed.json em uma estrutura que podemos consultar e manipular, ele consiste em trazer as informações do nosso projeto. Desde versão, nome, autor, arquivo principal para ser executado pela linha de comando. Como também os scripts, que são atalhos do nosso projeto para rodar no terminal, como comandos de run, test, stop e etc.
 
 Outro objeto da estrutura do packed.json são as **dependencies**, nesse objeto podemos ver todos os pacotes intalados e suas versões. Assim como há também os **devdependencies**, no qual mostra os pacotes instaladas somente para acesso e manipulação dos desenvolvedores, e que para fazer a instalação nas diferentes dependencies são usados comandos diferentes. *npm install 'pacote'* para instalações normais e *npm install 'pacote' --save-dev* para instalar um pacote dentro do dev dependencies.
+
+**[⬆ voltar ao capitulo](#node)**
 
 ## Modules
 Os módulos são funções globais do node, ao fazer o npm init nós temos acesso a uma biblioteca de funções que são nativas do nodejs, e para fazer seu uso podemos atribuir uma váriavel e fazer a importação a partir do **require()**.
@@ -1911,6 +1971,7 @@ const multiplicando = multi(10, 20)
 console.log(somando)
 console.log(multiplicando)
 ```
+**[⬆ voltar ao capitulo](#node)**
 
 ## Process
 
@@ -1922,6 +1983,8 @@ Já o .process.stdin() é o Standard Input - entrada padrão - input para inser�
 
 **exit()**
 Para indicar a finalização de um process, existe a função process.exit(). Da qual termina a execução de algum processo em andamento - de receber inputs por exemplo
+
+**[⬆ voltar ao capitulo](#node)**
 
 ## Métodos - Node
 
@@ -1939,6 +2002,8 @@ Para indicar a finalização de um process, existe a função process.exit(). Da
     Faz praticamente a mesma função que o on, porém ele escuta e executa uma ação apenas uma vez - assim como seu nome indica - ex: se no último caso usei o exit, então a função declarada será executada apenas na primeira vez que exit for usado, se isso por acaso se repita o evento once() não será executado novamente.
   </dd>
 </dl>
+
+**[⬆ voltar ao capitulo](#node)**
 
 ## Timers
 Funções semelhantes a vistas antes no javascript, onde são usadas em códigos assincronos e uso de callbacks.
@@ -2002,6 +2067,8 @@ const interval = setInterval(check, timer)
 setTimeout( () => clearInterval(interval), 5000)
 ```
 
+**[⬆ voltar ao capitulo](#node)**
+
 ## Events
 Events Modules são como as notificações que recebemos de aplicativos por exemplo, a configuração padrão é para ouvir um evento que quando é acionado dispara uma ação. Vimos casos semelhantes no método on() por exemplo.
 
@@ -2024,6 +2091,8 @@ Primeiro a importação desestruturada do require de events trazendo o Emitter e
 Output esperado:
 
 Evento emitido, escutado e executado
+
+**[⬆ voltar ao capitulo](#node)**
 
 ### Event Emitter com parâmetros
 
@@ -2050,6 +2119,8 @@ Evento emitido, escutado e executado primeiro
 Evento emitido, escutado e executado segundo
 
 Evento emitido, escutado e executado terceiro
+
+**[⬆ voltar ao capitulo](#node)**
 
 ### Evento com disparo único
 
