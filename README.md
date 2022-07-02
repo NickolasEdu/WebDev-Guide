@@ -945,6 +945,31 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 
 # Javascript
 
+**Index**
+
+- [O Básico](#o-básico)
+- [Fundamentos](#fundamentos)
+- [Prototype](#prototype)
+- [Statemants](#statements)
+- [Expressions](#expressions)
+- [Variavéis](#variavéis)
+- [Escopos](#escopo-global-vs-especifico)
+- [Funções](#functions)
+- [Hoisting](#hoisting)
+- [Sincrono e Assincrono](#síncrono-vs-assíncrono)
+- [Callback x Promisse](#callback-vs-promise)
+- [Arrays](#arrays-e-objects)
+- [Operadores](#operadores)
+- [Condicionais](#condicionais)
+- [Loops - Laços de Repetição](#loops)
+- [Métodos](#métodos---js)
+- [Seletores no Javascript](#seletores-js)
+- [Manipulação de HTML](#manipulação-dos-elementos-html)
+- [Eventos](#eventos---js)
+- [Conersão de Dados](#conversão-de-dados)
+- [API](#api--json)
+- [ECMAScript](#ecmascript---2022)
+
 ## O Básico
 No desenvolvimento web o **HTML** é a estrutura da página, o **CSS** é a forma que as elementos são apresentados e o **Javascript** é uma maneira de criar funcionalidades para a nossa aplicação. Numa explicação mais simples, o HTML é o corpo, CSS a aparência e o Javascript será o cérebro, esta linguagem é capaz de manipular todo o nosso site.
 
@@ -968,6 +993,9 @@ Exemplo: ...
 
 ## Material de Apoio
 [Intensivão Javascript](https://www.youtube.com/watch?v=i6Oi-YtXnAU)
+
+## Prototype
+O Javascript é uma linguagem baseada em protótipos, nesse caso, a maioria dos objetos herda uma cadeia de protótipos com usos prédinifidos pelo sistema. Isso pode ser observado acessando a partir do .__proto__ após qualquer objeto. Mostrando assim a cadeia de dados deste protótipo e várias de suas funções, como .length que mostra as posições (quantidade de items) desse objeto. 
 
 ## Statements
 Os Statements são as instrunções de uso para passarmos comandos para o sistema.
@@ -1224,9 +1252,6 @@ const person = {
 }
 ```
 
-## Prototype
-O Javascript é uma linguagem baseada em protótipos, nesse caso, a maioria dos objetos herda uma cadeia de protótipos com usos prédinifidos pelo sistema. Isso pode ser observado acessando a partir do .__proto__ após qualquer objeto. Mostrando assim a cadeia de dados deste protótipo e várias de suas funções, como .length que mostra as posições (quantidade de items) desse objeto. 
-
 ## Operadores
 Os operadores servem para fazer alterações nos valores que estamos usando, e são essenciais para desenvolver os nosso algoritmos.
 
@@ -1376,7 +1401,7 @@ while ( count <= 10 ) {
 } 
 ```
 
-## Métodos
+## Métodos - JS
 Os métodos são maneiras de alteração e manipulação de dados de objetos ou arrays.
 
 <dl>
@@ -1628,7 +1653,7 @@ _Neste exemplo o elemento é uma div central que há apenas uma imagem dentro, n
 </dl>
 
 
-## Eventos
+## Eventos - JS
 
 Eventos são como uma função especifica pré definidas, isso faz com que a sintax também tenha suas particularidades.
 
@@ -1704,9 +1729,26 @@ O JSON é uma forma de comunicação de dados entre sistemas, no consumo de API 
 ## API + JSON
 {PLACEHOLDER}
 
+
+## ECMAScript - 2022
+
 **[⬆ voltar ao topo](#index)**
 
 # Node
+
+**Index**
+
+- [Introdução](#introdução-ao-node)
+- [Comportamento](#comportamento)
+- [NPM](#npm)
+- [Instalação de PAcotes](#instalação-de-pacotes)
+- [Módulos](#modules)
+- [Process](#process)
+- [Métodos - Node](#métodos---node)
+- [Timers](#timers)
+- [Events](#events)
+
+## Introdução ao node
 
 Criado em 2009 por Ryan Dahl, o uso do Node cresceu muito, tanto que em 2015 foi criado o Node Fundation, para discutir e analisar melhorias no sistema que é open source. Mas o que é o Node.js? É um interpretador de Javascritp, que faz isso a partir do backend - diferente do javascript que é interpretado pelo browser, aqui o código roda do lado do servidor interpretado pelo V8 do Google e tem algumas particularidades, uma delas por exemplo é que não temos o DOM - Seu uso é variado, mas uma de suas maiores vantagens é não precisar dividir o seu projeto em diferentes linguagens para o front e para o back, tudo é desenvolvido baseado em Javascript.
 Bascicamente é um ambiente de execução em tempo real - JS Runtime Enviroment.
@@ -1837,7 +1879,7 @@ Já o .process.stdin() é o Standard Input - entrada padrão - input para inser�
 **exit()**
 Para indicar a finalização de um process, existe a função process.exit(). Da qual termina a execução de algum processo em andamento - de receber inputs por exemplo
 
-## Métodos
+## Métodos - Node
 
 <dl>
   <dt>on()</dt>
