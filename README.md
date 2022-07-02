@@ -37,18 +37,19 @@ Se você tem tempo e pode investir em um curso de inglês, compre a vontade que 
 
 # Conceitos Web
 
+
 ### Dev - Index
 
--[A Internet](#a-internet)
--[URL](#link-url)
--[HTTPS](#https)
--[IP](#ip)
--[TCP](#tcp)
--[DNS](#dns)
--[Proxy](#proxy)
--[Cliente x Server](#client-vs-server)
--[Browser](#browser)
--[Sites: Estático x SPA](#site-estatico-vs-spa)
+- [A Internet](#a-internet)
+- [URL](#link-url)
+- [HTTPS](#https)
+- [IP](#ip)
+- [TCP](#tcp)
+- [DNS](#dns)
+- [Proxy](#proxy)
+- [Cliente x Server](#client-vs-server)
+- [Browser](#browser)
+- [Sites: Estático x SPA](#site-estatico-vs-spa)
 
 ## Introdução
 
