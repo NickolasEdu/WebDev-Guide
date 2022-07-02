@@ -1732,6 +1732,50 @@ O JSON é uma forma de comunicação de dados entre sistemas, no consumo de API 
 
 ## ECMAScript - 2022
 
+O ECMAS é o regulador do Javascript, onde é definido quais atualizações serão adicionadas ao Javascript, como exemplo temos as variáveis, foi no ECMAS 2015 que adicionaram as declarações com let e const. São por conta destas atualizações que devemos ficar atentos a features que não funcionam em navegadores antigos.
+
+Neste ano de 20220 não foram gandes as adições, aqui comentrei algumas mais importantes e daquelas que envolvem um conteúdo que ainda não abordei aqui, como programação orientada a objetos.
+
+<dl>
+  <dt>.at()</dt>
+  <dd>
+    Novo método de array, que acessa valores através do index deles. Podendo receber valores negativos.
+  </dd>
+</dl>
+
+ex:
+```javascript
+
+const array = ['index0', 'index1', 'index2', 'index3', 'index4']
+
+console.log(array.at(-2))
+```
+
+Output: index3;
+
+<dl>
+  <dt>error.case</dt>
+  <dd>
+    Ajuda na investigação do erro causado dos valores passados como argumento.
+  </dd>
+</dl>
+
+```javascript
+
+const transformData = (unprocessData) => {
+  return unprocessData.map(data => {
+    try {
+      actFunction(data)
+    } catch (err) {
+      throw new Error(
+        'Something went wrong',
+        {cause: err},
+      )
+    }
+  })
+}
+```
+
 **[⬆ voltar ao topo](#index)**
 
 # Node
