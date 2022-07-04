@@ -2212,3 +2212,35 @@ Os campos podem ser preenchidos com qualquer informação, desde que sigam regra
     Um texto que não pode se repetir em mais nenhum campo daquela tabela, mas que também não é uma Primary Key - como @usuario que só poderá haver um.
   </dd>
 </dl>
+
+## Comandos
+
+Os Comandos são as apresentações e manipulações de dados, sempre em letras UpperCase.
+
+<dl>
+  <dt>SELECT</dt>
+  <dd>
+    Selecionar qual o campo
+  </dd>
+</dl>
+
+<dl>
+  <dt>FROM</dt>
+  <dd>
+    Após selecionar o campo, indicar qual a tabela ele está.
+  </dd>
+</dl>
+
+<dl>
+  <dt>WHERE</dt>
+  <dd>
+    Uma condição de o que especificamente deve ser procurado. ex: WHERE in = 1 / trazendo tudo no campo do ID 1
+  </dd>
+</dl>
+
+<dl>
+  <dt>like "${key}%"</dt>
+  <dd>
+    Uma condicional do WHERE, onde procura algum valor que comece com um caractere especifico. ex: SELECT * FROM tabela WEHRE nome like "a%" / Retornando tudo o que começa com A ou "%a%" para retornar algo que tenha A no meio de outros caracteres.
+  </dd>
+</dl>
