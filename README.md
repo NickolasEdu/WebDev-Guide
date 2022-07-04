@@ -2145,3 +2145,70 @@ Output esperado:
 Evento emitido, escutado e executado Primeiro
 
 **[⬆ voltar ao topo](#index)**
+
+# SQL
+
+## Bancos de dados
+
+Um repositório de informações, ou banco de dados, são onde armazenamos e manipulamos tipos de dados. Como exemplo, nos nossos celulares temos o aplicativo de contatos que armazena as informações de números de contato, e os dados consistem em Nome, Número Móvel e Número Fixo.
+
+## SQL x noSQL
+
+O SQL é formado por:
+
+  Tabelas > Campos > Infos > Relacionamentos de tabelas
+
+As *tabelas* são os diferentes grupos de dados;
+Os *campos* são os títulos das colunas da tabela;
+As *informações* são os dados inseridos em cada campo;
+Essas infos devem seguir regras de aplicação para serem acessados, esse é o *relacionamento de tabelas*.
+
+{img}
+
+## Tipos de campos
+
+Os campos podem ser preenchidos com qualquer informação, desde que sigam regras de uso do sistema - como uma syntax. Não podem receber acentos, caracteres especiais, espaços e nem começar com número. São declarados com letras, underline e com algum desses valores seguidos de algum número.
+
+<dl>
+  <dt>Text</dt>
+  <dd>
+    Qualquer valor escrito, desde: letras, caracteres especiais, espaços e números
+  </dd>
+</dl>
+
+<dl>
+  <dt>Number</dt>
+  <dd>
+    Apenas valores numéricos.
+  </dd>
+</dl>
+
+<dl>
+  <dt>Datetime</dt>
+  <dd>
+    Recebe números e traços, interpretados pelo sistema como data e horário. Ex: dd-mm-yy-hh-mm-ss ou 04-07-2022-10-41-30
+  </dd>
+</dl>
+
+<dl>
+  <dt>Primary Key</dt>
+  <dd>
+    Um valor de ID que será único para um campo daquela tabela.
+  </dd>
+</dl>
+
+<dl>
+  <dt>Foreign Key</dt>
+  <dd>
+    É quando uam tabela importa a Primary de outra tabela, enquanto cada uma teu sua própria Primary Key, para ser relacionada em outra tabela ela agora será a Foreign Key, que agora pode se repetir.
+  </dd>
+</dl>
+
+{Img2}
+
+<dl>
+  <dt>Text Unique</dt>
+  <dd>
+    Um texto que não pode se repetir em mais nenhum campo daquela tabela, mas que também não é uma Primary Key - como @usuario que só poderá haver um.
+  </dd>
+</dl>
