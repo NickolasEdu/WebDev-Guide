@@ -2248,6 +2248,47 @@ Os Comandos são as apresentações e manipulações de dados, sempre em letras 
   </dd>
 </dl>
 
+EX:
+```SQL
+SELECT * FROM tabela WHERE nome
+```
+
+<dl>
+  <dt>INSERT INTO</dt>
+  <dd>
+    Insere novos dados em uma tabela, recebendo os campos que serão inseridos os dados e os valores.
+  </dd>
+</dl>
+
+EX:
+```SQL
+INSERT INTO tabela (nome, ususario, id) VALUES ('Maria Luiza', 'Malu', 123456)
+```
+
+<dl>
+  <dt>UPDATE</dt>
+  <dd>
+    Alterar dados de campos já existentes. Recebendo os campos que serão alterados e seus valores, e a condição que será aplicada. 
+  </dd>
+</dl>
+
+EX:
+```SQL
+UPDATE tabela SET nome='Marilu' usuario='@malu' WHERE user_id = 3
+```
+
+<dl>
+  <dt>DELETE</dt>
+  <dd>
+    Remove o campo e os dados selecionados, recebe a tabela e é sempre necessário uma condição. Pois sem ela, o comportamento padrão é excluir toda a tabela quando não há um campo especifico.
+  </dd>
+</dl>
+
+EX:
+```SQL
+DELETE FROM tabela WHERE user_id = 3
+```
+
 ## Operadores SQL
 
 ### Relacionais
@@ -2269,7 +2310,7 @@ Retornando todos valores diferentes de uma condicionais. Com os operadores: *!=,
 SELECT * FROM tabela WHERE idade != 55
 SELECT * FROM tabela WHERE idade <> 13
 ```
-
+Para comparações com texto não são usados operadores, mas sim a expressão *like*
 
 ### Matemáticos
 
