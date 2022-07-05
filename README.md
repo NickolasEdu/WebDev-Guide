@@ -2247,3 +2247,82 @@ Os Comandos são as apresentações e manipulações de dados, sempre em letras 
     Uma condicional do WHERE, onde procura algum valor que comece com um caractere especifico. ex: SELECT * FROM tabela WEHRE nome like "a%" / Retornando tudo o que começa com A ou "%a%" para retornar algo que tenha A no meio de outros caracteres.
   </dd>
 </dl>
+
+## Operadores SQL
+
+### Relacionais
+
+São operadores que fazem camparação entre valores de condicionais. São eles: *=,!=, >, <, <=, >=, <>*
+
+ex:
+
+Retornando cadastros que contém 18 anos de idade ou que contém menos de 18. Juntandos as condições de maior/menor e igual.
+```SQL
+
+SELECT * FROM tabela WHERE idade >= 18
+SELECT * FROM tabela WHERE idade <= 18
+```
+
+Retornando todos valores diferentes de uma condicionais. Com os operadores: *!=, <>*
+```SQL
+
+SELECT * FROM tabela WHERE idade != 55
+SELECT * FROM tabela WHERE idade <> 13
+```
+
+
+### Matemáticos
+
+Operadores simples de gramática:
+
+- Adição: +
+- Subtração: -
+- Multiplicação: *
+- Divisão: /
+- Módulo (restante de uma divisão): %
+
+### Lógicos
+
+Para condicionais avançadas
+
+*And* para declarar uma condição, mais outra.
+```SQL
+SELECT * FROM tabela WHERE nome like 'A%' and idade > 18
+```
+ex: buscando por um usuário cujo o nome comece com a letra A seguida de outros caracteres e também tenha idade superior a 18.
+
+*Or* para executar uma condição ou outra.
+```SQL
+SELECT * FROM tabela WHERE idade >= 18 or idade >= 14
+```
+ex: Dados de usuários maiores de 18, se não houver, maiores de 14.
+
+*Between* retorna valores dentro de uma condição.
+```SQL
+SELECT * FROM tabela WHERE user_id between 100 and 150
+```
+
+*Not Between* retornar valores, exeto por aqueles dentro de uma sequência especifíca.
+```SQL
+SELECT * FROM tabela WHERE user_id NOT BETWEEN 100 and 150
+```
+
+*IN* Sequência específica de campos. Recebe os parâmetros de campo que serão retornados
+```SQL
+SELECT * FROM tabela WHERE user_id IN (3, 5, 8, 13)
+```
+
+*NOT IN* para fazer o oposto, retornando todos os valores exeto os declarados.
+```SQL
+SELECT * FROM tabela WHERE user_id NOT IN (3, 5, 8, 13)
+```
+
+*IS NULL* retornando dados de campos com valores vazios ou nulos (undefined)
+```SQL
+SELECT * FROM tabela WHERE user_id IS NULL
+```
+
+*IS NOT NULL* para retornar a negação ao undefined
+```SQL
+SELECT * FROM tabela WHERE user_id IS NOT NULL
+```
