@@ -2151,6 +2151,9 @@ Evento emitido, escutado e executado Primeiro
 ## Bancos de dados
 
 Um repositório de informações, ou banco de dados, são onde armazenamos e manipulamos tipos de dados. Como exemplo, nos nossos celulares temos o aplicativo de contatos que armazena as informações de números de contato, e os dados consistem em Nome, Número Móvel e Número Fixo.
+Estas databases são sequenciais ou não-sequenciais, nos bancos noSQL cada campo de informação tem uma chave própria para que as informações sejam pesquisadas. Por obter uma escrita simples e direta, não há uma organização complexa de dados, porém eles são encontrados mais rápidos e suportam mais acessos.
+
+Enquanto um banco SQL as informações são organizadas em campos dentro de tabelas, a correlação de dados será feito entre as tabelas, onde cada campo de informação terá keys únicas e kays que se repetem.
 
 ## SQL x noSQL
 
