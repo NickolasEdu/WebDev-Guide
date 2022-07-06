@@ -2289,6 +2289,79 @@ EX:
 DELETE FROM tabela WHERE user_id = 3
 ```
 
+### Comandos avançados
+
+<dl>
+  <dt>ORDER BY</dt>
+  <dd>
+    Definir a ordem da apresentação crescente da apresentação, ou ordem decrescente com o comando DESC
+  </dd>
+</dl>
+
+ex:
+```SQL
+SELECT * FROM tabela ORDER BY Nome
+SELECT * FROM tabela ORDER BY Nome DESC
+```
+
+<dl>
+  <dt>LIMIT</dt>
+  <dd>
+    Definir um limite para a quantidade de dados apresentados.
+  </dd>
+</dl>
+
+ex:
+```SQL
+SELECT * FROM tabela LIMIT 50
+```
+
+<dl>
+  <dt>OFF SET</dt>
+  <dd>
+    Desconsiderer os primeiros 'x' números de resultados, antes de apresentar os dados - ou seja, pula a apresentação destes dados.
+  </dd>
+</dl>
+
+ex:
+```SQL
+SELECT * FROM tabela LIMIT 50 OFF SET 5
+```
+
+<dl>
+  <dt>COUNT()</dt>
+  <dd>
+    Retorna uma função que faz a contagem de dados.
+  </dd>
+</dl>
+
+<dl>
+  <dt>GROUP BY</dt>
+  <dd>
+    Faz a contagem de campos.
+  </dd>
+</dl>
+
+<dl>
+  <dt>HAVING</dt>
+  <dd>
+    Gera mais uma segunda condição após o WHERE, para trazer mais especificidade para a apresentação dos dados.
+  </dd>
+</dl>
+
+EX:
+```SQL
+
+SELECT departamentos.descrição, COUNT(funcionarios.id_departamentos)
+FROM funcionarios
+JOIN depertamentos
+ON funcionarios.id_departamentos = departamentos.id_dept
+GROUP BY departamento.id_dept
+HAVING COUNT (funcionarios.id_departamentos) >= 2
+```
+*Legenda:*
+_Placeholder_
+
 ## Operadores SQL
 
 ### Relacionais
@@ -2367,3 +2440,54 @@ SELECT * FROM tabela WHERE user_id IS NULL
 ```SQL
 SELECT * FROM tabela WHERE user_id IS NOT NULL
 ```
+
+## Relação de tabelas
+
+<dl>
+  <dt>JOIN</dt>
+  <dd>
+    Faz o relacionamento das tabelas através de dados especificos.
+  </dd>
+</dl>
+
+<dl>
+  <dt>ON</dt>
+  <dd>
+    Este parâmetro se refere aos valores das diferentes tabelas que devem ser iguais para que seja feita a relação.
+  </dd>
+</dl>
+
+ex:
+```SQL
+SELECT * FROM funcionarios JOIN setor ON setor.area_id = funcionarios.func_id
+WHERE setor.area_id = 1
+```
+
+_Neste caso buscando os funcionarios que tem relação com o setor de id 1_
+
+<dl>
+  <dt>LEFT OUTER JOIN</dt>
+  <dd>
+   Faz a relação de todos os campos, mesmo aquelas com valor null.
+  </dd>
+</dl>
+
+ex:
+```SQL
+SELECT * FROM funcionarios LEFT OUTER JOIN setor ON usuario.id = servidor.id
+```
+
+<dl>
+  <dt>AS</dt>
+  <dd>
+    Criar um nome alternativo aos nomes de tabelas e campos que manipulamos.
+  </dd>
+</dl>
+
+ex:
+```SQL
+SELECT  tabela.nome as "Name" FROM funcionarios as Func JOIN departamentos as Dept ON Func.id = Dept.id
+```
+
+_Trazendo as mesmas informações do ultimo exemplo, dessa vez sem os valores null e com os nomes alternativos_
+
