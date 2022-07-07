@@ -2491,3 +2491,35 @@ SELECT  tabela.nome as "Name" FROM funcionarios as Func JOIN departamentos as De
 
 _Trazendo as mesmas informações do ultimo exemplo, dessa vez sem os valores null e com os nomes alternativos_
 
+## Command Tables
+
+Para criar um novo banco do zero, é criado um arquivo .txt vazio e então alterado para .SQL e seu import feito no manipulador de SQL.
+
+<dl>
+  <dt>CREATE TABLE</dt>
+  <dd>
+    Recebe o nome de tabela, os campos e as configurações deles
+  </dd>
+</dl>
+
+```SQL
+CREATE TABLE alunos {
+  matricula INTEGER PRIMARY KEY AUTOINCREMENT,
+  nome TEXT,
+  cpf INTEGER UNIQUE,
+}
+```
+
+<dl>
+  <dt>ALTER TABLE 'nomeAtual' RENAME TO 'novoNome'</dt>
+  <dd>
+    Alterar os nomes de tabelas, ou para alterar o nome de campos com ALTER TABLE nome RENAME COLUMN campo TO 'novoNome'
+  </dd>
+</dl>
+
+<dl>
+  <dt>DROP TABLE</dt>
+  <dd>
+    Excluir toda a tabela e seus registros.
+  </dd>
+</dl>
