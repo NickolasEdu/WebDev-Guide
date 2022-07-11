@@ -2144,6 +2144,27 @@ Output esperado:
 
 Evento emitido, escutado e executado Primeiro
 
+### Herdando Eventos
+
+Inherits é uma função que recebe dois parâmetros(aquele que será o herdeiro, quem está herdando). No exemplo, a função principal está herdando os módulos de Events
+
+```JSX
+
+const { EventEmitter} = require('events')
+const { inherits } = require('util')
+
+function Main(print) {
+  this.name = print
+}
+
+inherits(Main, EventEmitter)
+
+const setPrint = new Main('Hello World')
+setPrint.on('Testing', () => console.log('Está funcionando'))
+
+setPrint.emit('Testting')
+```
+
 **[⬆ voltar ao topo](#index)**
 
 # SQL
