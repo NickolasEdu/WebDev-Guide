@@ -978,7 +978,7 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 - [Hoisting](#hoisting)
 - [Sincrono e Assincrono](#síncrono-vs-assíncrono)
 - [Callback x Promisse](#callback-vs-promise)
-- [Arrays](#arrays-e-objects)
+- [Arrays](#arrays)
 - [Operadores](#operadores)
 - [Condicionais](#condicionais)
 - [Loops - Laços de Repetição](#loops)
