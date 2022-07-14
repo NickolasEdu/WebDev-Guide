@@ -1273,11 +1273,15 @@ startPromise()
 
 **[⬆ voltar ao capitulo](#javascript)**
 
-## Arrays e Objects
-Arrays são como variáveis, que ao invés de armazenar um valor ele armazena vários do mesmo valor, desde que seja do mesmo tipo
-Ex:
+## Arrays
+
+Os Arrays são estruturas que recebem diversos tipos de dado, desde strings, números, boleanos. E cada dado há uma recebe uma posição de index, respeitando a ordem em que são inseridos, partindo do número zero.
+O sinal de ‘**[ ]**’ é sinônimo de array, sendo usado para serem colocados os dados e ao ser acessado pelo index também são usados estes sinais.
+
 ```javascript
-const names = ["Augusto","Bruna","Camila", "Danilo"]
+const Array = ['String', 10, 'Not a number', true]
+
+console.log(Array[2])
 ```
 
 Objetos são parecidos, mas com ele somos capazes de armazenar diferentes tipos de dados
@@ -1289,6 +1293,33 @@ const person = {
   city: "Londrina",
 }
 ```
+
+## Estrutura de dados
+
+### Matriz
+É uma estrutura onde são colocados arrays dentro de um outro array. Onde os dados são acessados a partir do index dentro do index.
+```javascript
+
+const students = [['José', 23, 'MG'], ['Breno', 19, 'SP'], ['Amanda', 20, 'RJ']]
+
+console.log(students[1][0])
+```
+
+### Stack
+São uma pilha de dados, como se estivessem sendo colocados algo em cima do outro. Nesse estrutura há o conceito de Last in, first out, onde aquilo que é colocado por último é o primeiro a sair, da mesma forma que ocorreria numa pilha de livros. 
+Métodos relacionados:
+- push(): adicionar elemento
+- pop(): remover elemento 
+- peek(): pegar o elemento no topo
+
+
+### Queue
+Uma fila de dados, onde o conceito é first in, first out. Quando o primeiro a chegar é o primeiro a sair, assim como filas de atendimento.
+Métodos relacionados:
+- enqueue(): adicionar ao final da fila
+- dequeue(): remover o primeiro da fila
+
+
 **[⬆ voltar ao capitulo](#javascript)**
 
 ## Operadores
