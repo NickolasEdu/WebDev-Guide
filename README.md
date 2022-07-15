@@ -989,7 +989,7 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 - [Conersão de Dados](#conversão-de-dados)
 - [API](#api--json)
 - [ECMAScript](#ecmascript---2022)
-
+- [Programação Funcional]()
 ## O Básico
 No desenvolvimento web o **HTML** é a estrutura da página, o **CSS** é a forma que as elementos são apresentados e o **Javascript** é uma maneira de criar funcionalidades para a nossa aplicação. Numa explicação mais simples, o HTML é o corpo, CSS a aparência e o Javascript será o cérebro, esta linguagem é capaz de manipular todo o nosso site.
 
@@ -1860,7 +1860,70 @@ const transformData = (unprocessData) => {
   })
 }
 ```
+**[Voltar ao capítulo](#javascript)**
 
+## Programação Funcional
+Um paradigma para uma interptração mais simples do código, e abstrair problemas em funções pequenas e especificas. Trabalhando muito com argumentos e com a maneirda de escrita ligeiramente diferente do método tradicional.
+
+**Programação imperativa**
+Funções imperativas são as que dão o script de como o processo deve ser feito, cada passo, quando e onde é declarada ou chamada.
+```javascript
+let number = 2
+
+function square() {
+	return number * number
+}
+
+number = square()
+```
+
+**Programação declarativa**
+Já na função Declarativa, ela é declarada e fica lá armazenada para ser usada quando necessário. Recebendo o que será feito, mas tudo com valores neutros pois isso só será definido quando for necessário ser usada.
+```javascript
+const square = n => n * n
+square(2)
+```
+
+Nesse contexto o sistema faz o Stateless, ou seja, não guarda o estado de number em momento algum, ele recebe o estado de valor apenas na hora que é chamado. Diferente de Statefull, onde o sistema sempre ficará atento caso a variável *let* tenha seu valor alterado. Dessa forma a função não trabalha com dados externos, e sim apenas com os dados que são entregues.
+
+Esse é um conceito de imutabilidade, todas as variáveis devem ser consideradas como constantes, seus valores não podem ser alterados, mas sim criando novos, sendo recebidos via argumentos e deixando as declarações muito mais simples.
+
+### Funções funcionais
+
+#### Independentes
+Funções que só trabalham com dados externos passados via argumentos, e retornam um novo valor. Todo dado externo é imutável para esta função, e também não podem ser feitos uso de loops. Para uso de loops é feito o uso do algoritmo de recursão onde o valor está sendo multiplicado a cada rodada com o seu próprio valor -1, até que chegue no zero.
+```javascript
+const factorial = x => {
+     if(x === 0) {
+         return 1
+     }
+     return x * factorial(x - 1)
+}
+
+factorial(6)
+```
+#### First Class
+Funções que são interpretadas como variáveis, podem ser atribuídas a uma constante e sua ação feita sempre que algo for passada como argumento para dentro dela. runFunction( ) sendo usada literalmente para simplesmente rodar outras arrow functions, ou até operações dentro de console.log.
+```javascript
+const runFunction = rf => rf()
+const sayMyName = () => console.log('Heinserberg')
+
+runFunction(sayMyName)
+runFunction(() => console.log('Jesse Pikman, bitch'))
+```
+#### High Order - Currying
+PLACEHOLDER
+
+#### Composição
+Um encadeamento de funções, onde são passados argumentos que vão de uma função a outra fazendo alterações a cada nível e seguem sendo passados como argumentos. Semelhante a promisses.
+```javascript
+const people = ['Amanda', 'Daniel', 'Danilo', 'Joab', 'Matheus']
+const peopleWithD = people
+.filter(person => person.startsWith('D'))
+.map(dperson => dperson.toUpperCase())
+
+peopleWithD
+```
 **[⬆ voltar ao topo](#index)**
 
 # Node
