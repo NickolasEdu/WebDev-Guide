@@ -1924,6 +1924,117 @@ const peopleWithD = people
 
 peopleWithD
 ```
+
+**[⬆ voltar ao capítulo](#javascript)**
+
+## Programação Orientada a Objetos
+O Javascript é uma linguagem de multiparadgima, sendo os paradigmas maneiras de enxergar e interpretar o desenvolvimento de alguma forma especifica para gerar melhor compreendimento e comunicação entre times de devs. Sendo o OOP - Programação Orientada a Objetos - um paradigma muito usado com o objetivo de abstrair reutilizar códigos.
+
+**Vamos aos conceitos**
+
+### Objetos
+Possuem **Atributos** e **Métodos**, os atributos são as sua propriedades, aquilo que o define e suas funções. Já os Métodos são o estado e o comportamento daquele objeto, em qual estado ele se encontra e qual é seu comportamento quando alterado para outro estado.
+
+### Objetos Abstratos
+Não tem **métodos ou Atributos** claramente definidos, são mais como **processos**, que dependem de um conjunto de métodos e atributos, mas que não tem forma definida. Como processos de **autenticação**, **validação** e **autorização**.
+
+### Classes
+Servem como moldes, para que objetos sejam criados a partir delas. Sendo que o comportamento padrão do Javascript, todo objeto herda prototypes dos seus objetos pais.
+
+### Encapsulamento
+São agrupados dentro de uma classe alguma função e valores que só serão usados quando essa capsula for requisitada, ficando totalmente independente de todo o resto da aplicação.  Esse conceito de encapsulamento é um dos fatores mais distintos da OOP para programação estrutural.
+
+## Programação Estrutural x Orientada a Objetos
+
+Estrutural
+```jsx
+let valorHora = 50
+let desconto: number
+let desconto = valorHora * tempoEstimado * (10 / 100)
+let custoEstimado = valorHora * tempoEstimado - desconto
+console.log(custoEstimado)
+```
+
+OOP
+```jsx
+const job = new job()
+job.valorHora = 50
+job.tempoEstimado = 20
+job.desconto = 10
+const custoEstimado = jobb.calcularEstimativa()
+console.log(custoEstimado)
+```
+
+## Herança
+Maneira de reutilização de código, onde um novo objeto é a extensão do outro e recebe funções do objeto pai.
+
+```jsx
+class Veiculo {
+rodas = 4
+
+mover(direção){}
+virar(direção){}
+}
+
+class Moto extends Veiculo {
+ constructor() {
+		super()
+		this.rodas = 2
+	}
+}
+```
+*Legenda:*
+> A class Veículo foi criada com um padrão de 4 rodas, onde normalmente serão carros
+> Funções de direção pré estabelecidas, onde definiram a direção os veículos
+> Um novo objeto criado de motos, recebendo extends de veículos 
+> Constructor para 
+> super( ) que faz a importação das funcionalidades e métodos do objeto pai - aqui com as funções de direções
+
+## Polimorfismo
+São objetos que se estendem de outros porém seus métodos são semelhantes, porém não serão idênticos. Onde são criadas condições para funções.
+
+```jsx
+class Atleta {
+	peso
+	categoria
+
+	constructor(peso) {
+		this.peso = peso
+	}
+
+	definirCategoria() {
+	if (this.peso <= 50) {
+				this.categoria = 'infantil'
+		} else if (this.peso <= 65) {
+				this.categoria = 'jovem'
+		} else {
+				this.categoria = 'adulto'
+		}
+	}
+}
+
+class Lutador extends Atleta { 
+	constructor(peso) {
+		super(peso)
+}
+
+	definirCategoria() {
+	if (this.peso <= 50) {
+				this.categoria = 'Mosca'
+		} else if (this.peso <= 60) {
+				this.categoria = 'Meio Leve'
+		} else {
+				this.categoria = 'Médio pesado'
+		}
+	}
+}
+```
+*Legenda*
+> Um objeto onde é declarado peso e altura sem nenhum valor
+> Esses valores são passados posteriormente por argumentos
+> E também a partir de condições, onde originalmente as funções recebem o peso e depois definem os valores de categoria
+
+
 **[⬆ voltar ao topo](#index)**
 
 # Node
