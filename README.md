@@ -1927,7 +1927,7 @@ peopleWithD
 
 **[⬆ voltar ao capítulo](#javascript)**
 
-## Programação Orientada a Objetos
+## Oriented Object Programming
 O Javascript é uma linguagem de multiparadgima, sendo os paradigmas maneiras de enxergar e interpretar o desenvolvimento de alguma forma especifica para gerar melhor compreendimento e comunicação entre times de devs. Sendo o OOP - Programação Orientada a Objetos - um paradigma muito usado com o objetivo de abstrair reutilizar códigos.
 
 **Vamos aos conceitos**
