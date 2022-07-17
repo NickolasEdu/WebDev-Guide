@@ -1860,7 +1860,7 @@ const transformData = (unprocessData) => {
   })
 }
 ```
-**[Voltar ao capítulo](#javascript)**
+**[⬆ Voltar ao capítulo](#javascript)**
 
 ## Programação Funcional
 Um paradigma para uma interptração mais simples do código, e abstrair problemas em funções pequenas e especificas. Trabalhando muito com argumentos e com a maneirda de escrita ligeiramente diferente do método tradicional.
@@ -1985,9 +1985,13 @@ class Moto extends Veiculo {
 ```
 *Legenda:*
 > A class Veículo foi criada com um padrão de 4 rodas, onde normalmente serão carros
+
 > Funções de direção pré estabelecidas, onde definiram a direção os veículos
+
 > Um novo objeto criado de motos, recebendo extends de veículos 
-> Constructor para 
+
+> Constructor que é uma função reservada onde os atributos do objeto são definidos
+
 > super( ) que faz a importação das funcionalidades e métodos do objeto pai - aqui com as funções de direções
 
 ## Polimorfismo
