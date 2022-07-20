@@ -168,8 +168,6 @@ Também temos outras opções como Sublime Text e Atom, mas em questão de funci
 - **Codesnap**, Uma situação muito comum quando um dev precisa compartilhar um código que não está no GitHub ou precisa achar um erro em uma parte especifíca. O Codesnap é essencial para isso, essa extenção tira um print em ótima qualidade do trecho do código que você escolher, já importa para imagem pronta para ser enviada para outro dev.
 - **Dev Tools**, ou ferramente do desenvolvedor que abrimos pelo próprio navegador. Com ela conseguimos ver dados do código fonte, Estilos, consultas ao servidor de quase qualquer site que visitamos, e principalmente para estudarmos o comportamento dos nossos próprios projetos.
 
-## GitHub
-PLACEHOLDER
 
 ## Terminal - Shell
 
@@ -258,6 +256,158 @@ O terminal recebe linhas de comandos, atalhos escritos de um software não visua
     Recebe um arquivo para ser editado. Para sair crtl + x
   </dd>
 </dl>
+
+
+## Version Control System
+
+Os sistemas de controle de versão vieram para tapar os buracos dos sistemas de controle de revisão ou em nuvem. Suas limitações eram que, um mantém o histórico de versões na nuvem, dependendo de um serviço esterno para que se mantenha funcionando, e os sistemas de revisão onde era necessário criar manualmente essas versões, dificultando o compartilhamento. Os VCS é capaz de fazer as duas coisas, trazendo tudo o que é necessário para a visualização do histórico de projeto.
+Para fazer o controle e compartilhamentos de projeto estaremos fazendo uso do Git e do GitHub - que assim como Java e Javascript, soam parecidos mas não são.
+
+### Comandos Git
+
+Todas as alterções que fizermos terão 3 estados de processamento: *Workstage*, *Staged* e *Commit*. **Workstage** se refere ao arquivo que está sendo editado, você salva as alterações na sua máquina mas não se reflete no projeto na nuvem. **Staged** é quando o arquivo está pronto para ser inserido no repositório final, **Commit** é as alterações adcionadas e definindo uma nova versão atual para o projeto.
+
+<dl>
+  <dt>git clone 'endereço do repositório'</dt>
+  <dd>
+    Cria uma cópia local na sua máquina de um repositório remoto
+  </dd>
+</dl>
+
+<dl>
+  <dt>git init</dt>
+  <dd>
+    Dentro de um diretório local esse comando dá start no git, logo o sistema indica que esse diretório se tornou a branch master do projeto.
+  </dd>
+</dl>
+
+<dl>
+  <dt>git status</dt>
+  <dd>
+    Trás informações sobre o estado do projeto, como qual a branch, os commits e se ainda tem algo para ser adicionado
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git add 'nomeArquivo' ou '.' para todos os arquivos rastreados</dt>
+  <dd>
+    No chamado do git status ele avisa que para adicionar arquivos é preciso usar o comando de add, isso porque não basta criar o arquivo dentro da mesma pasta, após o git ser iniciado agora é preciso inserir esses arquivos via commits.
+  </dd>
+</dl>
+
+"**Nesse caso, ao criar um arquivo dentro da pasta e dar git status, esse novo arquivo irá ser apresentado constando na pasta mas será exibido na cor vermelha, indicando que não faz parte do estage, ou que não está sendo rastreado pelo commit que será subido para o projeto principal. Essa é a função do git add, indicar a inserção desse arquivo e ao pedir git status de novo o arquivo será exibido na cor verde, pronto para ser commitado**"
+
+<dl>
+  <dt>git commit -m"Mensagem do commit"</dt>
+  <dd>
+    Esse comando fecha o pacote que será subido para o projeto principal e com uma mensagem para indicar qual foi a aplicação da atualização. Tudo feito até aqui, com arquivos adicionados e status de ok confirmados, o pack está preparado para ser enviado ao repositório remoto.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git commit -ma"Mensagem do commit"</dt>
+  <dd>
+    Passar um arquivo rastreado do Workstage direto para o commit stage, pulando o staged.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git log</dt>
+  <dd>
+    Ao fazer o commit o sistema não dá nenhum feedback que deu certo, sendo assim o comando log serve para vermos o histórico de commits e confirmar que o commit foi aceito. Cada commit recebe um HASH SHA-1, que é como um ID para indentificar essa versão no tempo do projeto.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git diff</dt>
+  <dd>
+    Mostra no terminal as alterações feitas no commit.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git pull</dt>
+  <dd>
+    Deve ser feito antes do push, o sistema procura se há algum commit na fila.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git push origin master</dt>
+  <dd>
+    Finalmente enviar o pacote para o repositório. Ao chamar o git push o sistema vai indicar um comando para não ser necessário chamar o origin master todas as vezes, deixando simplificar para apenas git push. o comando é '--set-upstream origin master'
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>Branchs</dt>
+  <dd>
+    As branchs são onde as atualizações são feitas, cada pasta pode ter uma branch e lá a alteração é feita sem alterar o arquivo final.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git checkout -b 'nome_branch'</dt>
+  <dd>
+    Cria uma branch, toda alteração será  feita e commitada nessa branch e então atualizada no projeto final
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git checkout 'nome_branch'</dt>
+  <dd>
+    Navegar entre as branchs, como o cd
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git merge 'nome_branch'</dt>
+  <dd>
+    Na branch master ao rodar esse comando os arquivos da branch selecionada serão adicionados na branch master do projeto. Feito isso é hora de rodar o git push origin master na branch master.
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git branch -D</dt>
+  <dd>
+    Excluir a branch vazia após ter feito o merge, porém a exclusão do repositório remoto deve ser feito manualmente
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git ignore</dt>
+  <dd>
+    Um dos arquivos do projeto tem o nome .gitignore, nele você lista o nome dos arquivos e pastas que não ficarão disponíveis no repositório remoto
+  </dd>
+</dl>
+
+
+<dl>
+  <dt>git restore 'arquivo'</dt>
+  <dd>
+    Recuperar um arquivo exluído do staged
+  </dd>
+</dl>
+
+<dl>
+  <dt>git revert 'HASH-1'</dt>
+  <dd>
+    Retornar o projeto para um ponto no tempo espcifico.
+  </dd>
+</dl>
+
 
 ## Dicionário Dev
 PLACEHOLDER
