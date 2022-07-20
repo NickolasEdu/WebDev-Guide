@@ -15,6 +15,8 @@ Eu não sou nenhum desenvolvedor Pleno ou Sênior, ainda não sou nem um Júnior
 4. [CSS](#css)
 5. [Javascript](#javascript)
 6. [Node](#node)
+7. [SQL](#sql)
+8. [React.js](#reactjs)
 
 # Ingles
 
@@ -2558,7 +2560,7 @@ Enquanto um banco SQL as informações são organizadas em campos dentro de tabe
 
 O SQL é formado por:
 
-  Tabelas > Campos > Infos > Relacionamentos de tabelas
+Tabelas > Campos > Infos > Relacionamentos de tabelas
 
 As *tabelas* são os diferentes grupos de dados;
 Os *campos* são os títulos das colunas da tabela;
@@ -2931,3 +2933,5 @@ HAVING COUNT (funcionarios.id_departamentos) >= 2
 ```
 
 **[⬆ voltar ao topo](#index)**
+
+## Reactjs
