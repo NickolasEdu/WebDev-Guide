@@ -2615,6 +2615,8 @@ Os campos podem ser preenchidos com qualquer informação, desde que sigam regra
   </dd>
 </dl>
 
+**[⬆ voltar ao capitulo](#sql)**
+
 ## Comandos SQL
 
 Os Comandos são as apresentações e manipulações de dados, sempre em letras UpperCase.
@@ -2687,6 +2689,7 @@ EX:
 ```SQL
 DELETE FROM tabela WHERE user_id = 3
 ```
+**[⬆ voltar ao capitulo](#sql)**
 
 ## Operadores SQL
 
@@ -2767,6 +2770,8 @@ SELECT * FROM tabela WHERE user_id IS NULL
 SELECT * FROM tabela WHERE user_id IS NOT NULL
 ```
 
+**[⬆ voltar ao capitulo](#sql)**
+
 ## Command Tables
 
 Para criar um novo banco do zero, é criado um arquivo .txt vazio e então alterado para .SQL e seu import feito no manipulador de SQL.
@@ -2799,6 +2804,8 @@ CREATE TABLE alunos {
     Excluir toda a tabela e seus registros.
   </dd>
 </dl>
+
+**[⬆ voltar ao capitulo](#sql)**
 
 ## Relação de tabelas
 
@@ -2849,6 +2856,8 @@ SELECT  tabela.nome as "Name" FROM funcionarios as Func JOIN departamentos as De
 ```
 
 _Trazendo as mesmas informações do ultimo exemplo, dessa vez sem os valores null e com os nomes alternativos_
+
+**[⬆ voltar ao capitulo](#sql)**
 
 ## Comandos Avançados
 
@@ -2920,3 +2929,5 @@ ON funcionarios.id_departamentos = departamentos.id_dept
 GROUP BY departamento.id_dept
 HAVING COUNT (funcionarios.id_departamentos) >= 2
 ```
+
+**[⬆ voltar ao topo](#index)**
