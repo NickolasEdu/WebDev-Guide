@@ -1346,9 +1346,18 @@ Ou seja, o comportamento padrão é de executar na ordem em que foi escrito, mas
 
 É quando uma função fica de chamar outra assim que for terminada sua execução, usada para quando uma função específica depende de outra para ser executada. Exemplo, um sistema que precisa receber um valor e depois exibir ele. Não é possível exibir um valor antes dele ser atribuído, então a primeira função vai ficar responsável por receber uma ação de dado e depois chamar a função que irá exibir os dados.
 
-**Promisse**
+**Promise**
 
 As Promises são um método mais moderno que o de Callback, aqui a intenção de uso é praticamente a mesma, mas com comportamento diferente. Aqui a ideia também é chamar uma função depois que outra for executada, porém a próxima função será chamada referente a uma condição estabelecida, já que a promise deve ser retornada para alguém (variável ou função) e recebe dois parâmetros(resolve, reject) um em caso de condição concluída, outro em caso de condição não concluída.
+
+Elas tem 4 estágios: 
+**Pending** - Quando a promise é declarada;
+
+**Fullfilled** - A promessa foi cumprida
+
+**Rejected** - Houve algum problema na execução da promessa
+
+**Settled** - A cadeia de funções foi concluída, sendo a promessa bem sucedida ou não.
 
 ## Exemplos
 Síncrono
