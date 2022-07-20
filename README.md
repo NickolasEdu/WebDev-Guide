@@ -1139,7 +1139,9 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 - [Conersão de Dados](#conversão-de-dados)
 - [API](#api--json)
 - [ECMAScript](#ecmascript---2022)
-- [Programação Funcional]()
+- [Programação Funcional](#oriented-object-programming)
+
+
 ## O Básico
 No desenvolvimento web o **HTML** é a estrutura da página, o **CSS** é a forma que as elementos são apresentados e o **Javascript** é uma maneira de criar funcionalidades para a nossa aplicação. Numa explicação mais simples, o HTML é o corpo, CSS a aparência e o Javascript será o cérebro, esta linguagem é capaz de manipular todo o nosso site.
 
@@ -2537,6 +2539,14 @@ setPrint.emit('Testting')
 
 # SQL
 
+- [SQL x noSQL](#sql-x-nosql)
+- [Tipos de campos](#tipos-de-campos)
+- [Comandos SQL](#comandos-sql)
+- [Operadores](#operadores-sql)
+- [Criando tabelas](#command-tables)
+- [Relação de tabelas](#relação-de-tabelas)
+- [Comandos Avançados](#comandos-avançados)
+
 ## Bancos de dados
 
 Um repositório de informações, ou banco de dados, são onde armazenamos e manipulamos tipos de dados. Como exemplo, nos nossos celulares temos o aplicativo de contatos que armazena as informações de números de contato, e os dados consistem em Nome, Número Móvel e Número Fixo.
@@ -2605,7 +2615,7 @@ Os campos podem ser preenchidos com qualquer informação, desde que sigam regra
   </dd>
 </dl>
 
-## Comandos
+## Comandos SQL
 
 Os Comandos são as apresentações e manipulações de dados, sempre em letras UpperCase.
 
@@ -2677,79 +2687,6 @@ EX:
 ```SQL
 DELETE FROM tabela WHERE user_id = 3
 ```
-
-### Comandos avançados
-
-<dl>
-  <dt>ORDER BY</dt>
-  <dd>
-    Definir a ordem da apresentação crescente da apresentação, ou ordem decrescente com o comando DESC
-  </dd>
-</dl>
-
-ex:
-```SQL
-SELECT * FROM tabela ORDER BY Nome
-SELECT * FROM tabela ORDER BY Nome DESC
-```
-
-<dl>
-  <dt>LIMIT</dt>
-  <dd>
-    Definir um limite para a quantidade de dados apresentados.
-  </dd>
-</dl>
-
-ex:
-```SQL
-SELECT * FROM tabela LIMIT 50
-```
-
-<dl>
-  <dt>OFF SET</dt>
-  <dd>
-    Desconsiderer os primeiros 'x' números de resultados, antes de apresentar os dados - ou seja, pula a apresentação destes dados.
-  </dd>
-</dl>
-
-ex:
-```SQL
-SELECT * FROM tabela LIMIT 50 OFF SET 5
-```
-
-<dl>
-  <dt>COUNT()</dt>
-  <dd>
-    Retorna uma função que faz a contagem de dados.
-  </dd>
-</dl>
-
-<dl>
-  <dt>GROUP BY</dt>
-  <dd>
-    Faz a contagem de campos.
-  </dd>
-</dl>
-
-<dl>
-  <dt>HAVING</dt>
-  <dd>
-    Gera mais uma segunda condição após o WHERE, para trazer mais especificidade para a apresentação dos dados.
-  </dd>
-</dl>
-
-EX:
-```SQL
-
-SELECT departamentos.descrição, COUNT(funcionarios.id_departamentos)
-FROM funcionarios
-JOIN depertamentos
-ON funcionarios.id_departamentos = departamentos.id_dept
-GROUP BY departamento.id_dept
-HAVING COUNT (funcionarios.id_departamentos) >= 2
-```
-*Legenda:*
-_Placeholder_
 
 ## Operadores SQL
 
@@ -2830,6 +2767,39 @@ SELECT * FROM tabela WHERE user_id IS NULL
 SELECT * FROM tabela WHERE user_id IS NOT NULL
 ```
 
+## Command Tables
+
+Para criar um novo banco do zero, é criado um arquivo .txt vazio e então alterado para .SQL e seu import feito no manipulador de SQL.
+
+<dl>
+  <dt>CREATE TABLE</dt>
+  <dd>
+    Recebe o nome de tabela, os campos e as configurações deles
+  </dd>
+</dl>
+
+```SQL
+CREATE TABLE alunos {
+  matricula INTEGER PRIMARY KEY AUTOINCREMENT,
+  nome TEXT,
+  cpf INTEGER UNIQUE,
+}
+```
+
+<dl>
+  <dt>ALTER TABLE 'nomeAtual' RENAME TO 'novoNome'</dt>
+  <dd>
+    Alterar os nomes de tabelas, ou para alterar o nome de campos com ALTER TABLE nome RENAME COLUMN campo TO 'novoNome'
+  </dd>
+</dl>
+
+<dl>
+  <dt>DROP TABLE</dt>
+  <dd>
+    Excluir toda a tabela e seus registros.
+  </dd>
+</dl>
+
 ## Relação de tabelas
 
 <dl>
@@ -2880,35 +2850,73 @@ SELECT  tabela.nome as "Name" FROM funcionarios as Func JOIN departamentos as De
 
 _Trazendo as mesmas informações do ultimo exemplo, dessa vez sem os valores null e com os nomes alternativos_
 
-## Command Tables
-
-Para criar um novo banco do zero, é criado um arquivo .txt vazio e então alterado para .SQL e seu import feito no manipulador de SQL.
+## Comandos Avançados
 
 <dl>
-  <dt>CREATE TABLE</dt>
+  <dt>ORDER BY</dt>
   <dd>
-    Recebe o nome de tabela, os campos e as configurações deles
+    Definir a ordem da apresentação crescente da apresentação, ou ordem decrescente com o comando DESC
   </dd>
 </dl>
 
+ex:
 ```SQL
-CREATE TABLE alunos {
-  matricula INTEGER PRIMARY KEY AUTOINCREMENT,
-  nome TEXT,
-  cpf INTEGER UNIQUE,
-}
+SELECT * FROM tabela ORDER BY Nome
+SELECT * FROM tabela ORDER BY Nome DESC
 ```
 
 <dl>
-  <dt>ALTER TABLE 'nomeAtual' RENAME TO 'novoNome'</dt>
+  <dt>LIMIT</dt>
   <dd>
-    Alterar os nomes de tabelas, ou para alterar o nome de campos com ALTER TABLE nome RENAME COLUMN campo TO 'novoNome'
+    Definir um limite para a quantidade de dados apresentados.
+  </dd>
+</dl>
+
+ex:
+```SQL
+SELECT * FROM tabela LIMIT 50
+```
+
+<dl>
+  <dt>OFF SET</dt>
+  <dd>
+    Desconsiderer os primeiros 'x' números de resultados, antes de apresentar os dados - ou seja, pula a apresentação destes dados.
+  </dd>
+</dl>
+
+ex:
+```SQL
+SELECT * FROM tabela LIMIT 50 OFF SET 5
+```
+
+<dl>
+  <dt>COUNT()</dt>
+  <dd>
+    Retorna uma função que faz a contagem de dados.
   </dd>
 </dl>
 
 <dl>
-  <dt>DROP TABLE</dt>
+  <dt>GROUP BY</dt>
   <dd>
-    Excluir toda a tabela e seus registros.
+    Faz a contagem de campos.
   </dd>
 </dl>
+
+<dl>
+  <dt>HAVING</dt>
+  <dd>
+    Gera mais uma segunda condição após o WHERE, para trazer mais especificidade para a apresentação dos dados.
+  </dd>
+</dl>
+
+EX:
+```SQL
+
+SELECT departamentos.descrição, COUNT(funcionarios.id_departamentos)
+FROM funcionarios
+JOIN depertamentos
+ON funcionarios.id_departamentos = departamentos.id_dept
+GROUP BY departamento.id_dept
+HAVING COUNT (funcionarios.id_departamentos) >= 2
+```
