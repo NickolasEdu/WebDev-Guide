@@ -1400,7 +1400,7 @@ console.log('Ok, callback resolvida')
 main()
 ```
 
-//Promise - Basicamente é uma maneira mais moderna de fazer callbacks, encadeando sequências de funções que só são executadas após a anterior ser concluída.
+Promise - Basicamente é uma maneira mais moderna de fazer callbacks, encadeando sequências de funções que só são executadas após a anterior ser concluída.
 
 ```javascript
 
@@ -1433,6 +1433,8 @@ function succes() {
 
 startPromise()
 ```
+
+Geralmente o uso desse assincronismo será feito em consumos de APIs, onde veremos também o uso de Async e Await
 
 **[⬆ voltar ao capitulo](#javascript)**
 
@@ -1974,7 +1976,67 @@ O JSON é uma forma de comunicação de dados entre sistemas, no consumo de API 
 **[⬆ voltar ao capitulo](#javascript)**
 
 ## API + JSON
-{PLACEHOLDER}
+
+### JSON
+PLACEHOLDER
+
+### Fetch() x Axios()
+PLACEHOLDER
+
+### Fetch() com Promise X Async Await
+
+**Promisse**
+```javascript
+
+fetch('https://api.github.com/users/NickolasEdu')
+.then( response => response.json() )
+.then( data => fetch(data.repos_url) )
+.then( res => res.json() )
+.then( result => console.log(result))
+.catch( err => console.log(err) )
+```
+
+**Async Await**
+```javascript
+async function start() {
+  const url = 'https://api.github.com/users/NickolasEdu'
+  const user = await fetch(url).then(res = res.json())
+  const repos = await fetch(user.repos_url).then(res => res.json())
+  console.log(repos)
+}
+
+start().catch(e => console.log(e))
+```
+*Neste exemplo as cadeias .then de conversão de dados estão na mesma linha da chamada, por questões de clean code. Dessa forma o catch fica na chamada na função, retornando o erro de maneira explicita*
+
+### Axios() com Promise X Async Await
+
+**Promise**
+```jsx
+import axios from 'axios'
+
+axios
+  .get('https://api.github.com/users/NickolasEdu')
+  .then(response => axios.get(response.data.repos_url))
+  .then(repos => console.log(repos.data))
+  .catch(err => console.log(err))
+```
+**Async Await**
+```javascript
+import axios from 'axios'
+
+async function axiosRes() {
+  try {
+    const user = await axios.get('https://api.github.com/users/NickolasEdu')
+    const repos = repos = await axios.get(user.data.repos_url)
+    console.log(repos.data)
+  } catch(e) {
+    console.log(e)
+  }
+}
+
+axiosRes()
+```
 
 **[⬆ voltar ao capitulo](#javascript)**
 
