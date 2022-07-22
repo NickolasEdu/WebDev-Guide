@@ -1978,7 +1978,21 @@ O JSON é uma forma de comunicação de dados entre sistemas, no consumo de API 
 ## API + JSON
 
 ### JSON
-PLACEHOLDER
+Objeto Json é a maneira da qual os sistemas se comunicam, assim como nas linguagens tradicionais existem regras gramaticais e oratórias, os sistemas também respeitam padrões para trocar informações entre si. A maneira mais comum atualmente é um objeto JSON, que é baseado em um objeto javascript porém todos os valores - exeto números - são colocados entre "parênteses".
+
+As diferenças dos dados pode ser observada no output desse código:
+```javascript
+const objetoJS = {
+  nome: "Placeholder",
+  idade: 27,
+}
+
+const toJSON = JSON.stringify(objetoJS)
+const toJS = JSON.parse(toJSON)
+
+console.log(toJSON)
+console.log(toJS)
+```
 
 ### Fetch() x Axios()
 PLACEHOLDER
