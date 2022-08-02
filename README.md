@@ -15,8 +15,9 @@ Eu não sou nenhum desenvolvedor Pleno ou Sênior, ainda não sou nem um Júnior
 4. [CSS](#css)
 5. [Javascript](#javascript)
 6. [Node](#node)
-7. [SQL](#sql)
+7. [API]()
 8. [React.js](#reactjs)
+9. [SQL](#sql)
 
 # Ingles
 
@@ -171,7 +172,9 @@ Também temos outras opções como Sublime Text e Atom, mas em questão de funci
 - **Dev Tools**, ou ferramente do desenvolvedor que abrimos pelo próprio navegador. Com ela conseguimos ver dados do código fonte, Estilos, consultas ao servidor de quase qualquer site que visitamos, e principalmente para estudarmos o comportamento dos nossos próprios projetos.
 
 
-## Terminal - Shell
+## Git Bash
+
+Um terminal que recebe os mesmos comandos do terminal Shell, usados nos sistemas operacionais Mac e Linux, porém com o GitBash os mesmos comandos funcionam no Windows.
 
 O terminal recebe linhas de comandos, atalhos escritos de um software não visual. Para lembrar algum comando que não lembre exatamente a syntax o próprio terminal oferece ajudas, como comando -help, algum caractere + tab que retornará todas as opções de comando com aquelas letras e no terminal ele ainda pode indicar algum comando, quando escrevemos algo semelhante mas não idêntico.
 
@@ -259,6 +262,10 @@ O terminal recebe linhas de comandos, atalhos escritos de um software não visua
   </dd>
 </dl>
 
+## Git vs GitHub
+PLACEHOLDER
+
+{Chave SSHH, repositórios}
 
 ## Version Control System
 
@@ -1969,88 +1976,9 @@ String(4 + 4) e com isso retornando em string.
 
 Number(4 + '4') Retornando em formato de números.
 
-JSON.stringfy e JSON.parse
+[JSON.stringfy e JSON.parse](#api)
 
-O JSON é uma forma de comunicação de dados entre sistemas, no consumo de API por exemplo, mas o Javascript em si não traduz o JSON. Nesse caso, o método stringfy() pega os objetos, transforma em json e retorna para algo, uma variável por exemplo. Já o  parse(); Recebe um objeto json e retorna para alguém, no caso uma variavel em formato de objeto javascript, para que possa ser lido e usado no nosso sistema. 
-
-**[⬆ voltar ao capitulo](#javascript)**
-
-## API + JSON
-
-### JSON
-Objeto Json é a maneira da qual os sistemas se comunicam, assim como nas linguagens tradicionais existem regras gramaticais e oratórias, os sistemas também respeitam padrões para trocar informações entre si. A maneira mais comum atualmente é um objeto JSON, que é baseado em um objeto javascript porém todos os valores - exeto números - são colocados entre "parênteses".
-
-As diferenças dos dados pode ser observada no output desse código:
-```javascript
-const objetoJS = {
-  nome: "Placeholder",
-  idade: 27,
-}
-
-const toJSON = JSON.stringify(objetoJS)
-const toJS = JSON.parse(toJSON)
-
-console.log(toJSON)
-console.log(toJS)
-```
-
-### Fetch() x Axios()
-PLACEHOLDER
-
-### Fetch() com Promise X Async Await
-
-**Promisse**
-```javascript
-
-fetch('https://api.github.com/users/NickolasEdu')
-.then( response => response.json() )
-.then( data => fetch(data.repos_url) )
-.then( res => res.json() )
-.then( result => console.log(result))
-.catch( err => console.log(err) )
-```
-
-**Async Await**
-```javascript
-async function start() {
-  const url = 'https://api.github.com/users/NickolasEdu'
-  const user = await fetch(url).then(res = res.json())
-  const repos = await fetch(user.repos_url).then(res => res.json())
-  console.log(repos)
-}
-
-start().catch(e => console.log(e))
-```
-*Neste exemplo as cadeias .then de conversão de dados estão na mesma linha da chamada, por questões de clean code. Dessa forma o catch fica na chamada na função, retornando o erro de maneira explicita*
-
-### Axios() com Promise X Async Await
-
-**Promise**
-```jsx
-import axios from 'axios'
-
-axios
-  .get('https://api.github.com/users/NickolasEdu')
-  .then(response => axios.get(response.data.repos_url))
-  .then(repos => console.log(repos.data))
-  .catch(err => console.log(err))
-```
-**Async Await**
-```javascript
-import axios from 'axios'
-
-async function axiosRes() {
-  try {
-    const user = await axios.get('https://api.github.com/users/NickolasEdu')
-    const repos = repos = await axios.get(user.data.repos_url)
-    console.log(repos.data)
-  } catch(e) {
-    console.log(e)
-  }
-}
-
-axiosRes()
-```
+O JSON é uma forma de comunicação de dados entre sistemas, no consumo de API por exemplo, mas o Javascript em si não traduz o JSON. Nesse caso, o método stringfy() pega os objetos, transforma em json e retorna para algo, uma variável por exemplo. Já o  parse(); Recebe um objeto json e retorna para alguém, no caso uma variavel em formato de objeto javascript, para que possa ser lido e usado no nosso sistema.
 
 **[⬆ voltar ao capitulo](#javascript)**
 
@@ -2615,6 +2543,86 @@ setPrint.emit('Testting')
 
 **[⬆ voltar ao topo](#index)**
 
+# API
+
+## JSON
+
+Objeto Json é a maneira da qual os sistemas se comunicam, assim como nas linguagens tradicionais existem regras gramaticais e oratórias, os sistemas também respeitam padrões para trocar informações entre si. A maneira mais comum atualmente é um objeto JSON, que é baseado em um objeto javascript porém todos os valores - exeto números - são colocados entre "parênteses".
+
+As diferenças dos dados pode ser observada no output desse código:
+```javascript
+const objetoJS = {
+  nome: "Placeholder",
+  idade: 27,
+}
+
+const toJSON = JSON.stringify(objetoJS)
+const toJS = JSON.parse(toJSON)
+
+console.log(toJSON)
+console.log(toJS)
+```
+
+### Fetch() x Axios()
+PLACEHOLDER
+
+### Fetch() com Promise X Async Await
+
+**Promisse**
+```javascript
+
+fetch('https://api.github.com/users/NickolasEdu')
+.then( response => response.json() )
+.then( data => fetch(data.repos_url) )
+.then( res => res.json() )
+.then( result => console.log(result))
+.catch( err => console.log(err) )
+```
+
+**Async Await**
+```javascript
+async function start() {
+  const url = 'https://api.github.com/users/NickolasEdu'
+  const user = await fetch(url).then(res = res.json())
+  const repos = await fetch(user.repos_url).then(res => res.json())
+  console.log(repos)
+}
+
+start().catch(e => console.log(e))
+```
+*Neste exemplo as cadeias .then de conversão de dados estão na mesma linha da chamada, por questões de clean code. Dessa forma o catch fica na chamada na função, retornando o erro de maneira explicita*
+
+### Axios() com Promise X Async Await
+
+**Promise**
+```jsx
+import axios from 'axios'
+
+axios
+  .get('https://api.github.com/users/NickolasEdu')
+  .then(response => axios.get(response.data.repos_url))
+  .then(repos => console.log(repos.data))
+  .catch(err => console.log(err))
+```
+**Async Await**
+```javascript
+import axios from 'axios'
+
+async function axiosRes() {
+  try {
+    const user = await axios.get('https://api.github.com/users/NickolasEdu')
+    const repos = repos = await axios.get(user.data.repos_url)
+    console.log(repos.data)
+  } catch(e) {
+    console.log(e)
+  }
+}
+
+axiosRes()
+```
+
+# React
+
 # SQL
 
 - [SQL x noSQL](#sql-x-nosql)
@@ -3009,5 +3017,3 @@ HAVING COUNT (funcionarios.id_departamentos) >= 2
 ```
 
 **[⬆ voltar ao topo](#index)**
-
-## Reactjs
