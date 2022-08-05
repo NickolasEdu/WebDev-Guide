@@ -2546,7 +2546,7 @@ setPrint.emit('Testting')
 # API
 
 ## Definição
-{PLACEHOLDER}
+Application Programming Interface, que corresponde a Interface de Programação de Aplicações, é uma maneira de integrar sistemas fazendo intercâmbio de dados entre aplicações e linguagens. Para que esse câmbio funcione é preciso que seja em um formato que ambos os sistemas entendam, é aqui que usamos o JSON.
 
 ## JSON
 
