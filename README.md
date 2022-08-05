@@ -263,14 +263,17 @@ O terminal recebe linhas de comandos, atalhos escritos de um software não visua
 </dl>
 
 ## Git vs GitHub
-PLACEHOLDER
+Apesar de ter nomes parecidos, não são a mesma coisa. Porém são essenciais para a manipulação de projetos. Para uma visualização melhor do passo a passo de configuração, [Aqui está um vídeo explicativo](https://www.youtube.com/watch?v=UBAX-13g8OM).
 
-{Chave SSHH, repositórios}
 
-## Version Control System
+## Version Control System - Git
 
 Os sistemas de controle de versão vieram para tapar os buracos dos sistemas de controle de revisão ou em nuvem. Suas limitações eram que, um mantém o histórico de versões na nuvem, dependendo de um serviço esterno para que se mantenha funcionando, e os sistemas de revisão onde era necessário criar manualmente essas versões, dificultando o compartilhamento. Os VCS é capaz de fazer as duas coisas, trazendo tudo o que é necessário para a visualização do histórico de projeto.
 Para fazer o controle e compartilhamentos de projeto estaremos fazendo uso do Git e do GitHub - que assim como Java e Javascript, soam parecidos mas não são.
+
+## GitHub - IT service management company
+
+Um servidor para hospedar Repositórios, que são "pastas" onde seus projetos ficarão guardados e disponivéis para outros programadores acessarem. Unindo as utilidades do git e do github é possível manipular completamente o estado do seu projeto, controlando as versões em que ele é atualizado e salvando em um servidor remoto para que possa ser compartilhado ou simplesmente salvo fora da sua máquina.
 
 ### Comandos Git
 
