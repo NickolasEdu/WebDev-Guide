@@ -2545,6 +2545,9 @@ setPrint.emit('Testting')
 
 # API
 
+## Definição
+{PLACEHOLDER}
+
 ## JSON
 
 Objeto Json é a maneira da qual os sistemas se comunicam, assim como nas linguagens tradicionais existem regras gramaticais e oratórias, os sistemas também respeitam padrões para trocar informações entre si. A maneira mais comum atualmente é um objeto JSON, que é baseado em um objeto javascript porém todos os valores - exeto números - são colocados entre "parênteses".
@@ -2564,7 +2567,10 @@ console.log(toJS)
 ```
 
 ### Fetch() x Axios()
-PLACEHOLDER
+Ambos fazem basicamente a mesma coisa, o Axios por exemplo faz a requisição usando Fetch por debaixo dos panos. No caso o Fetch é uma requisção nativa do Javascript, onde pode ser usada de forma pura. Enquanto o Axios é uma biblioteca que trás algumas utilidades de maneira mais simples, porém para ser usado é preciso fazer a importação ou instalação dos pacotes do Axios.
+
+### Promise x Async Await
+Situação parecida com o caso do 'Fetch x Axios', no final das contas fazem a mesma coisa. A diferença nesse caso é que Promise retorna uma cadeia de _.then()_ enquanto ao indicar as funções com _await_ torna mais intuitiva a manipulação.
 
 ### Fetch() com Promise X Async Await
 
@@ -2620,6 +2626,10 @@ async function axiosRes() {
 
 axiosRes()
 ```
+
+
+
+**[⬆ voltar ao topo](#index)**
 
 # React
 
