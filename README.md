@@ -8,16 +8,18 @@ Eu não sou nenhum desenvolvedor Pleno ou Sênior, ainda não sou nem um Júnior
 
 ## Index
 
-0. [Inglês](#ingles)
-1. [Conceitos Web](#conceitos-web)
-2. [Desenvolvimento Web](#desenvolvimento-web)
-3. [HTML](#html)
-4. [CSS](#css)
-5. [Javascript](#javascript)
-6. [Node](#node)
-7. [API]()
-8. [React.js](#reactjs)
-9. [SQL](#sql)
+00. [Inglês](#ingles)
+01. [Conceitos Web](#conceitos-web)
+02. [Programação Básica](#desenvolvimento-web)
+03. [HTML](#html)
+04. [CSS](#css)
+05. [Javascript](#javascript)
+06. [Node](#node)
+07. [API](#api)
+08. [React.js](#react)
+09. [Programação Avançada](#programação-avançada)
+10. [Typescript](#typescript)
+11. [SQL](#sql)
 
 # Ingles
 
@@ -46,10 +48,7 @@ Se você tem tempo e pode investir em um curso de inglês, compre a vontade que 
 - [A Internet](#a-internet)
 - [URL](#link-url)
 - [HTTPS](#https)
-- [IP](#ip)
-- [TCP](#tcp)
-- [DNS](#dns)
-- [Proxy](#proxy)
+- [Dicionário Web](#dicionário-web)
 - [Cliente x Server](#client-vs-server)
 - [Browser](#browser)
 - [Sites: Estático x SPA](#site-estatico-vs-spa)
@@ -70,13 +69,15 @@ Estes computadores interligados, estão recebendo e enviando dados durante todo 
 
 O URL (**Uniform Resource Locator) esse conceito é traduzido como** Localizador e Identificador de Recursos. Aqui, recursos são os endereços das aplicações web, os sites que desenvolvemos. Para fazer essa localização e comunicação entre os computadores, ele é integrado ao protocolo **HTTP**. Usando regras de comunicação do sistema para passar as informações
 
-## HTTPS
+## HTTP
 
 Hiper Text Transfer Protocol (Protocolo de Transferência de Hipertexto)
 
 Esse é o método básico de como os computadores conversam, chamado de Request-response (ou Request-Reply), são os protocolos de requisitos feitos entre os computadores e servidores para qual e como os dados serão trafegados.
 
 Basicamente é um conjunto de recursos que tem como função fazer a conversa do PC do client converse de forma segura, rápida e otimizada com o **IP** dos servidores.
+
+## Dicionário Web
 
 ## IP
 
@@ -132,8 +133,10 @@ Agora a função de fazer que isso funcione, cabe o programador que seguindo alg
 - [Linguagem de programação](#linguagem-de-programação)
 - [IDE's](#ide)
 - [Ambiente de Desenvolvimento](#ambiente-de-desenvolvimento)
-- [GitHub](#github)
-- [Terminal - Shell](#terminal---shell)
+- [Terminal Git Bash](#git-bash)
+- [GitHub](#git-vs-github)
+- [Git Command Line](#comandos-git)
+- [Dicionário Dev](#dicionário-dev)
 
 ## Linguagem de programação
 
@@ -1149,7 +1152,6 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 - [Manipulação de HTML](#manipulação-dos-elementos-html)
 - [Eventos](#eventos---js)
 - [Conersão de Dados](#conversão-de-dados)
-- [API](#api--json)
 - [ECMAScript](#ecmascript---2022)
 - [Programação Funcional](#oriented-object-programming)
 
@@ -2032,182 +2034,6 @@ const transformData = (unprocessData) => {
 ```
 **[⬆ Voltar ao capítulo](#javascript)**
 
-## Programação Funcional
-Um paradigma para uma interptração mais simples do código, e abstrair problemas em funções pequenas e especificas. Trabalhando muito com argumentos e com a maneirda de escrita ligeiramente diferente do método tradicional.
-
-**Programação imperativa**
-Funções imperativas são as que dão o script de como o processo deve ser feito, cada passo, quando e onde é declarada ou chamada.
-```javascript
-let number = 2
-
-function square() {
-	return number * number
-}
-
-number = square()
-```
-
-**Programação declarativa**
-Já na função Declarativa, ela é declarada e fica lá armazenada para ser usada quando necessário. Recebendo o que será feito, mas tudo com valores neutros pois isso só será definido quando for necessário ser usada.
-```javascript
-const square = n => n * n
-square(2)
-```
-
-Nesse contexto o sistema faz o Stateless, ou seja, não guarda o estado de number em momento algum, ele recebe o estado de valor apenas na hora que é chamado. Diferente de Statefull, onde o sistema sempre ficará atento caso a variável *let* tenha seu valor alterado. Dessa forma a função não trabalha com dados externos, e sim apenas com os dados que são entregues.
-
-Esse é um conceito de imutabilidade, todas as variáveis devem ser consideradas como constantes, seus valores não podem ser alterados, mas sim criando novos, sendo recebidos via argumentos e deixando as declarações muito mais simples.
-
-### Funções funcionais
-
-#### Independentes
-Funções que só trabalham com dados externos passados via argumentos, e retornam um novo valor. Todo dado externo é imutável para esta função, e também não podem ser feitos uso de loops. Para uso de loops é feito o uso do algoritmo de recursão onde o valor está sendo multiplicado a cada rodada com o seu próprio valor -1, até que chegue no zero.
-```javascript
-const factorial = x => {
-     if(x === 0) {
-         return 1
-     }
-     return x * factorial(x - 1)
-}
-
-factorial(6)
-```
-#### First Class
-Funções que são interpretadas como variáveis, podem ser atribuídas a uma constante e sua ação feita sempre que algo for passada como argumento para dentro dela. runFunction( ) sendo usada literalmente para simplesmente rodar outras arrow functions, ou até operações dentro de console.log.
-```javascript
-const runFunction = rf => rf()
-const sayMyName = () => console.log('Heinserberg')
-
-runFunction(sayMyName)
-runFunction(() => console.log('Jesse Pikman, bitch'))
-```
-#### High Order - Currying
-PLACEHOLDER
-
-#### Composição
-Um encadeamento de funções, onde são passados argumentos que vão de uma função a outra fazendo alterações a cada nível e seguem sendo passados como argumentos. Semelhante a promisses.
-```javascript
-const people = ['Amanda', 'Daniel', 'Danilo', 'Joab', 'Matheus']
-const peopleWithD = people
-.filter(person => person.startsWith('D'))
-.map(dperson => dperson.toUpperCase())
-
-peopleWithD
-```
-
-**[⬆ voltar ao capítulo](#javascript)**
-
-## Oriented Object Programming
-O Javascript é uma linguagem de multiparadgima, sendo os paradigmas maneiras de enxergar e interpretar o desenvolvimento de alguma forma especifica para gerar melhor compreendimento e comunicação entre times de devs. Sendo o OOP - Programação Orientada a Objetos - um paradigma muito usado com o objetivo de abstrair reutilizar códigos.
-
-**Vamos aos conceitos**
-
-### Objetos
-Possuem **Atributos** e **Métodos**, os atributos são as sua propriedades, aquilo que o define e suas funções. Já os Métodos são o estado e o comportamento daquele objeto, em qual estado ele se encontra e qual é seu comportamento quando alterado para outro estado.
-
-### Objetos Abstratos
-Não tem **métodos ou Atributos** claramente definidos, são mais como **processos**, que dependem de um conjunto de métodos e atributos, mas que não tem forma definida. Como processos de **autenticação**, **validação** e **autorização**.
-
-### Classes
-Servem como moldes, para que objetos sejam criados a partir delas. Sendo que o comportamento padrão do Javascript, todo objeto herda prototypes dos seus objetos pais.
-
-### Encapsulamento
-São agrupados dentro de uma classe alguma função e valores que só serão usados quando essa capsula for requisitada, ficando totalmente independente de todo o resto da aplicação.  Esse conceito de encapsulamento é um dos fatores mais distintos da OOP para programação estrutural.
-
-## Programação Estrutural x Orientada a Objetos
-
-Estrutural
-```jsx
-let valorHora = 50
-let desconto: number
-let desconto = valorHora * tempoEstimado * (10 / 100)
-let custoEstimado = valorHora * tempoEstimado - desconto
-console.log(custoEstimado)
-```
-
-OOP
-```jsx
-const job = new job()
-job.valorHora = 50
-job.tempoEstimado = 20
-job.desconto = 10
-const custoEstimado = jobb.calcularEstimativa()
-console.log(custoEstimado)
-```
-
-## Herança
-Maneira de reutilização de código, onde um novo objeto é a extensão do outro e recebe funções do objeto pai.
-
-```jsx
-class Veiculo {
-rodas = 4
-
-mover(direção){}
-virar(direção){}
-}
-
-class Moto extends Veiculo {
- constructor() {
-		super()
-		this.rodas = 2
-	}
-}
-```
-*Legenda:*
-> A class Veículo foi criada com um padrão de 4 rodas, onde normalmente serão carros
-
-> Funções de direção pré estabelecidas, onde definiram a direção os veículos
-
-> Um novo objeto criado de motos, recebendo extends de veículos 
-
-> Constructor que é uma função reservada onde os atributos do objeto são definidos
-
-> super( ) que faz a importação das funcionalidades e métodos do objeto pai - aqui com as funções de direções
-
-## Polimorfismo
-São objetos que se estendem de outros porém seus métodos são semelhantes, porém não serão idênticos. Onde são criadas condições para funções.
-
-```jsx
-class Atleta {
-	peso
-	categoria
-
-	constructor(peso) {
-		this.peso = peso
-	}
-
-	definirCategoria() {
-	if (this.peso <= 50) {
-				this.categoria = 'infantil'
-		} else if (this.peso <= 65) {
-				this.categoria = 'jovem'
-		} else {
-				this.categoria = 'adulto'
-		}
-	}
-}
-
-class Lutador extends Atleta { 
-	constructor(peso) {
-		super(peso)
-}
-
-	definirCategoria() {
-	if (this.peso <= 50) {
-				this.categoria = 'Mosca'
-		} else if (this.peso <= 60) {
-				this.categoria = 'Meio Leve'
-		} else {
-				this.categoria = 'Médio pesado'
-		}
-	}
-}
-```
-*Legenda*
-> Um objeto onde é declarado peso e altura sem nenhum valor
-> Esses valores são passados posteriormente por argumentos
-> E também a partir de condições, onde originalmente as funções recebem o peso e depois definem os valores de categoria
-
 
 **[⬆ voltar ao topo](#index)**
 
@@ -2629,12 +2455,204 @@ async function axiosRes() {
 
 axiosRes()
 ```
+## CRUD
+Essa sigla se refere a 'Create, Read, Update e Delete', então toda rotina que permite essas manipulações pode ser considerdo CRUD. Desde interface visual, banco de dados, até o código com os verbos HTTP.
 
+## Verbos HTTP
+
+GET
+HEAD
+POST
+PUT
+PATCH
+DELETE
+
+## Métodos HTTP na prática - Repositório
 
 
 **[⬆ voltar ao topo](#index)**
 
 # React
+
+# Programação Avançada
+
+## Programação Funcional
+Um paradigma para uma interptração mais simples do código, e abstrair problemas em funções pequenas e especificas. Trabalhando muito com argumentos e com a maneirda de escrita ligeiramente diferente do método tradicional.
+
+**Programação imperativa**
+Funções imperativas são as que dão o script de como o processo deve ser feito, cada passo, quando e onde é declarada ou chamada.
+```javascript
+let number = 2
+
+function square() {
+	return number * number
+}
+
+number = square()
+```
+
+**Programação declarativa**
+Já na função Declarativa, ela é declarada e fica lá armazenada para ser usada quando necessário. Recebendo o que será feito, mas tudo com valores neutros pois isso só será definido quando for necessário ser usada.
+```javascript
+const square = n => n * n
+square(2)
+```
+
+Nesse contexto o sistema faz o Stateless, ou seja, não guarda o estado de number em momento algum, ele recebe o estado de valor apenas na hora que é chamado. Diferente de Statefull, onde o sistema sempre ficará atento caso a variável *let* tenha seu valor alterado. Dessa forma a função não trabalha com dados externos, e sim apenas com os dados que são entregues.
+
+Esse é um conceito de imutabilidade, todas as variáveis devem ser consideradas como constantes, seus valores não podem ser alterados, mas sim criando novos, sendo recebidos via argumentos e deixando as declarações muito mais simples.
+
+### Funções funcionais
+
+#### Independentes
+Funções que só trabalham com dados externos passados via argumentos, e retornam um novo valor. Todo dado externo é imutável para esta função, e também não podem ser feitos uso de loops. Para uso de loops é feito o uso do algoritmo de recursão onde o valor está sendo multiplicado a cada rodada com o seu próprio valor -1, até que chegue no zero.
+```javascript
+const factorial = x => {
+     if(x === 0) {
+         return 1
+     }
+     return x * factorial(x - 1)
+}
+
+factorial(6)
+```
+#### First Class
+Funções que são interpretadas como variáveis, podem ser atribuídas a uma constante e sua ação feita sempre que algo for passada como argumento para dentro dela. runFunction( ) sendo usada literalmente para simplesmente rodar outras arrow functions, ou até operações dentro de console.log.
+```javascript
+const runFunction = rf => rf()
+const sayMyName = () => console.log('Heinserberg')
+
+runFunction(sayMyName)
+runFunction(() => console.log('Jesse Pikman, bitch'))
+```
+#### High Order - Currying
+PLACEHOLDER
+
+#### Composição
+Um encadeamento de funções, onde são passados argumentos que vão de uma função a outra fazendo alterações a cada nível e seguem sendo passados como argumentos. Semelhante a promisses.
+```javascript
+const people = ['Amanda', 'Daniel', 'Danilo', 'Joab', 'Matheus']
+const peopleWithD = people
+.filter(person => person.startsWith('D'))
+.map(dperson => dperson.toUpperCase())
+
+peopleWithD
+```
+
+**[⬆ voltar ao capítulo](#javascript)**
+
+## Oriented Object Programming
+O Javascript é uma linguagem de multiparadgima, sendo os paradigmas maneiras de enxergar e interpretar o desenvolvimento de alguma forma especifica para gerar melhor compreendimento e comunicação entre times de devs. Sendo o OOP - Programação Orientada a Objetos - um paradigma muito usado com o objetivo de abstrair reutilizar códigos.
+
+**Vamos aos conceitos**
+
+### Objetos
+Possuem **Atributos** e **Métodos**, os atributos são as sua propriedades, aquilo que o define e suas funções. Já os Métodos são o estado e o comportamento daquele objeto, em qual estado ele se encontra e qual é seu comportamento quando alterado para outro estado.
+
+### Objetos Abstratos
+Não tem **métodos ou Atributos** claramente definidos, são mais como **processos**, que dependem de um conjunto de métodos e atributos, mas que não tem forma definida. Como processos de **autenticação**, **validação** e **autorização**.
+
+### Classes
+Servem como moldes, para que objetos sejam criados a partir delas. Sendo que o comportamento padrão do Javascript, todo objeto herda prototypes dos seus objetos pais.
+
+### Encapsulamento
+São agrupados dentro de uma classe alguma função e valores que só serão usados quando essa capsula for requisitada, ficando totalmente independente de todo o resto da aplicação.  Esse conceito de encapsulamento é um dos fatores mais distintos da OOP para programação estrutural.
+
+## Programação Estrutural x Orientada a Objetos
+
+Estrutural
+```jsx
+let valorHora = 50
+let desconto: number
+let desconto = valorHora * tempoEstimado * (10 / 100)
+let custoEstimado = valorHora * tempoEstimado - desconto
+console.log(custoEstimado)
+```
+
+OOP
+```jsx
+const job = new job()
+job.valorHora = 50
+job.tempoEstimado = 20
+job.desconto = 10
+const custoEstimado = jobb.calcularEstimativa()
+console.log(custoEstimado)
+```
+
+## Herança
+Maneira de reutilização de código, onde um novo objeto é a extensão do outro e recebe funções do objeto pai.
+
+```jsx
+class Veiculo {
+rodas = 4
+
+mover(direção){}
+virar(direção){}
+}
+
+class Moto extends Veiculo {
+ constructor() {
+		super()
+		this.rodas = 2
+	}
+}
+```
+*Legenda:*
+> A class Veículo foi criada com um padrão de 4 rodas, onde normalmente serão carros
+
+> Funções de direção pré estabelecidas, onde definiram a direção os veículos
+
+> Um novo objeto criado de motos, recebendo extends de veículos 
+
+> Constructor que é uma função reservada onde os atributos do objeto são definidos
+
+> super( ) que faz a importação das funcionalidades e métodos do objeto pai - aqui com as funções de direções
+
+## Polimorfismo
+São objetos que se estendem de outros porém seus métodos são semelhantes, porém não serão idênticos. Onde são criadas condições para funções.
+
+```jsx
+class Atleta {
+	peso
+	categoria
+
+	constructor(peso) {
+		this.peso = peso
+	}
+
+	definirCategoria() {
+	if (this.peso <= 50) {
+				this.categoria = 'infantil'
+		} else if (this.peso <= 65) {
+				this.categoria = 'jovem'
+		} else {
+				this.categoria = 'adulto'
+		}
+	}
+}
+
+class Lutador extends Atleta { 
+	constructor(peso) {
+		super(peso)
+}
+
+	definirCategoria() {
+	if (this.peso <= 50) {
+				this.categoria = 'Mosca'
+		} else if (this.peso <= 60) {
+				this.categoria = 'Meio Leve'
+		} else {
+				this.categoria = 'Médio pesado'
+		}
+	}
+}
+```
+*Legenda*
+> Um objeto onde é declarado peso e altura sem nenhum valor
+> Esses valores são passados posteriormente por argumentos
+> E também a partir de condições, onde originalmente as funções recebem o peso e depois definem os valores de categoria
+
+# Typescript
 
 # SQL
 
