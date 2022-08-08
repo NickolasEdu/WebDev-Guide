@@ -123,6 +123,8 @@ Um site estático é quando ele enviar para o navegador tudo de uma vez, para ve
 
 Agora a função de fazer que isso funcione, cabe o programador que seguindo algumas séries de regras criará e desenvolverá a comunicação entre Sites, Dispositivos e APIs.
 
+## CRUD
+Essa sigla se refere a 'Create, Read, Update e Delete', então toda rotina que permite essas manipulações pode ser considerdo CRUD. Desde interface visual, banco de dados, até o código com os verbos HTTP.
 
 **[⬆ voltar ao topo](#index)**
 
@@ -2455,17 +2457,65 @@ async function axiosRes() {
 
 axiosRes()
 ```
-## CRUD
-Essa sigla se refere a 'Create, Read, Update e Delete', então toda rotina que permite essas manipulações pode ser considerdo CRUD. Desde interface visual, banco de dados, até o código com os verbos HTTP.
 
 ## Verbos HTTP
 
-GET
-HEAD
-POST
-PUT
-PATCH
-DELETE
+
+<dl>
+  <dt>OPTIONS</dt>
+  <dd>
+    Retornar as especificações de request e response da API  
+  </dd>
+</dl>
+
+<dl>
+  <dt>HEAD</dt>
+  <dd>
+    Informações técnicas de dos dados da API. Não retorna nenhum conteúdo, apenas as informações sobre length, cache, etc sobre os dados.
+  </dd>
+</dl>
+
+<dl>
+  <dt>GET</dt>
+  <dd>
+    Lê e retorna o conteúdo do corpo da API, este é o conteúdo que chega no formato JSON antes de ser manipulado.
+  </dd>
+</dl>
+
+<dl>
+  <dt>POST</dt>
+  <dd>
+    Cria um novo recurso - dado de informação - e envia de volta para a API.
+  </dd>
+</dl>
+
+<dl>
+  <dt>PUT</dt>
+  <dd>
+    Altera os campos de informação dentro de um objeto. Como por exemplo dados de usuário, este verbo faz a requisição dos valores dos campos, que nesse caso serão relacioandos a nome, email, idade, etc.
+  </dd>
+</dl>
+
+<dl>
+  <dt>PATCH</dt>
+  <dd>
+    Também faz requisição de atualização, porém permite alterar campos únicos, sem precisar acessar toda a informação do objeto. Útil para atualizar informações especificas que podem alterar e receber vários requests em pouco espaço de tempo.
+  </dd>
+</dl>
+
+<dl>
+  <dt>DELETE</dt>
+  <dd>
+    Excluí alguma informação.
+  </dd>
+</dl>
+
+## Save & Idempotent
+Existem algumas definições para requisição de API, como **Save** que são requests seguros, que não fazem alterações no lado do servidor.
+E idempotent que sempre irão retornar a mesma respota, ou seja, que só terá alteração no retorno por fator externo e não diretamente da aplicação.
+
+## CORS
+Referente a Cross-origin resource sharing, é um protocolo de segurança que precisa ser configurado para definir uma comunicação segura antre dados que estão partindo de diferentes origens.
 
 ## Métodos HTTP na prática - Repositório
 
