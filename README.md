@@ -2517,7 +2517,197 @@ E idempotent que sempre irão retornar a mesma respota, ou seja, que só terá a
 ## CORS
 Referente a Cross-origin resource sharing, é um protocolo de segurança que precisa ser configurado para definir uma comunicação segura antre dados que estão partindo de diferentes origens.
 
-## Métodos HTTP na prática - Repositório
+
+
+## Métodos HTTP na prática
+
+Utilizando uma API configurada localmente de Jakeliny
+[API URL](https://github.com/jakeliny/node-api-discover)
+
+## HTTP com Fetch
+
+### Corpo HTML
+
+Onde os dados estão sendo apresentados para visualização
+
+```html
+		<p id="userName"></p>
+    <p id="userCity"></p>
+    <img src="" alt="" id="userAvatar">
+```
+
+### GET
+
+Lendo os dados pelo ID
+
+```jsx
+const url = "http://localhost:5500/api"
+
+function getUser() {
+    fetch(`${url}/1`)
+    .then(res => res.json())
+    .then(data => {
+        userName.textContent = data.name
+        userCity.textContent = data.city
+        userAvatar.src = data.avatar
+    })
+    .catch(err => console.error(err))
+}
+
+getUser()
+```
+
+### POST
+
+Enviado um novo dado
+
+```jsx
+const url = "http://localhost:5500/api"
+
+function addUser(newUser) {
+    fetch(url, {
+        method: "POST",
+        body: JSON.stringify(newUser),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+        }
+    })
+    .then(res => res.json())
+    .then(data => alertApi.textContent = data)
+    .catch(err => console.error(err))
+}
+
+const newUser = { 
+    name: "Anna",
+    city: "Londrina",
+    avatar: "http://pixelsum.com/400/200"
+}
+
+addUser()
+```
+
+### PUT
+
+Atualizando algum dado de usuário pelo ID
+
+```jsx
+const url = "http://localhost:5500/api"
+
+function updateUser(updatedUser, id) {
+    fetch(`${url}/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(updatedUser),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    .then(res => res.json())
+    .then(data => alertApi.textContent = data)
+    .catch(err => console.error(err))
+}
+
+const updatedUser = {
+    name: "Tallos",
+    city: "Guarujá",
+    avatar: "http://pixelsum.com/400/200"
+}
+
+updateUser(updatedUser, 9)
+```
+
+### DELETE
+
+Excluindo algum dado pelo ID
+
+```jsx
+const url = "http://localhost:5500/api"
+
+function deleteUser(id) {
+    fetch(`${url}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    .then(res => res.json())
+    .then(data => alertApi.textContent = data)
+    .catch(err => console.error(err))
+}
+
+deleteUser(2)
+```
+
+## HTTP com Axios
+
+### Corpo HTML
+
+Elemento para retornar os dados para visualização e importação do Axios
+
+```html
+<div id="apiResult">Hello World</div>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+```
+
+### GET
+
+```jsx
+function getUsers() {
+    axios.get(url)
+    .then(res => {
+        apiResult.textContent = JSON.stringify(res.data)
+    })
+    .catch(err => console.error(err))
+}
+
+getUsers()
+```
+
+POST
+
+```jsx
+function addNewUser() {
+    axios.post(url, {
+        name: "Zagreus",
+        city: "Campinas",
+        avatar: "https://picsum.photos/200/300"
+    })
+    .then(res => console.log(res))
+    .catch(err => console.error(err))
+}
+
+addNewUser()
+```
+
+PUT
+
+```jsx
+function updateUser(id, ) {
+    axios.put(`${url}/${id}`, {
+        name: "Alex",
+        city: "Vasco",
+        avatar: "https://picsum.photos/200/300"
+    })
+    .then(res => console.log(res))
+    .catch(e => console.error(e))
+}
+
+updateUser(1)
+```
+
+DETELE
+
+```jsx
+function deleteUser(id) {
+    axios.delete(`${url}/${id}`)
+    .then(res => console.log(res))
+    .catch(e => console.err(e))
+}
+
+deleteUser(2)
+```
+
 
 
 **[⬆ voltar ao topo](#index)**
