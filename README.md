@@ -402,6 +402,12 @@ Todas as alterções que fizermos terão 3 estados de processamento: *Workstage*
   </dd>
 </dl>
 
+<dl>
+  <dt>git fetch</dt>
+  <dd>
+    Copia e atualiza as branchs remotas para o desenvolvimento local.
+  </dd>
+</dl>
 
 <dl>
   <dt>git ignore</dt>
@@ -425,9 +431,11 @@ Todas as alterções que fizermos terão 3 estados de processamento: *Workstage*
   </dd>
 </dl>
 
+## Branchs
 
-## Dicionário Dev
-PLACEHOLDER
+O conceito de branch é criar novos caminhos de desenvolvimento que não afetam o principal, para o conteúdo ser aplicado no original é preciso fazer o merge. Porém deve existir um contexto pra a execução do merge, primeiro é não haver conflitos. Os conflitos acontecem quando algo foi alterado localmente enquanto a versão remotava já havia sido atualizada, então o sistema não vai saber quais conteúdos devem ser mantidos ou não, para resolver estes conflitos a resolução deve ser feita manualmente.
+
+O outro importante fator deste contexto é a Branch Protection Rule, que são as configurações do repositório que definem quem são os responsavéis por aprovar o merge da branch de desenvolvimento com a principal, onde em um time, por exemplo, haverão desenvolvedores ou analistas que fazem esta função. Ou no caso de um projeto open source - um repositório aberto para receber manutenção de outros devs - deverá ser feito um pull request, onde sua branch ficará em analise para ser aprovada ou não pelos desenvolvedores que criaram o repositório.
 
 **[⬆ voltar ao topo](#index)**
 
