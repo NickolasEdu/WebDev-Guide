@@ -2901,6 +2901,221 @@ class Lutador extends Atleta {
 > E também a partir de condições, onde originalmente as funções recebem o peso e depois definem os valores de categoria
 
 # Typescript
+O TS foi criado pela Microsoft, e é uma linguagem de superset que faz com que a tipagem no javascript seja possivel. A tipagem bascicamente é uma verificação constante nos tipos de dados usados na aplicação. Exemplos de linguagem fortemente tipadas são Java, C, C++, Rust, entre outras.
+
+Essa abordagem de linguagem nos permite reconhecer e evitar erros no programa de forma mais prática. Exemplo é ao definirmos uma syntax correta, porém em que os métodos não estão, podendo ser um método array em uma função, ou dados errados passados por argumentos. Esses são erros de produção que o Typescript visa evitar.
+
+Além de fazer a verificação de estado dos dados, o Typescript também faz a compilação de TS para JS - assim como funciona em SASS e CSS, por exemplo - ou seja, vamos desenvolver as lógicas e rotinas usando as tipagems em Typescript, e esse código será convertido em JS puro. A vantagem aqui é que o TS gera shortcuts no desenvolvimento, permitindo escrever menos código e a tipagem diminui a complexidade.
+
+### tsconfig
+
+São as configurações padrões do Typescript, para alinhar com as suas preferências de desenvolvimento. Exemplo visual no TS Playground, onde podemos definir a versão de JS, indicar uso de framework (React, Node, etc) ou retirar avisos de erro, como erros de tipagens em geral.
+
+É através da instalação das dependencias do typescrip e da configuração do arquivo ‘tsconfig’ que vamos conseguir usar essa liguagem nos projetos.
+
+## Tipagens
+
+### Tipagem implicita
+
+Atribuindo um tipo de valor, ao tentar atribuir um valor diferente o sistema automaticamente irá retornar um erro, pois automaticamente é definido uma tipagem baseada no valor atribuido inicialmente.
+
+```tsx
+let name = 'Rodrigo'
+
+name = 10
+```
+
+### Tipagem Explicíta
+
+Declarando um tipo de valor que deve ser atribuído
+
+```tsx
+function showUser(user: string, id: number){
+	console.log(`Hello ${user}, your ID is: ${id}`)
+}
+
+console.log('Artorias', 123)
+```
+## Valores
+
+### Any
+Esse é o parâmetro padrão do JS puro, onde qualquer variável ou argumento pode receber qualquer valor. No TS para usar este mesmo comportamento, é declarado o valor ‘Any’
+```tsx
+let data: any;
+
+data = []
+data = 'Name'
+data = true
+info = 10
+```
+
+### Tipagem em Array
+Para definir dados especificos para arrays, existe duas formas:
+```tsx
+let numbers: number[]
+numbers = [ 1, 2, 3, 4, 5 ]
+
+let names: string[]
+names = [ 'Amanda', 'Bianca', 'Carol' ]
+
+let data: any[]
+data = [ 1, 'b', 3, '4', true ]
+```
+
+ OU
+
+```tsx
+let numbers: Array<number>
+numbers = [ 1, 2, 3, 4, 5 ]
+
+let names: Array<string>
+names = [ 'Amanda', 'Bianca', 'Carol' ]
+
+let data: Array<any>
+data = [ 1, 'b', 3, '4', true ]
+```
+
+### Tipagem em Funções
+No geral as tipagens em funções são implicitas, porém há comportamentos que precisamos ficar atentos.
+
+Ao retornar uma valor, automaticamente a função vai considerar esse valor na tipagem, mas podemos declarar um tipo de dado esperado para ser retornado.
+
+Ou até declarar se queremos um retorno ou não.
+
+Se nenhuma tipagem é declarada, é feito a definição implicita.
+
+ex:
+Tipagem ‘void’ indica que não é permitido usar um ‘return’ dentro desta função. 
+```tsx
+function noReturn(text: string): void{
+	console.log(text)
+}
+
+noReturn('Hello World')
+```
+
+Neste caso o retorno espera uma string, porém se um valor de número for retornado o sistema já indicará o erro.
+```tsx
+function stringReturn(text: string): string{
+	return text
+}
+```
+
+### Union
+Operador de ‘ou’, indicando que aquela tipagem recebe um valor ou outro valor.
+
+```tsx
+function printUserName(id: number | string){
+	console.log(`O nome de usuário é: ${id}`)
+}
+
+printUserName('@Igor123')
+```
+## Manipulação de tipos
+
+### Reutilizando tipagens
+Para declarar tipagens padrões que irão se repetir ou como meio de facilitar a manutenção delas, é usado o ‘type’
+```tsx
+type IDType = string | number
+
+let userId: IDType
+let adminId: IDType
+```
+
+### Type Assertion
+Indicar ao sistema o que ele pode esperar - ou deve considerar - as opções vindo de um objeto vazio. Passando para esse objeto o type do qual ele deve ser cosniderado.
+```tsx
+type UserResponse = {
+	id: number;
+	name: string;
+	city: string;
+}
+
+let userResponse = {} as UserResponse
+```
+
+### Type Opicional
+Quando o type é definido, é possível definir uma propriedade que por padrão não será obrigatória. Pois se esse parâmetro o sistema estaria retornando um erro, para isso simplesmente é adicionado um ‘?’ na declaração.
+```tsx
+type User = {
+    name: string;
+    email: string;
+    age: number;
+    isAdmin?: boolean;
+}
+
+let newUser: User = {
+    name: 'João',
+    email: 'joao@email.com',
+    age: 18
+}
+```
+
+### Type Objects
+Declarar a tipagem de objetos como argumentos
+```tsx
+type Dates = {
+    d: number;
+    m: string;
+    y: number;
+}
+
+function showDate(dates: Dates){
+    console.log(`São Paulo ${dates.d} de ${dates.m}, de ${dates.y}`)
+}
+
+showDate({d: 10, m: 'Agosto', y: 2022})
+```
+
+### Type Asserction
+Declarar dois Types separadamente, e unir em um único
+```tsx
+type User = {
+    id: number,
+    name: string,
+}
+
+type Char = {
+    nickname: string,
+    level: number
+}
+
+type PlayerInfo = User & Char;
+
+let info: PlayerInfo = {
+    id: 1,
+    name: 'João Inácio',
+    nickname: 'birobirobiro',
+    level: 50
+}
+```
+
+## Syntax
+
+### Type x Interface
+Servem ao mesmo propósito, as diferenças são mínimas. O interface tem uma syntax que lembra o paradigma de OOP - Programação Orientada a Objetos - dessa forma quem tem contato com esse método pode sentir mais facilidade nessa maneira, enquanto o type tem uma manipulação mais simplificada. ex:
+
+### Type Asserction com interface
+```tsx
+interface User {
+    id: number,
+    name: string,
+}
+
+interface Char {
+    nickname: string,
+    level: number
+}
+
+interface PlayerInfo extends User, Char {}
+
+let info: PlayerInfo = {
+    id: 1,
+    name: 'João Inácio',
+    nickname: 'birobirobiro',
+    level: 50
+}
+```
 
 # SQL
 
