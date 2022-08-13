@@ -1136,6 +1136,86 @@ Ao ser atribuído a um elemento pai, nos permite controlar a orientação de tod
 
 ### Grid
 
+## Transitions x Animations
+As transitions são estados que refletem alguma ação, enquanto as animações tem comportamentos e execução pré difinidas. No entento, ambos recebem a propriedade de **Transition/ Animation Timing Function:** São comportamentos das transições e opções de animações pré definidas pelo sistema, que consistem em: Ease, Linear, Ease-in, Ease-out, Ease-in-out e Cube. Que vão variar entre animações que começam lentas e terminam rápidas, e outras variações, como Cube que é um shorthand para trabalhar em cima desses comportamentos.
+
+## Transitions
+Permite controlar o estado de um elemento, baseado em uma ação - pseudo element hover, por exemplo. É passado qual ação irá dar incio a transição, e atribuída ao seletor do elemento. Passando qual propriedade será aplicada a a transition e qual o novo valor, sendo que, quando mais de uma propriedade é passada, elas são declaradas juntas enquanto os seus valores separados.
+Por fim é passado a duração e se necessário, o tempo de delay até a transition iniciar.
+Ex:
+```css
+.containerDiv {
+  transition-property: background-color, width;
+  background-color: #FFF;
+  width: 100px;
+  transition-duration: 5s;
+  transition-delay: 3s;
+}
+```
+
+## Animations
+As animações são criadas em uma tag '@keyframe' e recebem um nome, para ser atribuídas a um seletor de elemento é através da tag animation-name e animation-duration, para definir um tempo de execução para a animação. Também é possível definir a quantidade de execuções com a propriedade **Animation Interaction**, e direção de movimentação da animação com **Animation direction**
+
+A animation tem duas maneiras de ser escrita, com propriedades sendo uma inicial e uma final, ou com porcentagem de execução.
+Ex:
+
+Propriedades keyframe
+```css
+.container {
+  animation-name: main-animation;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframe main_animation {
+  from {
+    background-color: #FFF;
+  }
+
+  to {
+    background-color: #000;
+  }
+}
+```
+Porcentagens keyframe
+```css
+.container {
+  animation-name: main-animation;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframe main_animation {
+  0% {
+    background: black;
+  }
+
+  25% {
+    background: brown;
+  }
+
+  50% {
+    background: grey;
+  }
+
+  75% {
+    background: green;
+  }
+
+  100% {
+    background: red;
+  }
+}
+```
+Entendendo os comportamentos de inicio e fim de uma animação, podemos definir alterações no seu estado inicial e final. Com **Animation Fill Mode**, podemos usar propriedades para definir a aplicação de estilos temporários em fixos. Ex:
+- Backwards: Pega os valores iniciais de uma animação - 'from' ou '0%' - e automaticamente aplica ao elemento, mesmo que aja delay.
+- Foward: Mantém aplicado no elemento os estilos do final da animação - 'to' ou 100%.
+- Both: Aplica tanto o Backwards quanto o Foward.
+
 **[⬆ voltar ao topo](#index)**
 
 # Javascript
