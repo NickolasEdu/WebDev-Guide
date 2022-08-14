@@ -745,6 +745,8 @@ Legenda:
   Essas podem ser informações ainda abstratas, mas ao decorrer do estudo de CSS tudo isso fará mais sentido. O intuito dessa introdução é como no capítulo sobre internet, falar sobre conceitos básicos que vão nos ajudar ao entendimento global dos outros conceitos.
 </p>
 
+## SEO
+
 **[⬆ voltar ao topo](#index)**
 
 # CSS
@@ -1215,6 +1217,10 @@ Entendendo os comportamentos de inicio e fim de uma animação, podemos definir 
 - Backwards: Pega os valores iniciais de uma animação - 'from' ou '0%' - e automaticamente aplica ao elemento, mesmo que aja delay.
 - Foward: Mantém aplicado no elemento os estilos do final da animação - 'to' ou 100%.
 - Both: Aplica tanto o Backwards quanto o Foward.
+
+## Responsividade
+
+## Bootstrap x T.
 
 **[⬆ voltar ao topo](#index)**
 
@@ -2796,7 +2802,7 @@ function deleteUser(id) {
 deleteUser(2)
 ```
 
-
+## Rest x RestFull
 
 **[⬆ voltar ao topo](#index)**
 
