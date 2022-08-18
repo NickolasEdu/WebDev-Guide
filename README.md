@@ -2807,6 +2807,309 @@ deleteUser(2)
 **[⬆ voltar ao topo](#index)**
 
 # React
+[ intro ]
+
+Para criar projetos em React, existem comandos que á trazem uma pré definição de arquivos. O mais comum é no terminal rodar o comando ‘create-react-app’. Onde irá criar componentes padrões e importar icones placeholders, porém este é um método demorado pelo tamanho do conteúdo. Por conta disso há um comando bseado em Vue.js que trás um formato mais otimizado na criação de projetos, com o comando ‘npm create vite@latest appname --template react’.
+
+Ao rodar o comando no terminal do projeto, ele pedirá a confirmação do template, que varia desde o react ao template Vue. Feito isso o próprio terminal irá retornar os próximos passos, indicando a alteração para o diretório do projeto, e instalação do npm com ‘npm install’ e o comando para rodar o projeto.
+
+## Corpo do React
+
+Para algo ser renderizado no navegador, é necessário um arquivo HTML, e é aqui que vemos a importância dos templates pré definidos pelo comando ‘create app’, pois fica muito mais prático a utilização, já que as importações já vem configuradas.
+
+### index.html
+
+Esse é todo o conteúdo do corpo HTML, uma div de renderização e um script que está lendo tudo o que foi feito em arquivos jsx.
+
+```jsx
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+```
+
+### main.jsx
+
+Onde o conteúdo está sendo processado, passando o método .render( ) para o id da div root. O que está sendo renderizado é o app react, onde o conteúdo é escrito em JSX.
+
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+```
+
+## JSX
+
+Esse é o formato da syntax do React, onde permite escrever código onde haverá HTML junto de escrita Javascript. No arquivo ‘main.jsx’ ele está renderizando tudo dentro do componente App, no qual podemos observar que é primeiro importado o arquivo, e usado como uma tag ‘<App />’.
+
+É dentro deste componente onde criaremos e colocaremos os outros componentes da aplicação, escritos em JSX, sua syntax padrão é:
+
+```jsx
+function Componente() {
+	const flag = true
+
+	return (
+		<div>
+			<h1>Hello World</h1>
+		</div>
+)
+}
+
+export default Componente
+```
+
+_Uma função recebe o nome do componente, que deve ser o mesmo do arquivo.
+
+Dentro dessa função podem ser declarados variáveis.
+
+Em ‘return’ será escrito tudo o que irá ser renderizado.
+
+export default é a indicação de exportação do componente, para que seja importado no App ou em outro componente.
+
+Também pode ser feito a exportação na declaração da função. _
+
+## Fragment
+
+Porém cada componente só pode retornar um elemento filho, ou seja, apenas uma tag. Por esse motivo existe o React Fragment, um sinal de tag onde é colocado todo o conteúdo, assim retornando um só elemento filho, com vários outros dentro. O Fragment também pode ser substituido por uma tag de div.
+
+```jsx
+function App() {
+
+  return (
+    <>
+      <h1>Hello World</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      </p>
+    </>
+  )
+}
+
+export default App
+```
+
+Assim como a criação de componentes são individuais, a importação de CSS também. Sendo interessante manter um arquivo .css na mesma página de cada arquivo .jsx.
+
+### Styles
+
+CSS - CSS Modules - Styled Components
+
+### Pages x Components
+
+O desenvolvimento em components no React nos permite reutilizar muito código, e para ficar organizados geralmente é feita a separação de páginas e de componentes nos assets do projeto. Mas afinal, se tudo no React é componente, qual a diferença? Simplesmente o fato de que pages serão as páginas da aplicação no qual iremos navegar, enquanto os components são pedaços dessas páginas que podem se repetir ou não, exemplo: header, footer, caixas de conteúdo, etc.
+
+Página chamando um componente repetidas vezes
+
+```jsx
+import './style.css'
+import { Item } from '../../components/item'
+
+export function App() {
+
+  return (
+    <div className='container'>
+      <h1>Hello World</h1>
+      <input type="text" placeholder='Digite aqui'/>
+      <button type='button'>Add</button>
+      
+      <Item />
+      <Item />
+      <Item />
+    </div>
+  )
+}
+```
+
+Componente criado para reutilização
+
+```jsx
+import './style.css'
+
+export function Item() {
+    return (
+        <div className='item'>
+            <p>$name$</p>
+            <small>$description$</small>
+        </div>
+    )
+}
+```
+
+### Props
+
+Passando como se fosse um argumento de função, e o sinal de ‘{ }’ substituindo as strings literais, onde é declarado os nomes das proprieades que serão passadas ia Props.
+
+```jsx
+export function Item(props) {
+    return (
+        <div className='item'>
+            <p>{props.name}</p>
+            <small>{props.descript}</small>
+        </div>
+    )
+}
+```
+
+Ou Props com destructuring
+
+```jsx
+export function Item({ name, descript }) {
+    return (
+        <div className='item'>
+            <p>{name}</p>
+            <small>{descript}</small>
+        </div>
+    )
+}
+```
+
+Page chamando o componente e preenchendo os campos com novas informações.
+
+```jsx
+import { Item } from '../../components/item'
+
+export function App() {
+
+  return (
+    <div className='container'>
+      <h1>Hello World</h1>
+      <input type="text" placeholder='Digite aqui'/>
+      <button type='button'>Add</button>
+      
+      <Item name="Kobe" descript="Black Mamba" />
+      <Item name="Young" descript="Ice Man"/>
+      <Item name="Giannis" descript="Greek Freak"/>
+    </div>
+  )
+}
+```
+
+## Hooks
+
+São métodos de React que são funções e variáveis, voltados para o paradigma de programação funcional, que é concenso de desenvolvimento em React para trabalhar os ciclos de vida da aplicação.
+
+### State
+
+Os states servem para manipular o estado visual da aplicação, sempre que é atualizado ele renderiza o componente. Sua syntax consiste em importar o hook de state a partir do React, atribuir a uma variável que recebe dois valores, um onde serão armazenado o valor desse estado, como uma variável, e o que irá manipulalo, como uma função. Dentro da declaração das varáveis de estado, podemos passar um valor inicial, de como ele iniciará por padrão.
+
+Uma rotina de exemplo para  mostrar a atualização de estado em tempo real, onde o useState está sendo importado;
+
+Seu uso atribuído a uma constante com uma variável e uma função;
+
+Um evento de On Change para escutar toda alteração no input, e toda vez chamar a função declarada a partir do useState;
+
+Esse evento está recebendo o e de event e retornando a função que recebe como argumento event e o valor dele mesmo;
+
+Tag recebendo a variável dentro das chaves literais ‘{ }’;
+
+```jsx
+import { useState } from 'react'
+
+export function App() {
+  const [inputState, setInputState] = useState('')
+
+  return (
+    <>
+      <h1>Hello World</h1>
+      <input
+      type="text"
+      placeholder='Digite aqui'
+      onChange={e => setInputState(e.target.value)}
+      />
+      <button type='button'>Add</button>
+      
+      <p>{inputState}</p>
+		</>
+```
+
+### Imutabilidade
+
+Recebendo um novo valor de estado, sem alterar o anterior e sim apenas adicionar um novo.
+
+```jsx
+export function App() {
+  
+  const [ inputState, setInputState ] = useState('')
+  const [ items, setItems ] = useState([])
+
+  function handleAddItem() {
+    const newItem = {
+      name: inputState,
+      time: new Date().toLocaleDateString('pt-BR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      }),
+    }
+
+    setItems((prevState) => [...prevState, newItem])
+  }
+```
+
+### Key Props
+
+É como um id para laços de repetição, por mais que as estruturas geradas de um loop sejam similares, cada uma deve receber um valor único. Para serem melhor identificadas pelo sistema e evitar futuros bugs. Essa key é passada como atributo e recebe um valor.
+
+Como estamos definindo um valor de tempo para cada objeto, ele é um valor que dificilmente não será único, por isso foi passado como key.
+
+```jsx
+{
+        items.map((item) => ( 
+        <Card
+          key={item.time}
+          name={item.name}
+          time={item.time}
+        />
+      ))
+}
+```
+
+## Effect
+
+use Effect é um hook de auto execução, ele é chamado assim que a aplicação terminar de ser renderizada. Diferente do state, atualiza parte da aplicação sem precisar fazer uma nova renderização.
+
+A Syntax do hook useEffect consiste na declaração da função, o que irá ser executado, e a condção da execução. Se o último parâmetro estiver vazio ele cumprirá o comportamento padrão de ser executado uma única vez após a renderização, mas podemos passar um state, que o Effect irá escutar e toda vez que ele for alterado, a função é chamada. E caso for escutar mais de um estado, pode ser adcionado e colocados entre virgula.
+
+```jsx
+useEffect(() => {
+    fetch('https://api.github.com/users/NickolasEdu')
+    .then(res => res.json())
+    .then(data => {
+      setUser({
+        name: data.name,
+        avatar: data.avatar_url,
+      })
+    })
+  }, [])
+```
+
+### Async Effect
+
+Não é possivel atribuir um Async Await na declaração do useEffect, deve ser feito normalmente numa função, que pode estar dentro do estado.
+
+```jsx
+useEffect(() => {
+    async function fetchData() {
+      const response = await fetch("https://api.github.com/users/birobirobiro");
+      const data = await response.json();
+      console.log("DADOS =>", data);
+
+      setUser({
+        name: data.name,
+        avatar: data.avatar_url,
+      });
+    }
+
+    fetchData();
+  }, []);
+```
 
 # Programação Avançada
 
