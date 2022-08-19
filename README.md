@@ -1219,8 +1219,11 @@ Entendendo os comportamentos de inicio e fim de uma animação, podemos definir 
 - Both: Aplica tanto o Backwards quanto o Foward.
 
 ## Responsividade
+Media Query + mobile first
 
-## Bootstrap x T.
+# Bootstrap
+
+Ele é um framework que tem a proposta de trazer mais praticidade, com componentes visuais, plugins de ações e até metodologia mobile first prontos pra ajudar no desenvolvimento de layouts. Inicialmente foi criado por uma equipe do twitter para padronizar a manutenção da plataforma, porém foi uma solução tão eficaz que os criadores logo perceberam o potencial e disponibilizaram para o uso do publico geral.
 
 **[⬆ voltar ao topo](#index)**
 
