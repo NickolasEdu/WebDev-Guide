@@ -1218,6 +1218,189 @@ Entendendo os comportamentos de inicio e fim de uma animação, podemos definir 
 - Foward: Mantém aplicado no elemento os estilos do final da animação - 'to' ou 100%.
 - Both: Aplica tanto o Backwards quanto o Foward.
 
+## Pré Processador SASS
+O SASS é uma maneira de se escrever CSS num formato de identação que lembra o HTML. Porém o navegador não é capaz de ler o arquivo SCSS, sendo necessário uma ferramenta de porte.
+
+Principal função do Sass era trazer funcionalidades a mais que o CSS, porém com o tempo ele adicionou alguma dessas funcionalidades na versão de CSS3, e o SASS não é prático para ser usado com o react.
+
+---
+
+Para começar a desenvolver em SASS são necessárias ferramentas de desenvolvimento, no próprio VS Code instalando as extensões.
+
+**SCSS Formater** e  **Live Sass Compiler**
+
+Essas ferramentas são necessárias pois os navegadores não conseguem ler o SCSS, então é preciso de um arquivo para escrevermos os códigos e outro que será o arquivo que será importado no projeto.
+
+Ao criar um arquivo .scss e rodar o live compiler watcher, a extensão criará um arquivo .css e um css.map. O map é uma configuração da extensão enquanto o .css será o arquivo que vamos importar no projeto, porém é no .scss onde iremos fazer todas as edições e o live compiler vai atualizando o arquivo principal.
+
+### Syntax - CSS x SASS
+
+No CSS os seletores são usados individualmente, sempre que precisamos manipular um elemento específico é preciso fazer o ‘rastreamento’ dele e dentro de quais elementos ele está.
+
+```scss
+.container {
+	background: red;
+}
+
+.container p {
+	color: blue;
+}
+```
+
+Enquanto no SASS tem um comportamento que lembra o HTML, onde podemos definir os códigos dos elementos pais e filhos de forma parecida como os escrevemos.
+
+```scss
+.container {
+	background-color: red;
+
+	p {
+		color: blue;
+	}
+}
+```
+
+### Partials
+
+No SASS é possível aplicar a abordagem de desenvolvimento com componentes, pois podemos fragmentar os arquivos scss e os importar no arquivo principal.
+
+Todos os arquivos de componente recebem um ‘_’ na frente, pois dessa forma o SASS não irá tentar compilar dois arquivos de uma só vez. E no arquivo main.scss é feito o ‘@import’
+
+_component.scss
+
+```css
+header {
+	background: black;
+}
+```
+
+main.scss
+
+```scss
+@import 'component';
+```
+
+### Variaveis - SASS
+
+A proposta de variáveis chegou no sass antes do css, hoje ambos tem essa funcionalidade, porém com syntax um pouco diferentes.
+
+```scss
+$main-color: #107C10;
+
+body {
+    background-color: $main-color;
+}
+```
+
+### Mixins
+
+São como variáveis que pode agrupar valores mais complexos e sua declaração também, usando o ‘@’ na declaração e importação e no nome é atribuído ‘( )’ como uma função Javascript. Entre os parenteses o SASS pode receber variáveis como parâmetros.
+
+```scss
+@mixin box-shadow() {
+    box-shadow: 2px 2px 4px -2px #000;
+}
+
+.container {
+    @include box-shadow();
+    background-color: #FFF;
+}
+```
+
+### Condicionais - SASS
+
+Ao criar uma condição e passar via parâmetros, podemos definir se algo será aplicado ou não.
+
+```scss
+@mixin validation($val) {
+    @if $val == sucess {
+				color: green;
+		}
+		@else $val == error {
+				color: red;
+		}
+}
+
+.container {
+		@include validation(sucess);
+    background-color: #FFF;
+}
+```
+
+### Laços de repetição
+
+FOR
+
+Fazendo uma série de classes com o FOR para correlacionar com uma série de classes. Usado para um caso de HTML nesse exemplo:
+
+```html
+		<div id="class-1"></div>
+    <div id="class-2"></div>
+    <div id="class-3"></div>
+    <div id="class-4"></div>
+    <div id="class-5"></div>
+```
+
+Pela variável vamos definir o nome da classe e então definimos um começo e um final, para dentro de chaves aplicar a alteração.
+
+Nesse loop existem dois comportamentos, o ‘to’ e o ‘through’. Usando o exemplo o To pega tudo até o 6, mas não o considera. Enquanto o Through considera até o último número definido
+
+```scss
+@for $i from 1 to 6 {
+    .class#{$i} {
+        font-size: 30px;
+    }
+}
+
+||
+
+@for $i from 1 through 5 {
+    .class#{$i} {
+        font-size: 30px;
+    }
+}
+```
+
+### For Each + Array em CSS
+
+```scss
+$colors: (color1: blue, color2: red, color3: green, color4: grey);
+
+@each $key, $color in $colors {
+	.#{$color}-text: { color: $color; }
+}
+```
+
+### Heranças
+
+A partir do ‘@extend’ recebe como padrão as definições de uma classe herdada, porém pelo comportamento de cascata de CSS é tranquilamente possível reescrever algum valor.
+
+```scss
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    @extend .flex;
+    background-color: $main-color;
+}
+```
+
+### Pseudo-class
+
+Para usar manipulações em SCSS é preciso declarar um ‘&’ para referenciar ao próprio elemento que está sendo selecionado.
+
+```scss
+footer {
+    background-color: #FFF;
+
+    &:hover {
+        background-color: gray;
+    }
+}
+```
+
 ## Responsividade
 Media Query é a tag CSS onde vamos adaptar o site para uma versão com telas menores, como tablets e celulares. Através do @media nós podemos definir até a maneira que a página será apresentada quando for ser impressa, pois a tag recebe um parâmetro de em qual condição irá alterar o conteúdo, seja screen (tela) ou print (versão para impressão) e ainda recebe o all que serve para os dois, mas por padrão essa condição não é necessária. Após definir a primeira condição, agora a tag recebe como argumento as dimensões da tela do qual será aplicada, ele se baseia em width no qual iremos definir um valor mínimo ou máximo para aquele código ser implementado, ou também pode ser passado uma propriedade de orientation para um comportamento mais específico.
 
