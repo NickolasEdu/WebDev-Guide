@@ -1219,7 +1219,24 @@ Entendendo os comportamentos de inicio e fim de uma animação, podemos definir 
 - Both: Aplica tanto o Backwards quanto o Foward.
 
 ## Responsividade
-Media Query + mobile first
+Media Query é a tag CSS onde vamos adaptar o site para uma versão com telas menores, como tablets e celulares. Através do @media nós podemos definir até a maneira que a página será apresentada quando for ser impressa, pois a tag recebe um parâmetro de em qual condição irá alterar o conteúdo, seja screen (tela) ou print (versão para impressão) e ainda recebe o all que serve para os dois, mas por padrão essa condição não é necessária. Após definir a primeira condição, agora a tag recebe como argumento as dimensões da tela do qual será aplicada, ele se baseia em width no qual iremos definir um valor mínimo ou máximo para aquele código ser implementado, ou também pode ser passado uma propriedade de orientation para um comportamento mais específico.
+
+Exemplo de definição Media Query, onde a página tem uma propriedade, mas a partir do momento que entra numa condição de tela menor é alterada.
+
+```css
+body {
+  color: red;
+}
+
+@media (max-width: 850px) {
+  body {
+    color: blue;
+  }
+}
+```
+
+## Mobile First
+Foi lá em 2009 em que Luke Wroblewski percebeu que toda a indústria de desenvolvimento precisava se atualizar, já que os celulares estavam tomando conta do cotidiano das pessoas. Foi então que ele criou a metodologia mobile first, ou numa tradução literal: dispositivo móvel antes. Essa abordagem foi criada para inverter o processo de desenvolvimento de sites e interfaces que teriam um uso maior pelo celular e depois adaptar para o desktop, pois assim seria mais simples. Luke argumenta que em alguns projetos era complicado pegar um website cheio de funcionalidades e um layout definido para adaptar para telas extremamente menores e com menos suporte a funcionalidades, aplicando essa ideia de desenvolvimento ficou mais simples entregar uma experiência completa ao usuário e depois importar para o desktop. Claro que esse não deve ser um padrão de desenvolvimento para todos os projetos, mas existem casos que essa abordagem será muito mais prática.
 
 # Bootstrap
 
