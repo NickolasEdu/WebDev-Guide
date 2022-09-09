@@ -1219,15 +1219,21 @@ Entendendo os comportamentos de inicio e fim de uma animação, podemos definir 
 - Both: Aplica tanto o Backwards quanto o Foward.
 
 ## Pré Processador SASS
-O SASS é uma maneira de se escrever CSS num formato de identação que lembra o HTML. Porém o navegador não é capaz de ler o arquivo SCSS, sendo necessário uma ferramenta de porte.
+O SASS - abreviação de Syntactically Awesome Style Sheets - é um pré processador de CSS, que basicamente nos permite escrever os estilos num formato semelhante mas não idêntico ao CSS. No seu inicio a principal função do Sass era trazer funcionalidades a mais que o CSS, porém com o tempo ele adicionou alguma dessas funcionalidades na versão de CSS3, e o SASS não é prático para ser usado com o react.
 
-Principal função do Sass era trazer funcionalidades a mais que o CSS, porém com o tempo ele adicionou alguma dessas funcionalidades na versão de CSS3, e o SASS não é prático para ser usado com o react.
+Sua syntax consiste em dois tipos .sass e .scss, o primeiro é uma forma de escrever que lembram as regras do Python, equanto arquivos scss lembrar as regras do html.
 
 ---
 
-Para começar a desenvolver em SASS são necessárias ferramentas de desenvolvimento, no próprio VS Code instalando as extensões.
+Para começar a desenvolver em SASS são necessárias ferramentas de desenvolvimento, no próprio VS Code instalando as extensões: **SCSS Formater** e  **Live Sass Compiler**. Porém não é uma boa prática o seu uso, pois não serve para grande escala e ficamos dependentes das atualizações destas extensões para conseguir continuar desenvolvendo em SASS.
 
-**SCSS Formater** e  **Live Sass Compiler**
+Por conta disso o recomendado é instalar o [Node.js](https://nodejs.org/en/) direto no computador, instalar o SASS de forma global com ``` npm install -g sass ``` e rodar no terminal sempre que for preciso compilar um arquivo SASS para CSS.
+
+O comando para iniciar a compilação consiste em: *saaa --watch diretório/arquivo.scss:diretório/arquivo.css*, dessa forma indicando o caminho do arquivo que deverá ser préprocessado e um diretório+nomeArquivo que sofrerá as atualizações a cada edição.
+
+```sass --watch sass/main.scss:css/main.css```
+
+Para parar a compilação é usado o ctrl+c (padrão do terminal)
 
 Essas ferramentas são necessárias pois os navegadores não conseguem ler o SCSS, então é preciso de um arquivo para escrevermos os códigos e outro que será o arquivo que será importado no projeto.
 
@@ -1424,6 +1430,8 @@ Foi lá em 2009 em que Luke Wroblewski percebeu que toda a indústria de desenvo
 # Bootstrap
 
 Ele é um framework que tem a proposta de trazer mais praticidade, com componentes visuais, plugins de ações e até metodologia mobile first prontos pra ajudar no desenvolvimento de layouts. Inicialmente foi criado por uma equipe do twitter para padronizar a manutenção da plataforma, porém foi uma solução tão eficaz que os criadores logo perceberam o potencial e disponibilizaram para o uso do publico geral.
+
+
 
 **[⬆ voltar ao topo](#index)**
 
