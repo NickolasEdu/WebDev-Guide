@@ -2702,6 +2702,26 @@ console.log(toJSON)
 console.log(toJS)
 ```
 
+
+## Save & Idempotent
+Existem algumas definições para requisição de API, como **Save** que são requests seguros, que não fazem alterações no lado do servidor.
+E idempotent que sempre irão retornar a mesma respota, ou seja, que só terá alteração no retorno por fator externo e não diretamente da aplicação.
+
+## CORS
+Referente a Cross-origin resource sharing, é um protocolo de segurança que precisa ser configurado para definir uma comunicação segura antre dados que estão partindo de diferentes origens.
+
+## Middleware
+São linhas de código que são executadas em todas vezes que uma requisição é feita, a partir de um 'app.use()' ou alguma rota especifica. Um exemplo do uso é no próprio CORS e objeto JSON. Onde podemos configurar para toda vez que uma chamada é feita, ele automáticamente usar a função de segurança e de conversão de dados, não precisando repetir código em toda rota que for chamada.
+ex:
+```jsx
+  const express = require('express')
+  const app = express()
+  const cors = require('cors')
+
+  app.use(express.json())
+  app.use(cors())
+```
+
 ### Fetch() x Axios()
 Ambos fazem basicamente a mesma coisa, o Axios por exemplo faz a requisição usando Fetch por debaixo dos panos. No caso o Fetch é uma requisção nativa do Javascript, onde pode ser usada de forma pura. Enquanto o Axios é uma biblioteca que trás algumas utilidades de maneira mais simples, porém para ser usado é preciso fazer a importação ou instalação dos pacotes do Axios.
 
@@ -2814,14 +2834,6 @@ axiosRes()
     Excluí alguma informação.
   </dd>
 </dl>
-
-## Save & Idempotent
-Existem algumas definições para requisição de API, como **Save** que são requests seguros, que não fazem alterações no lado do servidor.
-E idempotent que sempre irão retornar a mesma respota, ou seja, que só terá alteração no retorno por fator externo e não diretamente da aplicação.
-
-## CORS
-Referente a Cross-origin resource sharing, é um protocolo de segurança que precisa ser configurado para definir uma comunicação segura antre dados que estão partindo de diferentes origens.
-
 
 
 ## Métodos HTTP na prática
