@@ -3026,6 +3026,7 @@ deleteUser(2)
 ```
 
 ## Rest x RestFull
+REST de Representational State Transfer - Transferência de estado Representacional - são um conjunto de consenso de arquitetura web para criação de API mais performáticas. Enquanto RESTFul é justamente quando um serviço, como uma API, tem os conceitos REST aplicados na sua estrutura, seguindo as recomendações para facilitar as comunicações entre siatemas.
 
 **[⬆ voltar ao topo](#index)**
 
