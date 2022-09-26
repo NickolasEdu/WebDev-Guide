@@ -2681,27 +2681,16 @@ setPrint.emit('Testting')
 
 # API
 
+*Index*
+- [Formatos](#formatos)
+- [Requisições](#requisições)
+- [HTTP Verbs](#verbos-http)
+- [Fetch HTTP](#http-com-fetch)
+- [Axios HTTP](#http-com-axios)
+- [Rest API](#rest-x-restfull)
+
 ## Definição
 Application Programming Interface, que corresponde a Interface de Programação de Aplicações, é uma maneira de integrar sistemas fazendo intercâmbio de dados entre aplicações e linguagens. Para que esse câmbio funcione é preciso que seja em um formato que ambos os sistemas entendam, é aqui que usamos o JSON.
-
-## JSON
-
-Objeto Json é a maneira da qual os sistemas se comunicam, assim como nas linguagens tradicionais existem regras gramaticais e oratórias, os sistemas também respeitam padrões para trocar informações entre si. A maneira mais comum atualmente é um objeto JSON, que é baseado em um objeto javascript porém todos os valores - exeto números - são colocados entre "parênteses".
-
-As diferenças dos dados pode ser observada no output desse código:
-```javascript
-const objetoJS = {
-  nome: "Placeholder",
-  idade: 27,
-}
-
-const toJSON = JSON.stringify(objetoJS)
-const toJS = JSON.parse(toJSON)
-
-console.log(toJSON)
-console.log(toJS)
-```
-
 
 ## Save & Idempotent
 Existem algumas definições para requisição de API, como **Save** que são requests seguros, que não fazem alterações no lado do servidor.
@@ -2722,6 +2711,29 @@ ex:
   app.use(cors())
 ```
 
+## Formatos
+### XML
+Placeholder
+
+### JSON
+Objeto Json é a maneira da qual os sistemas se comunicam, assim como nas linguagens tradicionais existem regras gramaticais e oratórias, os sistemas também respeitam padrões para trocar informações entre si. A maneira mais comum atualmente é um objeto JSON, que é baseado em um objeto javascript porém todos os valores - exeto números - são colocados entre "parênteses".
+
+As diferenças dos dados pode ser observada no output desse código:
+```javascript
+const objetoJS = {
+  nome: "Placeholder",
+  idade: 27,
+}
+
+const toJSON = JSON.stringify(objetoJS)
+const toJS = JSON.parse(toJSON)
+
+console.log(toJSON)
+console.log(toJS)
+```
+
+**[⬆ voltar ao capítulo](#api)**
+## Requisições
 ### Fetch() x Axios()
 Ambos fazem basicamente a mesma coisa, o Axios por exemplo faz a requisição usando Fetch por debaixo dos panos. No caso o Fetch é uma requisção nativa do Javascript, onde pode ser usada de forma pura. Enquanto o Axios é uma biblioteca que trás algumas utilidades de maneira mais simples, porém para ser usado é preciso fazer a importação ou instalação dos pacotes do Axios.
 
@@ -2782,10 +2794,9 @@ async function axiosRes() {
 
 axiosRes()
 ```
+**[⬆ voltar ao capítulo](#api)**
 
 ## Verbos HTTP
-
-
 <dl>
   <dt>OPTIONS</dt>
   <dd>
@@ -2835,16 +2846,14 @@ axiosRes()
   </dd>
 </dl>
 
+**[⬆ voltar ao capítulo](#api)**
 
 ## Métodos HTTP na prática
-
 Utilizando uma API configurada localmente de Jakeliny
 [API URL](https://github.com/jakeliny/node-api-discover)
 
 ## HTTP com Fetch
-
-### Corpo HTML
-
+*Corpo HTML*
 Onde os dados estão sendo apresentados para visualização
 
 ```html
@@ -2853,7 +2862,7 @@ Onde os dados estão sendo apresentados para visualização
     <img src="" alt="" id="userAvatar">
 ```
 
-### GET
+*GET*
 
 Lendo os dados pelo ID
 
@@ -2874,7 +2883,7 @@ function getUser() {
 getUser()
 ```
 
-### POST
+*POST*
 
 Enviado um novo dado
 
@@ -2903,7 +2912,7 @@ const newUser = {
 addUser()
 ```
 
-### PUT
+*PUT*
 
 Atualizando algum dado de usuário pelo ID
 
@@ -2932,7 +2941,7 @@ const updatedUser = {
 updateUser(updatedUser, 9)
 ```
 
-### DELETE
+*DELETE*
 
 Excluindo algum dado pelo ID
 
@@ -2953,9 +2962,9 @@ function deleteUser(id) {
 
 deleteUser(2)
 ```
+**[⬆ voltar ao capítulo](#api)**
 
 ## HTTP com Axios
-
 ### Corpo HTML
 
 Elemento para retornar os dados para visualização e importação do Axios
@@ -2967,7 +2976,7 @@ Elemento para retornar os dados para visualização e importação do Axios
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 ```
 
-### GET
+GET
 
 ```jsx
 function getUsers() {
