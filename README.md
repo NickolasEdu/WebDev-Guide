@@ -3068,10 +3068,64 @@ function deleteUser(id) {
 deleteUser(2)
 ```
 
+## Params
+São parâmetros - informações adicionais - que as requisições HTTP podem receber.
+
+### Body Params
+Busca as informações do corpo da API - como fazemos em Arrays com array.name - e permite associar estas infos com variáveis. A partir do request com o .body,  exemplo: ‘req.body’
+API - Com todas as informações em formato JSON
+
+```jsx
+{
+	"name": "Nicho",
+	"last": "Darwin",
+	"city": "São Paulo",
+	"nation": "Brazil"
+}
+```
+
+O método PUT recebe o Body Params com os valores que serão alterados e também recebe um Route Params, informando qual recurso vai ser modificado.
+
+### Route Params
+Busca ou envia uma ação através de um parâmetro especifico, exemplo: há a rota de usuários, mas é preciso detalhar qual usuário desejado, nesse caso que vemos URLs com '/usuários/login' que pode ser verificado com um código, nome de usuário único ou id.
+```javascript
+const express = require('express')
+const app = express()
+app.use(express.json())
+
+
+app.route('/:id').get( (req, res) => res.send(req.params.name))
+
+const port = 3000
+app.listen(port)
+```
+
+## Query Params
+Equanto podemos especificar os dados buscados na rota a partir de 'Route/:id', por exemplo; No Query Params nós podemos visualizar os parâmetros através da própria URL. Onde o sinal de '?' vale como o ":".
+
+'https://rastreiocorreios.com.br/?rastreio=OX476176269BR'
+
+## Headers Params
+
+```jsx
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.listen(port)
+app.use(express.json())
+
+app.route('/').post( (req, res) => {
+    const { name, city } = req.body
+    res.send(`O nome do usuário é ${name}, e está localizado em ${city}`)
+})
+```
+
 ## Rest x RestFull
 REST de Representational State Transfer - Transferência de estado Representacional - são um conjunto de consenso de arquitetura web para criação de API mais performáticas. Enquanto RESTFul é justamente quando um serviço, como uma API, tem os conceitos REST aplicados na sua estrutura, seguindo as recomendações para facilitar as comunicações entre siatemas.
 
 **Regras da arquitetura REST**
+
 **Cliente-Servidor**: A separação das responsabilidades é o princípio por trás do cliente-servidor. Ao separar as preocupações de interface de usuário (UI) do armazenamento de dados, é possível melhorar a portabilidade através de múltiplas plataformas de UI, simplificar os componentes do servidor, mas principalmente, permitir a evolução de forma independente uma vez que não há dependência entre os lados cliente/servidor.
 
 **Interface Uniforme**: A característica principal que diferencia o estilo arquitetural REST dos demais é uma interface uniforme entre os componentes cliente e servidor. Como o cliente e servidor compartilham esta interface, deve-se ter um “contrato” bem definido para comunicação entre os lados. Há quatros princípios que devem ser seguidos para obter uma interface uniforme: Identificação dos Recursos, Representação dos recursos, Mensagens auto-descritivas e Hypermedia (HATEOAS).
