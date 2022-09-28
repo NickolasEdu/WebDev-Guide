@@ -2366,14 +2366,16 @@ Bascicamente é um ambiente de execução em tempo real - JS Runtime Enviroment.
 ## Comportamento
 No JS convencional a execução é sincrona e feita na sequencia que foi escrita, já no Node por padrão é de forma assincrona no blocking -não bloqueante -  a partir dos eventos em loop. De inicio o Nodejs registra todas as funções declaradas e põe em uma fila de execução, sempre que uma função precisa de tempo para ser processada ela vai parar na fila de processos e deixa que a fila de execução continue normalmente, até que ela seja executada por último. E responsável por tirar dessa fila e fazer com que seja executado é o Event Loop, ele está o tempo "de olho" para não deixar nada na fila, sempre trazendo uma função de cada vez para a execução.
 
-Sendo assim, mesmo que uma função receba um timeout de zero segundos, ao identificar que há um timeout definido, o event loop coloca a função na fila dos processos o que faz ir para o final da fila de execução. Então ela só será executada após todas as outras da sequência, mesmo que o timeout já tenha sido concluído.
+Sendo assim, mesmo que uma função receba um timeout de zero segundos, ao identificar que há um timeout definido, o event loop coloca a função na fila dos processos - chamada de callstack, que tem o comportamento single thread porém que não bloqueia a chamada de outras funções - o que faz ir para o final da fila de execução. Então ela só será executada após todas as outras da sequência, mesmo que o timeout já tenha sido concluído.
+<img src="./assets/event-loop.png" alt="Exemplo de imagem" width="95%" height="600px">
+
 
 **[⬆ voltar ao capitulo](#node)**
 
 
-## NPM
+## Gerenciador de Pacotes
 
-O Node Packged Meneger é um gerenciador de pacotes do Node, ele já vem com diversas funções nativas, porém existem outras das quais podemos adicionar individualmente em cada projeto e fazer uso delas - essas funções extras são chamadas de modules, packages ou dependencies e são como se fossem uma extensão do Nodejs.
+O Node Packged Meneger - ou o Yarn - é um gerenciador de pacotes do Node, ele já vem com diversas funções nativas, porém existem outras bibliotecas externas das quais podemos adicionar individualmente em cada projeto e fazer uso delas - essas funções extras são chamadas de modules, packages ou dependencies e são como se fossem uma extensão do Nodejs.
 
 **Comandos**
 
@@ -2423,6 +2425,14 @@ Tanto o packed.lock.json quanto o node_modules são arquivos fixos para o funcio
 Já o packed.json em uma estrutura que podemos consultar e manipular, ele consiste em trazer as informações do nosso projeto. Desde versão, nome, autor, arquivo principal para ser executado pela linha de comando. Como também os scripts, que são atalhos do nosso projeto para rodar no terminal, como comandos de run, test, stop e etc.
 
 Outro objeto da estrutura do packed.json são as **dependencies**, nesse objeto podemos ver todos os pacotes intalados e suas versões. Assim como há também os **devdependencies**, no qual mostra os pacotes instaladas somente para acesso e manipulação dos desenvolvedores, e que para fazer a instalação nas diferentes dependencies são usados comandos diferentes. *npm install 'pacote'* para instalações normais e *npm install 'pacote' --save-dev* para instalar um pacote dentro do dev dependencies.
+
+**[⬆ voltar ao capitulo](#node)**
+
+## Node Live server
+
+Sempre que o código fonte do servidor local é alterado, é preciso fazer a parada da excecução pelo terminal - Ctrl + C - e iniciar novamente, para evitar esse comportamento podemos fazer a instalação do Nodemon e definir scripts de execução, que só estarão disponivéis para o desenvolvedor. 
+
+Nodemon -D para instalação em devDependencies, onde só será instalado no ambiente dev, no caso na máquina do desenvolvedor. Ficando fora do projeto final. Para rodar esse live server com nodemon é preciso criar o script que recebe a descrição no objeto com nodemon e o nome do arquivo. ex: “dev”: “nodemon index.js”. Dessa forma fazendo que o server seja reiniciado a cada atualização, e em alguns momentos retornando erros pelo próprio console/terminal.
 
 **[⬆ voltar ao capitulo](#node)**
 
@@ -2690,7 +2700,7 @@ setPrint.emit('Testting')
 - [Rest API](#rest-x-restfull)
 
 ## Definição
-Application Programming Interface, que corresponde a Interface de Programação de Aplicações, é uma maneira de integrar sistemas fazendo intercâmbio de dados entre aplicações e linguagens. Para que esse câmbio funcione é preciso que seja em um formato que ambos os sistemas entendam, é aqui que usamos o JSON.
+Application Programming Interface, que corresponde a Interface de Programação de Aplicações, é uma maneira de integrar sistemas fazendo intercâmbio de dados entre aplicações e linguagens. Para que esse câmbio funcione é preciso que seja em um formato que ambos os sistemas entendam, é aqui que usamos o JSON - ou o XML.
 
 ## Save & Idempotent
 Existem algumas definições para requisição de API, como **Save** que são requests seguros, que não fazem alterações no lado do servidor.
@@ -3036,6 +3046,26 @@ deleteUser(2)
 
 ## Rest x RestFull
 REST de Representational State Transfer - Transferência de estado Representacional - são um conjunto de consenso de arquitetura web para criação de API mais performáticas. Enquanto RESTFul é justamente quando um serviço, como uma API, tem os conceitos REST aplicados na sua estrutura, seguindo as recomendações para facilitar as comunicações entre siatemas.
+
+**Regras da arquitetura REST**
+**Cliente-Servidor**: A separação das responsabilidades é o princípio por trás do cliente-servidor. Ao separar as preocupações de interface de usuário (UI) do armazenamento de dados, é possível melhorar a portabilidade através de múltiplas plataformas de UI, simplificar os componentes do servidor, mas principalmente, permitir a evolução de forma independente uma vez que não há dependência entre os lados cliente/servidor.
+
+**Interface Uniforme**: A característica principal que diferencia o estilo arquitetural REST dos demais é uma interface uniforme entre os componentes cliente e servidor. Como o cliente e servidor compartilham esta interface, deve-se ter um “contrato” bem definido para comunicação entre os lados. Há quatros princípios que devem ser seguidos para obter uma interface uniforme: Identificação dos Recursos, Representação dos recursos, Mensagens auto-descritivas e Hypermedia (HATEOAS).
+
+**Stateless**: A comunicação entre cliente-servidor deve ocorrer independente de estado, não cabendo ao servidor armazenar qualquer tipo de contexto, ou seja, cada requisição deve possuir toda informação necessária para que seja inteiramente compreensível. Este princípio acaba gerando um alto tráfego de dados e redução de performance, porém pode ser contrabalanceado utilizando adequadamente o recurso de cache.
+
+**Cache**: O cache ajuda a melhorar a performance, a escalabilidade e eficiência uma vez que reduz o tempo de resposta médio quando comparado entre uma série de interações cliente-servidor. As diretivas de cache são controladas pelo servidor através do cabeçalho HTTP (*HTTP Header*).
+
+**Camadas**: Arquitetura deve ser construída através de camadas gerenciadas de forma independente, onde cada layer não pode ver além do layer adjacente e mudanças de um layer não devem impactar nos demais. É recomendável que o cliente nunca conecte-se diretamente no servidor de aplicação e que uma camada de balanceamento de carga seja adicionada entre cliente-servidor. A grande vantagem de trabalhar em camadas é que a arquitetura se torna menos complexa e fica mais propensa a mudanças.
+
+## Códigos de resposta
+No desenvolvimento de uma API devemos retornar para o usuário as respostas de requisição de maneira correta, pois assim permitirá que ele usa a aplicação de forma intuitiva.
+
+100 a 1XX - Informativo, solicitação ainda em andamento.
+200 a 2XX - Confirmação, requisição bem sucedida.
+300 a 3XX - Redirecionamento, por algum motivo a informação está sendo ou foi movida.
+400 a 4XX - Erro no client, ocorreu algum erro no processo.
+500 a 5XX - Erro no servidor, o erro no processo é ocorreu no servidor.
 
 **[⬆ voltar ao topo](#index)**
 
