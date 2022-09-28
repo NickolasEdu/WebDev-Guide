@@ -2367,6 +2367,7 @@ Bascicamente é um ambiente de execução em tempo real - JS Runtime Enviroment.
 No JS convencional a execução é sincrona e feita na sequencia que foi escrita, já no Node por padrão é de forma assincrona no blocking -não bloqueante -  a partir dos eventos em loop. De inicio o Nodejs registra todas as funções declaradas e põe em uma fila de execução, sempre que uma função precisa de tempo para ser processada ela vai parar na fila de processos e deixa que a fila de execução continue normalmente, até que ela seja executada por último. E responsável por tirar dessa fila e fazer com que seja executado é o Event Loop, ele está o tempo "de olho" para não deixar nada na fila, sempre trazendo uma função de cada vez para a execução.
 
 Sendo assim, mesmo que uma função receba um timeout de zero segundos, ao identificar que há um timeout definido, o event loop coloca a função na fila dos processos - chamada de callstack, que tem o comportamento single thread porém que não bloqueia a chamada de outras funções - o que faz ir para o final da fila de execução. Então ela só será executada após todas as outras da sequência, mesmo que o timeout já tenha sido concluído.
+<br>
 <img src="./assets/event-loop.png" alt="Exemplo de imagem" width="95%" height="600px">
 
 
@@ -2710,8 +2711,30 @@ E idempotent que sempre irão retornar a mesma respota, ou seja, que só terá a
 Referente a Cross-origin resource sharing, é um protocolo de segurança que precisa ser configurado para definir uma comunicação segura antre dados que estão partindo de diferentes origens.
 
 ## Middleware
-São linhas de código que são executadas em todas vezes que uma requisição é feita, a partir de um 'app.use()' ou alguma rota especifica. Um exemplo do uso é no próprio CORS e objeto JSON. Onde podemos configurar para toda vez que uma chamada é feita, ele automáticamente usar a função de segurança e de conversão de dados, não precisando repetir código em toda rota que for chamada.
-ex:
+São linhas de código que são executadas em todas vezes que uma requisição é feita, a partir de um 'app.use()' ou é possível declarar uma função que será especifica para se comportar como um middleware. Ou seja, aquilo entre a requisição e a rota.
+
+A função está fazendo a validação e retornando um erro caso a validação não seja aprovada, caso contrário é retornado o ‘next’ que dá um ok para o sistema continuar com a interpretação do código.
+Chamando uma middleware, existem duas maneiras que vão depender da necessidade de uso.
+Em caso de chamar uma middleware para algumas rotas especificas, dessa maneira ela só será chamada nesta ou naquelas em que a middle for chamada entre a rota e os parâmetros.
+
+```jsx
+function middlewareFunc(request, response, next) {
+	const { cpf } = req.headers
+  const customer = customers.find((customer) => customer.cpf === cpf)
+
+	if (!customer) {
+		return json({ error: "não foi validado" })
+	}
+
+	return next()
+}
+
+app.get("/statement", middlewareFunc, (req, res) => {
+	return res.send("OK")
+})
+```
+
+Ou Então com o 'use()' onde a middleware será chamada em todas as requisições que estão declaradas após a chamada da função. ex:
 ```jsx
   const express = require('express')
   const app = express()
@@ -2720,6 +2743,7 @@ ex:
   app.use(express.json())
   app.use(cors())
 ```
+
 
 ## Formatos
 ### XML
@@ -3062,10 +3086,16 @@ REST de Representational State Transfer - Transferência de estado Representacio
 No desenvolvimento de uma API devemos retornar para o usuário as respostas de requisição de maneira correta, pois assim permitirá que ele usa a aplicação de forma intuitiva.
 
 100 a 1XX - Informativo, solicitação ainda em andamento.
+
 200 a 2XX - Confirmação, requisição bem sucedida.
+
 300 a 3XX - Redirecionamento, por algum motivo a informação está sendo ou foi movida.
+
 400 a 4XX - Erro no client, ocorreu algum erro no processo.
+
 500 a 5XX - Erro no servidor, o erro no processo é ocorreu no servidor.
+
+[Para informação mais específica sobre os principais códigos](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 **[⬆ voltar ao topo](#index)**
 
