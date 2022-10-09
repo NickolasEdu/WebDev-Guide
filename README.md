@@ -3072,10 +3072,9 @@ deleteUser(2)
 São parâmetros - informações adicionais - que as requisições HTTP podem receber.
 
 ### Body Params
-Busca as informações do corpo da API - como fazemos em Arrays com array.name - e permite associar estas infos com variáveis. A partir do request com o .body,  exemplo: ‘req.body’
-API - Com todas as informações em formato JSON
+São parâmetros de texto, na arquitetura RESTFul devem ser em formato JSON, mas XML e strings simples também são suportadas por esse método.
 
-```jsx
+```json
 {
 	"name": "Nicho",
 	"last": "Darwin",
@@ -3083,31 +3082,7 @@ API - Com todas as informações em formato JSON
 	"nation": "Brazil"
 }
 ```
-
-O método PUT recebe o Body Params com os valores que serão alterados e também recebe um Route Params, informando qual recurso vai ser modificado.
-
-### Route Params
-Busca ou envia uma ação através de um parâmetro especifico, exemplo: há a rota de usuários, mas é preciso detalhar qual usuário desejado, nesse caso que vemos URLs com '/usuários/login' que pode ser verificado com um código, nome de usuário único ou id.
 ```javascript
-const express = require('express')
-const app = express()
-app.use(express.json())
-
-
-app.route('/:id').get( (req, res) => res.send(req.params.name))
-
-const port = 3000
-app.listen(port)
-```
-
-## Query Params
-Equanto podemos especificar os dados buscados na rota a partir de 'Route/:id', por exemplo; No Query Params nós podemos visualizar os parâmetros através da própria URL. Onde o sinal de '?' vale como o ":".
-
-'https://rastreiocorreios.com.br/?rastreio=OX476176269BR'
-
-## Headers Params
-
-```jsx
 const express = require('express')
 const app = express()
 const port = 3000
@@ -3120,6 +3095,29 @@ app.route('/').post( (req, res) => {
     res.send(`O nome do usuário é ${name}, e está localizado em ${city}`)
 })
 ```
+O método PUT recebe o Body Params com os valores que serão alterados e também recebe um Route Params, informando qual recurso vai ser modificado.
+
+### Headers Params
+Filtram baseados em um dado, esse dado é passado pela header da requisição e procurará toda informação que tenha relação com ele - como um id, nome de usuário, cpf, etc - ele é recebido pelo request.headers.
+
+### Route/Path Params
+É basicamente declarar algo após a rota, exemplo “get(’/rota’)”. Esse parâmetro acessa os dados especificados no endpoint, (’rota\dados’).  Essas informações são pegadas a partir da rota e ao declarar  ‘ : ‘ nela, tudo ali vira uma variável.
+```javascript
+const express = require('express')
+const app = express()
+app.use(express.json())
+
+
+app.route('/:id').get( (req, res) => res.send(req.params.name))
+
+const port = 3000
+app.listen(port)
+```
+
+### Query Params
+Equanto podemos especificar os dados buscados na rota a partir de 'Route/:id', por exemplo; No Query Params nós podemos visualizar os parâmetros através da própria URL. Onde o sinal de '?' vale como o ":" - ou seja, forma de armazenamento de informações. Exemplo do restreio que é o campo e o código o valor.
+
+'https://rastreiocorreios.com.br/?rastreio=OX476176269BR'
 
 ## Rest x RestFull
 REST de Representational State Transfer - Transferência de estado Representacional - são um conjunto de consenso de arquitetura web para criação de API mais performáticas. Enquanto RESTFul é justamente quando um serviço, como uma API, tem os conceitos REST aplicados na sua estrutura, seguindo as recomendações para facilitar as comunicações entre siatemas.
